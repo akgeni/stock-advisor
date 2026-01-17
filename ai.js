@@ -80,8 +80,10 @@ Questions to Answer (Be Decisive and Direct):
 4. BCG Matrix: Classify as Star, Cash Cow, Dog, or Question Mark. Start with the classification in bold. Explain logic.
 5. Price Drivers: Explain why the stock price is moving up or down recently. Cite factual reasons (earnings, news, market sentiment) if available in context.
 6. Corporate Governance: Critical analysis of governance standards. highlighting any red flags, trust issues, or management quality concerns. Be critical.
+7. Broker Recommendations: Summarize recent buy/sell calls from major brokerage houses (e.g. Morgan Stanley, Jefferies, Motilal Oswal). Include target prices if known.
+8. Institutional Activity: Analyze FII and DII flows for this stock. Also mention any recent buying/selling by Super Investors (e.g. Jhunjhunwala, Kacholia, Kedia). Be specific with names if possible.
 
-Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg", "priceDrivers", "governance".
+Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg", "priceDrivers", "governance", "brokerRecs", "institutional". All values MUST be strings, not objects.
 Content Style: Use short paragraphs and emojis. Use \n for line breaks. Avoid hedging (e.g. "It depends").
 `;
 

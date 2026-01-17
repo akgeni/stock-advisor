@@ -1,35 +1,15 @@
 {
   "indus towers": {
-    "timestamp": 1768670018382,
+    "timestamp": 1768674769036,
     "data": {
-      "guidelines": "NO. • Right-of-way clearances for new tower sites remain slow but not stricter • EMF radiation norms unchanged since 2021 • No fresh levy on tower companies in 2025-26 Budget • DoT’s 5G roll-out obligations actually favour tenancies",
-      "future": "Bullish. • 5G tenancies still ramping; only ~35% of sites 5G-ready • Vi’s survival removes major churn risk (30% of Indus tenancies) • Tenancy-addition CAGR guidance 4-5% vs 2% last 3 yrs • Risk: Fibreisation lag could cap upside after FY27",
-      "lifecycle": "**Growth**. Tower sector still adding ~8-10k new tenancies p.a.; 5G wave + rural 4G fill-in keeps growth above GDP; not yet a zero-sum game.",
-      "bcg": "**Star**. High market share (33% of India’s towers), double-digit EBITDA growth (12% FY25), ROCE >20% and still gaining share as new co-locations outpace new builds.",
-      "priceDrivers": "Up 29% in 3 mths → Vi cleared AGR dues (removes bankruptcy overhang), Citi & NDTV stories flag Vi revival = tenancy rebound, MF buying (15 funds added in Nov) + short-covering. No earnings miss; street pricing in 5-6% tenancy growth for FY26 vs 2% in FY25.",
-      "governance": "⚠️ Red flags: 1) 68% promoter (Bharti + Vodafone) block; independent directors only 3/8 → limited dissent 💡 2) Related-party rev 35% (Vi + Airtel) → pricing scrutiny risk 3) Auditor change FY23 without clear reason 4) Auditor flagged ₹1,070 cr dues from Vi (now partly paid) yet no provisioning 💰 5) No whistle-blower case disclosure since FY21 → opacity. Management quality: Ops team ex-Bharti, execution strong; disclosure culture lags best-in-class."
-    }
-  },
-  "authum invest": {
-    "timestamp": 1768670330509,
-    "data": {
-      "guidelines": "YES\n• RBI caps leverage (NOF-to-Net-Owned-Fund ≤ 4×) and sectoral exposure limits\n• Daily asset-quality reporting (GNPA > 5% triggers PCA) \n• 15% mandatory priority-sector lending quota",
-      "future": "Bullish 📈\n• Rising credit demand from MSMEs & gold loans post-COVID\n• Govt push for NBFC co-lending with banks = low-cost funds\n• Risk: Fast rate hikes → ALM mismatch & higher NPAs",
-      "lifecycle": "**Growth**<br>NBFC space still gaining share from banks; digital sourcing, niche products (gold, infra, microfinance) keep runway long.",
-      "bcg": "**Question Mark**<br>High growth (30% m-cap jump) but RoA <2%, scale still small vs banks; needs capital to capture share or slips to Dog.",
-      "priceDrivers": "Up 30% on BICCello acquisition buzz & 52-wk high momentum; promoter partly exited (₹1,165 cr Aug) yet market ignoring dilution on M&A optimism.",
-      "governance": "Red flag 🚩: Promoter sold 2.7% stake at discount without prior intimation; limited indie directors & no woman director yet. Acquisition funded via debt → minority squeeze risk."
-    }
-  },
-  "gokul agro": {
-    "timestamp": 1768670978045,
-    "data": {
-      "guidelines": "NO 🚫\n• FSSAI quality norms on edible oils are standard, not growth killers\n• Import duty tweaks on CPO/soft oils swing margins but are predictable\n• PLI scheme for oilseeds & export incentives actually help domestic crushers",
-      "future": "Bullish 📈\n• India’s 23 MMT import dependency → huge localisation runway\n• Rising per-capita fat consumption + packaged food boom\n• Soft-oil seed yields improving via GM mustard & better MSP",
-      "lifecycle": "**Growth** 🌱\nCapacity additions, new product lines (rice-bran, sunflower), regional brand roll-outs and frequent capex point to a classic growth phase, not yet consolidation.",
-      "bcg": "**Question Mark** ❓\nDouble-digit volume growth but EBITDA margins <6% and pan-India brand equity still low; needs cash to scale or risks slipping to ‘Dog’ if commodity squeeze persists.",
-      "priceDrivers": "50% “drop” on 14 Oct was 2:1 split, not loss. Post-split nominal price doubled liquidity; sentiment lifted 26% in Dec on strong Q2 volume jump and bonus chatter, not EPS beat.",
-      "governance": "Red flags 🚩\nPromoter pledge >45% of holding; frequent related-party raw-material deals; auditor resignation last FY citing ‘limited access’ to inventory data. Board reappoints CFO as whole-time director despite past SEBI consent order on insider rules—signals weak oversight."
+      "guidelines": "NO\n• 5G rollout mandates – faster tower fiberisation & rural roll-outs 🚀\n• Right-of-way clearances – state-level delays & fee caps 🚧\n• EMF radiation norms – tight limits but no new tightening 📡\n• AGR relief – Supreme Court order (Jan-26) removes ₹1.9 tn overhang ✅",
+      "future": "Bullish 📈\n• 5G densification + 6G prep = 40k new tenancies/yr\n• Vi survival = 35% of Indus’ receivables now collectible\n• Risk: Jio’s in-house towers & fiber could cannibalise 10-12% tenancies",
+      "lifecycle": "**Maturity** – India tower penetration >1.1x pop; new builds driven only by 5G small cells; pricing power flat; sector consolidating into 3 large players.",
+      "bcg": "**Cash Cow** – 200k towers churn steady 7% EBITDA margin; 90% payout ratio; low capex; no volume growth but generates ₹11-12 bn FCF/yr.",
+      "priceDrivers": "Up 29% in 3 mo – Vi’s AGR relief removes bankruptcy fear; Q3FY26 tenancy addition 4.3k vs 1.9k QoQ; Citi upgrade; MF inflow ₹1.4 bn Nov-Jan.",
+      "governance": "Red flags 🚩 – 40% of FY25 revenue from Vi which still owes ₹77 bn (net receivables); independent directors only 3/8; promoter Bharti Infratel merged via 1:1 swap without cash exit option for minorities; related-party transactions with Airtel at arm’s length but not auctioned.",
+      "brokerRecs": "Citi – Buy, TP ₹380 (2 Dec 25) 🎯\nMotilal Oswal – Buy, TP ₹410 (14 Jan 26) 🎯\nJefferies – Hold, TP ₹330 (9 Jan 26)",
+      "institutional": "FII net +₹3.2 bn Jan-26; DII net +₹1.1 bn. Super Investors: Ashish Kacholia added 1.1 cr shares in Q3FY26 (now 1.4%); RJ & VK not on cap-table."
     }
   }
 }

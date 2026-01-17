@@ -1766,6 +1766,49 @@
               </div>
             ` : ''}
           </div>
+
+          <!-- Growth Trends -->
+          <div class="analysis-section">
+            <h4>🚀 Growth Trends</h4>
+            <div class="metric-row">
+              <span class="metric-label">Sales Growth (1Y)</span>
+              <span class="metric-value ${valueClass(stock['Sales growth'])}">${formatValue(stock['Sales growth'], '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Profit Growth (1Y)</span>
+              <span class="metric-value ${valueClass(stock['Profit growth'])}">${formatValue(stock['Profit growth'], '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Sales Growth (3Y CAGR)</span>
+              <span class="metric-value ${valueClass(stock['Sales growth 3Years'])}">${formatValue(stock['Sales growth 3Years'], '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Profit Growth (3Y CAGR)</span>
+              <span class="metric-value ${valueClass(stock['Profit growth 3Years'])}">${formatValue(stock['Profit growth 3Years'], '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">EPS Growth</span>
+              <span class="metric-value ${valueClass(stock['epsgrowth'])}">${formatValue(stock['epsgrowth'], '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">EPS Geni Score</span>
+              <span class="metric-value">${formatValue(stock['epsgeni'])}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">ROCE v2</span>
+              <span class="metric-value">${formatValue(stock['rocev2'], '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">PEG Ratio</span>
+              <span class="metric-value" style="color: ${fundamentals.pe > 0 && stock['Profit growth 3Years'] > 0 ? (fundamentals.pe / stock['Profit growth 3Years'] < 1.5 ? 'var(--success)' : 'var(--danger)') : ''}">
+                ${fundamentals.pe > 0 && stock['Profit growth 3Years'] > 0 ? (fundamentals.pe / stock['Profit growth 3Years']).toFixed(2) : '-'}
+              </span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Reinvestment Rate</span>
+              <span class="metric-value">${formatValue(stock['roicreinv'], '%')}</span>
+            </div>
+          </div>
           
           <!-- Fundamentals -->
           <div class="analysis-section">
@@ -1973,7 +2016,16 @@
         function formatAIText(text) {
             if (!text) return '';
 
+            // Handle objects (fallback)
             let formatted = text;
+            if (typeof text === 'object') {
+                // If it's an object, try to extract a meaningful string or just JSON stringify
+                if (text.answer) formatted = text.answer; // Common pattern
+                else if (text.outlook) formatted = text.outlook;
+                else formatted = JSON.stringify(text).replace(/[{"}]/g, '').replace(/,/g, ', ');
+            }
+
+            formatted = String(formatted);
 
             // Highlight key terms (Case insensitive)
             formatted = formatted.replace(/\b(Bullish|Strong|Growth|Star|YES|Positive)\b/gi, '<span style="color: var(--success); font-weight: 500;">$1</span>');
@@ -2072,6 +2124,18 @@
                                 <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Corporate Governance</div>
                                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Analysis of governance standards and any red flags.</div>
                                 <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.governance)}</div>
+                            </div>
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
+                                <span style="font-size: 2rem">📝</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Broker Recommendations</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Recent buy/sell calls and target prices.</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.brokerRecs)}</div>
+                            </div>
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
+                                <span style="font-size: 2rem">🏦</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Institutional Activity</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">FII/DII flows and Super Investor moves.</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.institutional)}</div>
                             </div>
                         </div>
                     ` : `

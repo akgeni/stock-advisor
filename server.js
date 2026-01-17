@@ -294,14 +294,7 @@ app.get('/api/analysis/:code', (req, res) => {
         const checklist = generateInvestmentChecklist(stock, quarterlyAnalysis, fundamentals, technicals);
 
         res.json({
-            stock: {
-                name,
-                nseCode,
-                bseCode,
-                industry: stock['Industry'],
-                currentPrice: stock['Current Price'],
-                marketCap: stock['Market Capitalization']
-            },
+            stock: stock,
             quarterlyAnalysis,
             fundamentals,
             technicals,
