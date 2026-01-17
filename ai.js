@@ -3,12 +3,46 @@ import https from 'https';
 import Parser from 'rss-parser';
 import dotenv from 'dotenv';
 import { URL } from 'url';
+import fs from 'fs';
+import path from 'path';
 
 dotenv.config();
 
 const parser = new Parser();
+const CACHE_DIR = path.join(process.cwd(), 'db');
+const CACHE_FILE = path.join(CACHE_DIR, 'ai_cache.json');
+const CACHE_DURATION = 3 * 24 * 60 * 60 * 1000; // 3 days
+
+function getCache() {
+    try {
+        if (fs.existsSync(CACHE_FILE)) {
+            return JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+        }
+    } catch (e) {
+        console.error("Cache read failed:", e.message);
+    }
+    return {};
+}
+
+function saveCache(cache) {
+    try {
+        if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
+        fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
+    } catch (e) {
+        console.error("Cache write failed:", e.message);
+    }
+}
 
 export async function checkAI(stockName, industry) {
+    // 0. Check Cache
+    const cache = getCache();
+    const cacheKey = stockName.toLowerCase().trim();
+
+    if (cache[cacheKey] && (Date.now() - cache[cacheKey].timestamp < CACHE_DURATION)) {
+        console.log(`🧠 Serving cached AI analysis for: ${stockName}`);
+        return cache[cacheKey].data;
+    }
+
     const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
         return {
@@ -77,7 +111,16 @@ Content Style: Use short paragraphs and emojis. Use \n for line breaks. Avoid he
                     try {
                         const json = JSON.parse(data);
                         const content = json.choices[0].message.content;
-                        resolve(JSON.parse(content));
+                        const result = JSON.parse(content);
+
+                        // Save to cache
+                        try {
+                            const updatedCache = getCache();
+                            updatedCache[cacheKey] = { timestamp: Date.now(), data: result };
+                            saveCache(updatedCache);
+                        } catch (e) { console.error("Cache save warning:", e.message); }
+
+                        resolve(result);
                     } catch (e) {
                         reject(new Error("Failed to parse Groq response: " + data));
                     }
