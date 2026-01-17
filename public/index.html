@@ -1970,6 +1970,14 @@
             }
         }
 
+        function formatAIText(text) {
+            if (!text) return '';
+            // Convert **bold** to <strong>
+            let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--accent-secondary)">$1</strong>');
+            // Convert - bullets to HTML bullets if needed, but white-space: pre-wrap handles it.
+            return formatted;
+        }
+
         function renderAICheck() {
             const { allocation } = recommendation;
             const stocks = allocation.stocks;
@@ -2003,26 +2011,26 @@
                             <p>Consulting AI Strategist...</p>
                         </div>
                     ` : aiResult ? `
-                        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                            <div class="stat-card" style="text-align: left">
+                        <div class="stats-grid" style="align-items: start;">
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">🏛️</span>
                                 <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Government Guidelines</div>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5">${aiResult.guidelines}</p>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.guidelines)}</p>
                             </div>
-                            <div class="stat-card" style="text-align: left">
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">🔮</span>
                                 <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Sector Future</div>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5">${aiResult.future}</p>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.future)}</p>
                             </div>
-                            <div class="stat-card" style="text-align: left">
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">🔄</span>
                                 <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Industry Lifecycle</div>
-                                <div class="score-badge medium" style="width: auto; padding: 0.25rem 0.75rem; margin-bottom: 0.5rem">${aiResult.lifecycle}</div>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.lifecycle)}</p>
                             </div>
-                            <div class="stat-card" style="text-align: left">
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">⭐</span>
                                 <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">BCG Matrix</div>
-                                <div class="score-badge high" style="width: auto; padding: 0.25rem 0.75rem; margin-bottom: 0.5rem">${aiResult.bcg}</div>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.bcg)}</p>
                             </div>
                         </div>
                     ` : `

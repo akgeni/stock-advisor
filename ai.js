@@ -39,14 +39,14 @@ Data Source: Use your internal knowledge and the following recent news headlines
 Recent News Context:
 ${newsContext}
 
-Questions to Answer:
-1. Are there any government guidelines or regulations which strictly hinder the market for this company?
-2. What is the future outlook of this sector in India?
-3. Where in the industry life cycle would this company fit in (Startup, Growth, Shakeout, Maturity, or Decline)?
-4. Would you classify this company as a Star, Cash Cow, Dog, or Question Mark (BCG Matrix)?
+Questions to Answer (Be Decisive and Direct):
+1. Government Guidelines: Start with YES/NO. Are there strict regulations hindering growth? List key ones using bullet points.
+2. Sector Future: Provide a decisive outlook (Bullish/Bearish/Neutral). List 2-3 key growth drivers or risks using bullet points.
+3. Industry Lifecycle: Classify as Startup, Growth, Shakeout, Maturity, or Decline. Start with the classification in bold (e.g. **Maturity**). Explain briefly.
+4. BCG Matrix: Classify as Star, Cash Cow, Dog, or Question Mark. Start with the classification in bold. Explain logic.
 
 Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg".
-Content Style: Concise, professional, bullet points where appropriate.
+Content Style: Use short paragraphs and emojis. Use \n for line breaks. Avoid hedging (e.g. "It depends").
 `;
 
     // 3. Call Groq API via HTTPS (Node 14 compatible)
