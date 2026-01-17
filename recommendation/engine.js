@@ -73,10 +73,10 @@ export function generateRecommendation(stocks) {
 }
 
 /**
- * Get top 5 picks with detailed reasoning
+ * Get top 20 picks with detailed reasoning
  */
 function getTopPicks(stocks) {
-    return stocks.slice(0, 5).map(stock => ({
+    return stocks.slice(0, 20).map(stock => ({
         name: stock.name,
         code: stock.nseCode,
         weight: stock.weight,

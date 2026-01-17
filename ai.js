@@ -78,8 +78,10 @@ Questions to Answer (Be Decisive and Direct):
 2. Sector Future: Provide a decisive outlook (Bullish/Bearish/Neutral). List 2-3 key growth drivers or risks using bullet points.
 3. Industry Lifecycle: Classify as Startup, Growth, Shakeout, Maturity, or Decline. Start with the classification in bold (e.g. **Maturity**). Explain briefly.
 4. BCG Matrix: Classify as Star, Cash Cow, Dog, or Question Mark. Start with the classification in bold. Explain logic.
+5. Price Drivers: Explain why the stock price is moving up or down recently. Cite factual reasons (earnings, news, market sentiment) if available in context.
+6. Corporate Governance: Critical analysis of governance standards. highlighting any red flags, trust issues, or management quality concerns. Be critical.
 
-Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg".
+Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg", "priceDrivers", "governance".
 Content Style: Use short paragraphs and emojis. Use \n for line breaks. Avoid hedging (e.g. "It depends").
 `;
 

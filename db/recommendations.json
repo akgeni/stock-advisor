@@ -2,7 +2,7 @@
   {
     "id": "rec_2026-W03",
     "weekId": "2026-W03",
-    "timestamp": "2026-01-17T11:38:37.645Z",
+    "timestamp": "2026-01-17T17:27:07.146Z",
     "marketCondition": "NEUTRAL",
     "summary": {
       "totalAnalyzed": 71,
@@ -584,6 +584,331 @@
           "valuation": 83,
           "momentum": 42,
           "external": 66
+        }
+      },
+      {
+        "name": "RPG LifeScience.",
+        "code": "RPGLIFE",
+        "weight": 4.9,
+        "price": 2307.2,
+        "industry": "Pharmaceuticals",
+        "compositeScore": 70,
+        "recommendation": "STRONG BUY",
+        "strengths": [
+          "Low risk profile",
+          "Strong fundamentals",
+          "Positive momentum",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 70.5,
+          "fundamental": 89,
+          "valuation": 54,
+          "momentum": 66,
+          "external": 61
+        }
+      },
+      {
+        "name": "Tips Music",
+        "code": "TIPSMUSIC",
+        "weight": 4.8,
+        "price": 528,
+        "industry": "Media & Entertainment",
+        "compositeScore": 69,
+        "recommendation": "BUY",
+        "strengths": [
+          "Low risk profile",
+          "Strong fundamentals",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 70.5,
+          "fundamental": 81,
+          "valuation": 66,
+          "momentum": 53,
+          "external": 60
+        }
+      },
+      {
+        "name": "Dynacons Sys.",
+        "code": "DSSL",
+        "weight": 4.7,
+        "price": 1011.2,
+        "industry": "IT Enabled Services",
+        "compositeScore": 73,
+        "recommendation": "STRONG BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation",
+          "Positive momentum",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 66,
+          "fundamental": 81,
+          "valuation": 79,
+          "momentum": 68,
+          "external": 69
+        }
+      },
+      {
+        "name": "Indiamart Inter.",
+        "code": "INDIAMART",
+        "weight": 4.6,
+        "price": 2289,
+        "industry": "Internet & Catalogue Retail",
+        "compositeScore": 68,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Positive momentum"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 68.5,
+          "fundamental": 74,
+          "valuation": 63,
+          "momentum": 71,
+          "external": 55
+        }
+      },
+      {
+        "name": "Gokul Agro",
+        "code": "GOKULAGRO",
+        "weight": 4.6,
+        "price": 167.35,
+        "industry": "Edible Oil",
+        "compositeScore": 71,
+        "recommendation": "STRONG BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 65.5,
+          "fundamental": 85,
+          "valuation": 80,
+          "momentum": 55,
+          "external": 55
+        }
+      },
+      {
+        "name": "Ganesh Housing",
+        "code": "GANESHHOU",
+        "weight": 4.4,
+        "price": 741,
+        "industry": "Residential, Commercial Projects",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 67.5,
+          "fundamental": 77,
+          "valuation": 82,
+          "momentum": 40,
+          "external": 50
+        }
+      },
+      {
+        "name": "Master Trust",
+        "code": "MASTERTR",
+        "weight": 4.4,
+        "price": 106.94,
+        "industry": "Stockbroking & Allied",
+        "compositeScore": 68,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 66.5,
+          "fundamental": 77,
+          "valuation": 86,
+          "momentum": 41,
+          "external": 51
+        }
+      },
+      {
+        "name": "Jyoti Resins",
+        "code": "",
+        "weight": 4.4,
+        "price": 1152.55,
+        "industry": "Specialty Chemicals",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 66.5,
+          "fundamental": 73,
+          "valuation": 78,
+          "momentum": 49,
+          "external": 55
+        }
+      },
+      {
+        "name": "Welspun Corp",
+        "code": "WELCORP",
+        "weight": 4.3,
+        "price": 736.85,
+        "industry": "Iron & Steel Products",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 64.5,
+          "fundamental": 76,
+          "valuation": 85,
+          "momentum": 45,
+          "external": 52
+        }
+      },
+      {
+        "name": "One Global Serv",
+        "code": "",
+        "weight": 4.2,
+        "price": 528.6,
+        "industry": "Healthcare Service Provider",
+        "compositeScore": 72,
+        "recommendation": "STRONG BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 60,
+          "fundamental": 86,
+          "valuation": 87,
+          "momentum": 59,
+          "external": 63
+        }
+      },
+      {
+        "name": "Accelya Solution",
+        "code": "ACCELYA",
+        "weight": 4.1,
+        "price": 1352.2,
+        "industry": "Computers - Software & Consulting",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Positive momentum",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 62.5,
+          "fundamental": 78,
+          "valuation": 67,
+          "momentum": 64,
+          "external": 61
+        }
+      },
+      {
+        "name": "Indrapr.Medical",
+        "code": "INDRAMEDCO",
+        "weight": 3.9,
+        "price": 402.5,
+        "industry": "Hospital",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 59.5,
+          "fundamental": 83,
+          "valuation": 74,
+          "momentum": 52,
+          "external": 58
+        }
+      },
+      {
+        "name": "Kothari Petroche",
+        "code": "KOTHARIPET",
+        "weight": 3.9,
+        "price": 120.47,
+        "industry": "Petrochemicals",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 59.5,
+          "fundamental": 76,
+          "valuation": 89,
+          "momentum": 44,
+          "external": 55
+        }
+      },
+      {
+        "name": "Ashoka Buildcon",
+        "code": "ASHOKA",
+        "weight": 3.8,
+        "price": 150.16,
+        "industry": "Civil Construction",
+        "compositeScore": 66,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [
+          "Weak momentum"
+        ],
+        "scoreBreakdown": {
+          "safety": 58.5,
+          "fundamental": 85,
+          "valuation": 85,
+          "momentum": 35,
+          "external": 45
+        }
+      },
+      {
+        "name": "Waaree Renewab.",
+        "code": "WAAREERTL",
+        "weight": 3.8,
+        "price": 941.15,
+        "industry": "Other Electrical Equipment",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation",
+          "Positive momentum"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 57,
+          "fundamental": 80,
+          "valuation": 75,
+          "momentum": 65,
+          "external": 49
         }
       }
     ],

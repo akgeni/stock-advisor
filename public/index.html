@@ -1468,9 +1468,9 @@
               </thead>
               <tbody>
                 ${stocks.map(stock => `
-                  <tr>
+                  <tr onclick="viewDeepAnalysis('${stock.nseCode}')" style="cursor: pointer">
                     <td>
-                      <div class="stock-name">${stock.name}</div>
+                      <div class="stock-name" style="color: var(--accent-secondary)">${stock.name}</div>
                       <div class="stock-code">${stock.nseCode || stock.bseCode || '-'}</div>
                     </td>
                     <td style="color: var(--text-secondary); font-size: 0.9rem">${stock.industry}</td>
@@ -1972,10 +1972,35 @@
 
         function formatAIText(text) {
             if (!text) return '';
-            // Convert **bold** to <strong>
-            let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--accent-secondary)">$1</strong>');
-            // Convert - bullets to HTML bullets if needed, but white-space: pre-wrap handles it.
-            return formatted;
+
+            let formatted = text;
+
+            // Highlight key terms (Case insensitive)
+            formatted = formatted.replace(/\b(Bullish|Strong|Growth|Star|YES|Positive)\b/gi, '<span style="color: var(--success); font-weight: 500;">$1</span>');
+            formatted = formatted.replace(/\b(Bearish|Weak|Decline|Dog|NO|Negative|Risk)\b/gi, '<span style="color: var(--danger); font-weight: 500;">$1</span>');
+            formatted = formatted.replace(/\b(Neutral|Maturity|Shakeout|Question Mark|Cash Cow)\b/gi, '<span style="color: var(--warning); font-weight: 500;">$1</span>');
+
+            // Bold markdown
+            formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--text-primary)">$1</strong>');
+
+            // Convert lines to HTML lists/paragraphs
+            const lines = formatted.split('\n');
+            let inList = false;
+            let html = '';
+
+            lines.forEach(line => {
+                const trimmed = line.trim();
+                if (trimmed.startsWith('- ') || trimmed.startsWith('• ') || trimmed.startsWith('* ')) {
+                    if (!inList) { html += '<ul style="padding-left: 1.2rem; margin: 0.5rem 0;">'; inList = true; }
+                    html += `<li style="margin-bottom: 0.25rem">${trimmed.substring(2)}</li>`;
+                } else {
+                    if (inList) { html += '</ul>'; inList = false; }
+                    if (trimmed) html += `<p style="margin-bottom: 0.5rem">${trimmed}</p>`;
+                }
+            });
+            if (inList) html += '</ul>';
+
+            return html;
         }
 
         function renderAICheck() {
@@ -2014,23 +2039,39 @@
                         <div class="stats-grid" style="align-items: start;">
                             <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">🏛️</span>
-                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Government Guidelines</div>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.guidelines)}</p>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Government Guidelines</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Are there strict regulations hindering growth?</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.guidelines)}</div>
                             </div>
                             <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">🔮</span>
-                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Sector Future</div>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.future)}</p>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Sector Future</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">What is the future outlook and key drivers?</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.future)}</div>
                             </div>
                             <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">🔄</span>
-                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Industry Lifecycle</div>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.lifecycle)}</p>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Industry Lifecycle</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Where does it fit in the lifecycle?</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.lifecycle)}</div>
                             </div>
                             <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">⭐</span>
-                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">BCG Matrix</div>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">${formatAIText(aiResult.bcg)}</p>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">BCG Matrix</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Classify as Star, Cash Cow, Dog, or Question Mark.</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.bcg)}</div>
+                            </div>
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
+                                <span style="font-size: 2rem">📉</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Price Drivers</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Why is the price moving recently?</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.priceDrivers)}</div>
+                            </div>
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
+                                <span style="font-size: 2rem">⚖️</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Corporate Governance</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Analysis of governance standards and any red flags.</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.governance)}</div>
                             </div>
                         </div>
                     ` : `
@@ -2041,6 +2082,12 @@
                     `}
                 </div>
             `;
+        }
+
+        function viewDeepAnalysis(code) {
+            selectedStockCode = code;
+            setTab('deepAnalysis');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // Auto-load analysis when Deep Analysis tab is activated
