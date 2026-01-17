@@ -1,7 +1,7 @@
 {
-  "name": "stock-advisor",
+  "name": "stockify",
   "version": "1.0.0",
-  "description": "Stock recommendation system with risk-adjusted scoring",
+  "description": "Stockify - Intelligent Stock Analysis & Recommendation System",
   "type": "module",
   "scripts": {
     "start": "node server.js",

@@ -742,7 +742,7 @@ app.use((err, req, res, next) => {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`🚀 Stock Advisor API running on http://localhost:${PORT}`);
+    console.log(`🚀 Stockify API running on http://localhost:${PORT}`);
     console.log(`📊 Data file: ${DATA_FILE}`);
     console.log(`\nEndpoints:`);
     console.log(`  GET  /api/health              - Health check`);

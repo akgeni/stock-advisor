@@ -1,4 +1,4 @@
-# Stock Advisor - User Guide
+# Stockify 📈 - User Guide
 
 A risk-adjusted stock recommendation system that analyzes your portfolio and generates weighted buy recommendations.
 

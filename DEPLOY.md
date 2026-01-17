@@ -1,4 +1,4 @@
-# 🚀 How to Deploy Stock Advisor
+# 🚀 How to Deploy Stockify
 
 The easiest way to deploy this application for free is using **Render.com**.
 
