@@ -5,6 +5,7 @@
 import express from 'express';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
+import { checkAI } from './ai.js';
 import { dirname, join } from 'path';
 import { existsSync, writeFileSync } from 'fs';
 
@@ -738,6 +739,21 @@ app.get('/api/history/:code', (req, res) => {
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ error: 'Internal server error' });
+});
+
+// AI Check Endpoint
+app.post('/api/ai-check', async (req, res) => {
+    try {
+        const { name, industry } = req.body;
+        if (!name) return res.status(400).json({ error: 'Stock name required' });
+
+        console.log(`🤖 AI Check for: ${name}`);
+        const result = await checkAI(name, industry || 'Unknown');
+        res.json(result);
+    } catch (err) {
+        console.error("AI Check Error:", err);
+        res.status(500).json({ error: err.message });
+    }
 });
 
 // Start server

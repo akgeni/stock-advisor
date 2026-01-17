@@ -131,13 +131,16 @@
 
         /* Stats Grid */
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
             margin-bottom: 2rem;
         }
 
         .stat-card {
+            flex: 1 1 240px;
+            max-width: 350px;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
@@ -605,9 +608,7 @@
                 font-size: 1.8rem;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+
 
             .scores-row {
                 grid-template-columns: repeat(3, 1fr);
@@ -1090,7 +1091,7 @@
                 <span class="logo-icon">📈</span>
                 <h1>Stockify</h1>
             </div>
-            <p>Risk-adjusted portfolio recommendations powered by multi-factor analysis</p>
+            <p>Multi-factor analysis</p>
         </header>
 
         <div id="content">
@@ -1360,10 +1361,7 @@
 
         <!-- Stats -->
         <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">${allocation.stocks.length}</div>
-            <div class="stat-label">Recommended Stocks</div>
-          </div>
+
           <div class="stat-card">
             <div class="stat-value">${allocation.totalEquity}%</div>
             <div class="stat-label">Equity Allocation</div>
@@ -1382,10 +1380,11 @@
 
         <!-- Tabs -->
         <div class="tabs">
-          <button class="tab ${activeTab === 'allocation' ? 'active' : ''}" onclick="setTab('allocation')">Portfolio Allocation</button>
-          <button class="tab ${activeTab === 'topPicks' ? 'active' : ''}" onclick="setTab('topPicks')">Top 5 Picks</button>
+          <button class="tab ${activeTab === 'allocation' ? 'active' : ''}" onclick="setTab('allocation')">Risk Check</button>
+          <button class="tab ${activeTab === 'topPicks' ? 'active' : ''}" onclick="setTab('topPicks')">Multi Factor Score Analysis</button>
           <button class="tab ${activeTab === 'sectors' ? 'active' : ''}" onclick="setTab('sectors')">Sector Breakdown</button>
           <button class="tab ${activeTab === 'deepAnalysis' ? 'active' : ''}" onclick="setTab('deepAnalysis')">🔬 Deep Analysis</button>
+          <button class="tab ${activeTab === 'aiCheck' ? 'active' : ''}" onclick="setTab('aiCheck')">🤖 AI Check</button>
           <button class="tab ${activeTab === 'watchlist' ? 'active' : ''}" onclick="setTab('watchlist')">Watchlist</button>
         </div>
 
@@ -1426,6 +1425,9 @@
                 case 'deepAnalysis':
                     container.innerHTML = renderDeepAnalysis();
                     break;
+                case 'aiCheck':
+                    container.innerHTML = renderAICheck();
+                    break;
                 case 'watchlist':
                     container.innerHTML = renderWatchlist();
                     break;
@@ -1437,7 +1439,7 @@
             return `
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Portfolio Allocation</h3>
+            <h3 class="card-title">Risk Check</h3>
             <span style="color: var(--text-secondary)">${stocks.length} stocks</span>
           </div>
           <div class="table-container">
@@ -1923,6 +1925,102 @@
           </div>
         </div>
       `;
+        }
+
+
+        // AI Check
+        let aiResult = null;
+        let aiLoading = false;
+
+        async function runAICheck() {
+            if (!selectedStockCode) return;
+            const stock = recommendation.allocation.stocks.find(s => s.nseCode === selectedStockCode);
+            if (!stock) return;
+
+            aiLoading = true;
+            renderApp(); // Re-render to show loading state
+
+            try {
+                const res = await fetch(`${API_BASE}/ai-check`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: stock.name, industry: stock.industry })
+                });
+                const data = await res.json();
+
+                if (data.error) throw new Error(data.error);
+                aiResult = data;
+            } catch (err) {
+                showError(err.message);
+            } finally {
+                aiLoading = false;
+                renderApp();
+            }
+        }
+
+        function renderAICheck() {
+            const { allocation } = recommendation;
+            const stocks = allocation.stocks;
+
+            if (!selectedStockCode && stocks.length > 0) {
+                selectedStockCode = stocks[0].nseCode;
+            }
+
+            const stock = stocks.find(s => s.nseCode === selectedStockCode);
+
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">🤖 AI Strategic Check</h3>
+                    </div>
+
+                    <div class="analysis-header" style="margin-bottom: 2rem;">
+                         <div class="stock-selector">
+                            <select onchange="selectedStockCode = this.value; aiResult = null; renderApp()" style="padding: 0.5rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); font-size: 1rem;">
+                                ${stocks.map(s => `<option value="${s.nseCode}" ${s.nseCode === selectedStockCode ? 'selected' : ''}>${s.name}</option>`).join('')}
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="runAICheck()" ${aiLoading ? 'disabled' : ''}>
+                            ${aiLoading ? 'Thinking...' : '⚡ Run AI Analysis'}
+                        </button>
+                    </div>
+
+                    ${aiLoading ? `
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            <p>Consulting AI Strategist...</p>
+                        </div>
+                    ` : aiResult ? `
+                        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                            <div class="stat-card" style="text-align: left">
+                                <span style="font-size: 2rem">🏛️</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Government Guidelines</div>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5">${aiResult.guidelines}</p>
+                            </div>
+                            <div class="stat-card" style="text-align: left">
+                                <span style="font-size: 2rem">🔮</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Sector Future</div>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5">${aiResult.future}</p>
+                            </div>
+                            <div class="stat-card" style="text-align: left">
+                                <span style="font-size: 2rem">🔄</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">Industry Lifecycle</div>
+                                <div class="score-badge medium" style="width: auto; padding: 0.25rem 0.75rem; margin-bottom: 0.5rem">${aiResult.lifecycle}</div>
+                            </div>
+                            <div class="stat-card" style="text-align: left">
+                                <span style="font-size: 2rem">⭐</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0">BCG Matrix</div>
+                                <div class="score-badge high" style="width: auto; padding: 0.25rem 0.75rem; margin-bottom: 0.5rem">${aiResult.bcg}</div>
+                            </div>
+                        </div>
+                    ` : `
+                        <div class="empty-state">
+                            <p>Select a stock and click "Run AI Analysis" to get strategic insights covering regulations, sector future, and lifecycle position.</p>
+                            <p style="font-size: 0.8rem; opacity: 0.7">Powered by Groq & Real-time News</p>
+                        </div>
+                    `}
+                </div>
+            `;
         }
 
         // Auto-load analysis when Deep Analysis tab is activated
