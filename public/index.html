@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Advisor - Smart Portfolio Recommendations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --bg-hover: #22222f;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6a6a7a;
+            --accent-primary: #6366f1;
+            --accent-secondary: #818cf8;
+            --accent-glow: rgba(99, 102, 241, 0.3);
+            --success: #22c55e;
+            --success-bg: rgba(34, 197, 94, 0.1);
+            --warning: #f59e0b;
+            --warning-bg: rgba(245, 158, 11, 0.1);
+            --danger: #ef4444;
+            --danger-bg: rgba(239, 68, 68, 0.1);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* Header */
+        .header {
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Cards */
+        .card {
+            background: linear-gradient(145deg, rgba(26, 26, 37, 0.9), rgba(18, 18, 26, 0.9));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Market Badge */
+        .market-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .market-badge.bullish {
+            background: var(--success-bg);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .market-badge.bearish {
+            background: var(--danger-bg);
+            color: var(--danger);
+            border: 1px solid var(--danger);
+        }
+
+        .market-badge.neutral {
+            background: var(--warning-bg);
+            color: var(--warning);
+            border: 1px solid var(--warning);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 0.5rem 1.25rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.15s ease;
+        }
+
+        .tab:hover {
+            color: var(--text-primary);
+            background: var(--bg-hover);
+        }
+
+        .tab.active {
+            color: var(--accent-primary);
+            background: var(--accent-glow);
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.15s ease;
+        }
+
+        tr:hover td {
+            background: var(--bg-hover);
+        }
+
+        .stock-name {
+            font-weight: 600;
+        }
+
+        .stock-code {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+
+        /* Weight Bar */
+        .weight-bar-container {
+            width: 80px;
+            height: 8px;
+            background: var(--bg-secondary);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .weight-bar {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 999px;
+            transition: width 0.4s ease;
+        }
+
+        .weight-value {
+            font-weight: 600;
+            color: var(--accent-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Score Badge */
+        .score-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .score-badge.high {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .score-badge.medium {
+            background: var(--warning-bg);
+            color: var(--warning);
+        }
+
+        .score-badge.low {
+            background: var(--danger-bg);
+            color: var(--danger);
+        }
+
+        /* Recommendation Badge */
+        .rec-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .rec-badge.strong-buy {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .rec-badge.buy {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .rec-badge.accumulate {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+
+        .rec-badge.hold {
+            background: var(--warning-bg);
+            color: var(--warning);
+        }
+
+        .rec-badge.watch {
+            background: rgba(100, 100, 120, 0.2);
+            color: var(--text-secondary);
+        }
+
+        /* Top Picks */
+        .top-picks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pick-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pick-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .pick-rank {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .pick-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .pick-weight {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-secondary);
+            margin: 1rem 0;
+        }
+
+        .scores-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .score-item {
+            text-align: center;
+            padding: 0.5rem;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+        }
+
+        .score-item-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .score-item-value {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .strength-tag,
+        .risk-tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .strength-tag {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .risk-tag {
+            background: var(--warning-bg);
+            color: var(--warning);
+        }
+
+        /* Sector */
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .sector-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sector-name {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .sector-weight {
+            font-weight: 600;
+            color: var(--accent-secondary);
+        }
+
+        .sector-bar-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .sector-bar-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .sector-bar-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .sector-bar-value {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-secondary);
+        }
+
+        /* Loading */
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .controls-info h3 {
+            margin-bottom: 0.25rem;
+        }
+
+        .controls-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Watchlist */
+        .watchlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .watchlist-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            transition: all 0.25s ease;
+        }
+
+        .watchlist-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .watchlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .watchlist-reason {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .scores-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* File Upload */
+        .upload-zone {
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: var(--bg-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .upload-zone:hover,
+        .upload-zone.dragover {
+            border-color: var(--accent-primary);
+            background: var(--accent-glow);
+        }
+
+        .upload-zone input[type="file"] {
+            display: none;
+        }
+
+        .upload-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .upload-text strong {
+            color: var(--accent-secondary);
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .file-icon {
+            font-size: 1.5rem;
+        }
+
+        .file-details {
+            flex: 1;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .file-size {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+            border-color: var(--border-hover);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .success-message {
+            background: var(--success-bg);
+            border: 1px solid var(--success);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            color: var(--success);
+        }
+
+        /* Deep Analysis Styles */
+        .analysis-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stock-selector {
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .stock-selector:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .sentiment-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.25rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .sentiment-badge.bullish {
+            background: var(--success-bg);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .sentiment-badge.bearish {
+            background: var(--danger-bg);
+            color: var(--danger);
+            border: 1px solid var(--danger);
+        }
+
+        .sentiment-badge.neutral {
+            background: var(--warning-bg);
+            color: var(--warning);
+            border: 1px solid var(--warning);
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .analysis-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .analysis-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .metric-value.positive {
+            color: var(--success);
+        }
+
+        .metric-value.negative {
+            color: var(--danger);
+        }
+
+        .signal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .signal-icon {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .signal-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .signal-item.positive {
+            border-left: 3px solid var(--success);
+        }
+
+        .signal-item.negative {
+            border-left: 3px solid var(--danger);
+        }
+
+        .news-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.15s ease;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-link:hover {
+            border-color: var(--accent-primary);
+            background: var(--accent-glow);
+        }
+
+        .news-source {
+            font-weight: 500;
+        }
+
+        .news-arrow {
+            margin-left: auto;
+            color: var(--text-muted);
+        }
+
+        .loading-inline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        /* Investment Checklist Styles */
+        .checklist-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .checklist-score {
+            text-align: center;
+        }
+
+        .checklist-score-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .checklist-score-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .checklist-recommendation {
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .checklist-recommendation.success {
+            background: var(--success-bg);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .checklist-recommendation.warning {
+            background: var(--warning-bg);
+            color: var(--warning);
+            border: 1px solid var(--warning);
+        }
+
+        .checklist-recommendation.danger {
+            background: var(--danger-bg);
+            color: var(--danger);
+            border: 1px solid var(--danger);
+        }
+
+        .checklist-progress {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .progress-bar-container {
+            height: 12px;
+            background: var(--bg-card);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 0.5s ease;
+        }
+
+        .checklist-category {
+            margin-bottom: 1.5rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-title {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .category-badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border: 1px solid transparent;
+        }
+
+        .checklist-item.passed {
+            border-left: 3px solid var(--success);
+        }
+
+        .checklist-item.failed {
+            border-left: 3px solid var(--danger);
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .check-icon.passed {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .check-icon.failed {
+            background: var(--danger-bg);
+            color: var(--danger);
+        }
+
+        .check-content {
+            flex: 1;
+        }
+
+        .check-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .check-description {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        .check-value {
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: right;
+        }
+
+        .check-value.passed {
+            color: var(--success);
+        }
+
+        .check-value.failed {
+            color: var(--danger);
+        }
+
+        .importance-badge {
+            font-size: 0.65rem;
+            padding: 0.15rem 0.35rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .importance-badge.critical {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+
+        .importance-badge.important {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+        }
+
+        .importance-badge.optional {
+            background: rgba(100, 100, 120, 0.2);
+            color: var(--text-muted);
+        }
+
+        .checklist-guidance {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .guidance-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .guidance-item {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <header class="header">
+            <h1>📈 Stock Advisor</h1>
+            <p>Risk-adjusted portfolio recommendations powered by multi-factor analysis</p>
+        </header>
+
+        <div id="content">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading Stock Advisor...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '/api';
+        let recommendation = null;
+        let activeTab = 'allocation';
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRecommendation();
+        });
+
+        async function loadRecommendation() {
+            try {
+                showLoading();
+                const res = await fetch(`${API_BASE}/recommendations`);
+                const data = await res.json();
+
+                if (data.hasRecommendation) {
+                    recommendation = data.recommendation;
+                    renderApp();
+                } else {
+                    renderEmptyState();
+                }
+            } catch (err) {
+                showError('Failed to load recommendations. Is the server running?');
+            }
+        }
+
+        async function runAnalysis() {
+            try {
+                const btn = document.getElementById('analyzeBtn');
+                btn.disabled = true;
+                btn.innerHTML = '<div class="spinner" style="width:16px;height:16px;border-width:2px;margin:0;margin-right:8px"></div> Analyzing...';
+
+                const res = await fetch(`${API_BASE}/analyze`, { method: 'POST' });
+                const data = await res.json();
+
+                if (data.success) {
+                    recommendation = data.recommendation;
+                    renderApp();
+                } else {
+                    throw new Error(data.error || 'Analysis failed');
+                }
+            } catch (err) {
+                showError(err.message);
+                const btn = document.getElementById('analyzeBtn');
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '🔍 Run Analysis';
+                }
+            }
+        }
+
+        // File upload handling
+        let selectedFile = null;
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file && file.name.endsWith('.csv')) {
+                selectedFile = file;
+                updateFileDisplay();
+            } else {
+                showError('Please select a valid CSV file');
+            }
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            document.getElementById('uploadZone')?.classList.remove('dragover');
+
+            const file = event.dataTransfer.files[0];
+            if (file && file.name.endsWith('.csv')) {
+                selectedFile = file;
+                updateFileDisplay();
+            } else {
+                showError('Please drop a valid CSV file');
+            }
+        }
+
+        function handleDragOver(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            document.getElementById('uploadZone')?.classList.add('dragover');
+        }
+
+        function handleDragLeave(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            document.getElementById('uploadZone')?.classList.remove('dragover');
+        }
+
+        function updateFileDisplay() {
+            const zone = document.getElementById('uploadZone');
+            const info = document.getElementById('fileInfo');
+
+            if (selectedFile) {
+                if (zone) zone.style.display = 'none';
+                if (info) {
+                    info.style.display = 'flex';
+                    info.innerHTML = `
+                        <div class="file-icon">📄</div>
+                        <div class="file-details">
+                            <div class="file-name">${selectedFile.name}</div>
+                            <div class="file-size">${(selectedFile.size / 1024).toFixed(1)} KB</div>
+                        </div>
+                        <button class="btn btn-secondary" onclick="clearFile()">✕ Clear</button>
+                    `;
+                }
+            }
+        }
+
+        function clearFile() {
+            selectedFile = null;
+            const zone = document.getElementById('uploadZone');
+            const info = document.getElementById('fileInfo');
+            if (zone) zone.style.display = 'block';
+            if (info) info.style.display = 'none';
+            const input = document.getElementById('fileInput');
+            if (input) input.value = '';
+        }
+
+        async function uploadAndAnalyze() {
+            if (!selectedFile) {
+                showError('Please select a CSV file first');
+                return;
+            }
+
+            try {
+                const btn = document.getElementById('uploadBtn');
+                btn.disabled = true;
+                btn.innerHTML = '<div class="spinner" style="width:16px;height:16px;border-width:2px;margin:0;margin-right:8px"></div> Uploading...';
+
+                const content = await selectedFile.text();
+
+                const res = await fetch(`${API_BASE}/upload`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/csv' },
+                    body: content
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    recommendation = data.recommendation;
+                    selectedFile = null;
+                    renderApp();
+                    showSuccess(`Watchlist uploaded! Analyzed ${data.dataInfo.totalStocks} stocks.`);
+                } else {
+                    throw new Error(data.error || 'Upload failed');
+                }
+            } catch (err) {
+                showError(err.message);
+                const btn = document.getElementById('uploadBtn');
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '📤 Upload & Analyze';
+                }
+            }
+        }
+
+        function showSuccess(message) {
+            const content = document.getElementById('content');
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.innerHTML = `✅ ${message}`;
+            content.insertBefore(successDiv, content.firstChild);
+            setTimeout(() => successDiv.remove(), 5000);
+        }
+
+        function showLoading() {
+            document.getElementById('content').innerHTML = `
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Loading Stock Advisor...</p>
+        </div>
+      `;
+        }
+
+        function showError(message) {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+        <div class="card" style="background: var(--danger-bg); border-color: var(--danger);">
+          <p style="color: var(--danger);">⚠️ ${message}</p>
+        </div>
+      ` + content.innerHTML.replace(/<div class="card"[^>]*danger[^>]*>[\s\S]*?<\/div>/, '');
+        }
+
+        function renderEmptyState() {
+            document.getElementById('content').innerHTML = `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">📤 Upload Watchlist</h3>
+          </div>
+          
+          <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()" 
+               ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+            <input type="file" id="fileInput" accept=".csv" onchange="handleFileSelect(event)">
+            <div class="upload-icon">📁</div>
+            <div class="upload-text">
+              <strong>Click to upload</strong> or drag and drop<br>
+              CSV file from Screener.in
+            </div>
+          </div>
+          
+          <div class="file-info" id="fileInfo" style="display: none;"></div>
+          
+          <div class="btn-group">
+            <button class="btn btn-primary" id="uploadBtn" onclick="uploadAndAnalyze()">
+              📤 Upload & Analyze
+            </button>
+            <button class="btn btn-secondary" id="analyzeBtn" onclick="runAnalysis()">
+              🔍 Use Existing File
+            </button>
+          </div>
+        </div>
+        
+        <div class="card empty-state">
+          <h3>No Recommendations Yet</h3>
+          <p>Upload a new watchlist CSV or use the existing file to generate recommendations.</p>
+        </div>
+      `;
+        }
+
+        function renderApp() {
+            if (!recommendation) return renderEmptyState();
+
+            const { summary, allocation, marketCondition, topPicks, watchlist, timestamp } = recommendation;
+
+            document.getElementById('content').innerHTML = `
+        <!-- Controls -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">📤 Update Watchlist</h3>
+          </div>
+          
+          <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()" 
+               ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+            <input type="file" id="fileInput" accept=".csv" onchange="handleFileSelect(event)">
+            <div class="upload-icon">📁</div>
+            <div class="upload-text">
+              <strong>Click to upload</strong> or drag and drop<br>
+              New CSV file from Screener.in
+            </div>
+          </div>
+          
+          <div class="file-info" id="fileInfo" style="display: none;"></div>
+          
+          <div class="btn-group">
+            <button class="btn btn-primary" id="uploadBtn" onclick="uploadAndAnalyze()">
+              📤 Upload & Analyze
+            </button>
+            <button class="btn btn-secondary" id="analyzeBtn" onclick="runAnalysis()">
+              🔍 Re-analyze Current
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">${allocation.stocks.length}</div>
+            <div class="stat-label">Recommended Stocks</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">${allocation.totalEquity}%</div>
+            <div class="stat-label">Equity Allocation</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">${allocation.cash}%</div>
+            <div class="stat-label">Cash Reserve</div>
+          </div>
+          <div class="stat-card">
+            <div class="market-badge ${marketCondition.toLowerCase()}">
+              ${marketCondition === 'BULLISH' ? '🚀' : marketCondition === 'BEARISH' ? '🐻' : '⚖️'} ${marketCondition}
+            </div>
+            <div class="stat-label">Market Condition</div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="tab ${activeTab === 'allocation' ? 'active' : ''}" onclick="setTab('allocation')">Portfolio Allocation</button>
+          <button class="tab ${activeTab === 'topPicks' ? 'active' : ''}" onclick="setTab('topPicks')">Top 5 Picks</button>
+          <button class="tab ${activeTab === 'sectors' ? 'active' : ''}" onclick="setTab('sectors')">Sector Breakdown</button>
+          <button class="tab ${activeTab === 'deepAnalysis' ? 'active' : ''}" onclick="setTab('deepAnalysis')">🔬 Deep Analysis</button>
+          <button class="tab ${activeTab === 'watchlist' ? 'active' : ''}" onclick="setTab('watchlist')">Watchlist</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tabContent"></div>
+
+        <!-- Footer -->
+        <div class="footer">
+          Last updated: ${new Date(timestamp).toLocaleString()}
+        </div>
+      `;
+
+            renderTabContent();
+        }
+
+        function setTab(tab) {
+            activeTab = tab;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            const tabIndex = ['allocation', 'topPicks', 'sectors', 'deepAnalysis', 'watchlist'].indexOf(tab);
+            document.querySelector(`.tab:nth-child(${tabIndex + 1})`)?.classList.add('active');
+            renderTabContent();
+        }
+
+        function renderTabContent() {
+            const container = document.getElementById('tabContent');
+            if (!container || !recommendation) return;
+
+            switch (activeTab) {
+                case 'allocation':
+                    container.innerHTML = renderAllocationTable();
+                    break;
+                case 'topPicks':
+                    container.innerHTML = renderTopPicks();
+                    break;
+                case 'sectors':
+                    container.innerHTML = renderSectors();
+                    break;
+                case 'deepAnalysis':
+                    container.innerHTML = renderDeepAnalysis();
+                    break;
+                case 'watchlist':
+                    container.innerHTML = renderWatchlist();
+                    break;
+            }
+        }
+
+        function renderAllocationTable() {
+            const stocks = recommendation.allocation.stocks;
+            return `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Portfolio Allocation</h3>
+            <span style="color: var(--text-secondary)">${stocks.length} stocks</span>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Stock</th>
+                  <th>Industry</th>
+                  <th>Weight</th>
+                  <th>Score</th>
+                  <th>Risk</th>
+                  <th>Signal</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${stocks.map(stock => `
+                  <tr>
+                    <td>
+                      <div class="stock-name">${stock.name}</div>
+                      <div class="stock-code">${stock.nseCode || stock.bseCode || '-'}</div>
+                    </td>
+                    <td style="color: var(--text-secondary); font-size: 0.9rem">${stock.industry}</td>
+                    <td>
+                      <div class="weight-value">${stock.weight}%</div>
+                      <div class="weight-bar-container">
+                        <div class="weight-bar" style="width: ${Math.min(stock.weight * 8, 100)}%"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="score-badge ${getScoreClass(stock.compositeScore)}">${stock.compositeScore}</div>
+                    </td>
+                    <td style="color: ${getRiskColor(stock.riskLevel)}">${stock.riskLevel}</td>
+                    <td>
+                      <span class="rec-badge ${stock.recommendation.toLowerCase().replace(' ', '-')}">${stock.recommendation}</span>
+                    </td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+        }
+
+        function renderTopPicks() {
+            const picks = recommendation.topPicks;
+            return `
+        <div class="top-picks-grid">
+          ${picks.map((pick, i) => `
+            <div class="pick-card">
+              <div class="pick-rank">${i + 1}</div>
+              <div class="pick-name">${pick.name}</div>
+              <div class="stock-code">${pick.code}</div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center">
+                <div>
+                  <div class="pick-weight">${pick.weight}%</div>
+                  <div style="color: var(--text-secondary); font-size: 0.9rem">₹${pick.price?.toLocaleString() || '-'}</div>
+                </div>
+                <div class="score-badge ${getScoreClass(pick.compositeScore)}" style="width:50px;height:50px;font-size:1.1rem">
+                  ${pick.compositeScore}
+                </div>
+              </div>
+              
+              <div class="scores-row">
+                <div class="score-item">
+                  <div class="score-item-label">Safety</div>
+                  <div class="score-item-value" style="color: ${getScoreColor(pick.scoreBreakdown?.safety)}">${pick.scoreBreakdown?.safety || '-'}</div>
+                </div>
+                <div class="score-item">
+                  <div class="score-item-label">Fund.</div>
+                  <div class="score-item-value" style="color: ${getScoreColor(pick.scoreBreakdown?.fundamental)}">${pick.scoreBreakdown?.fundamental || '-'}</div>
+                </div>
+                <div class="score-item">
+                  <div class="score-item-label">Value</div>
+                  <div class="score-item-value" style="color: ${getScoreColor(pick.scoreBreakdown?.valuation)}">${pick.scoreBreakdown?.valuation || '-'}</div>
+                </div>
+                <div class="score-item">
+                  <div class="score-item-label">Mom.</div>
+                  <div class="score-item-value" style="color: ${getScoreColor(pick.scoreBreakdown?.momentum)}">${pick.scoreBreakdown?.momentum || '-'}</div>
+                </div>
+                <div class="score-item">
+                  <div class="score-item-label">Ext.</div>
+                  <div class="score-item-value" style="color: ${getScoreColor(pick.scoreBreakdown?.external)}">${pick.scoreBreakdown?.external || '-'}</div>
+                </div>
+              </div>
+              
+              ${pick.strengths?.length ? `
+                <div style="margin-top: 1rem">
+                  ${pick.strengths.map(s => `<span class="strength-tag">${s}</span>`).join('')}
+                </div>
+              ` : ''}
+              
+              ${pick.risks?.length ? `
+                <div style="margin-top: 0.5rem">
+                  ${pick.risks.map(r => `<span class="risk-tag">${r}</span>`).join('')}
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
+      `;
+        }
+
+        function renderSectors() {
+            const sectors = recommendation.allocation.sectorBreakdown;
+            const colors = ['#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e', '#f97316', '#eab308'];
+
+            return `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Sector Allocation</h3>
+          </div>
+          
+          <div class="sector-grid" style="margin-bottom: 2rem">
+            ${sectors.map((s, i) => `
+              <div class="sector-item">
+                <span class="sector-name">${s.sector}</span>
+                <span class="sector-weight">${s.weight}%</span>
+              </div>
+            `).join('')}
+          </div>
+          
+          <div>
+            ${sectors.map((s, i) => `
+              <div class="sector-bar-item">
+                <div class="sector-bar-header">
+                  <span class="sector-bar-label">${s.sector}</span>
+                  <span class="sector-bar-value">${s.weight}%</span>
+                </div>
+                <div class="weight-bar-container" style="width: 100%">
+                  <div class="weight-bar" style="width: ${Math.min(s.weight * 4, 100)}%; background: ${colors[i % colors.length]}"></div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+        }
+
+        function renderWatchlist() {
+            const watchlist = recommendation.watchlist;
+
+            if (!watchlist || watchlist.length === 0) {
+                return `
+          <div class="card empty-state">
+            <h3>No Watchlist Items</h3>
+            <p>All qualifying stocks are in the main allocation.</p>
+          </div>
+        `;
+            }
+
+            return `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Watchlist</h3>
+            <span style="color: var(--text-secondary)">Monitor for future opportunities</span>
+          </div>
+          <div class="watchlist-grid">
+            ${watchlist.map(stock => `
+              <div class="watchlist-card">
+                <div class="watchlist-header">
+                  <div>
+                    <div class="stock-name">${stock.name}</div>
+                    <div class="stock-code">${stock.code}</div>
+                  </div>
+                  <div class="score-badge ${getScoreClass(stock.compositeScore)}" style="width:32px;height:32px;font-size:0.8rem">
+                    ${stock.compositeScore}
+                  </div>
+                </div>
+                <span class="rec-badge ${stock.recommendation?.toLowerCase().replace(' ', '-')}">${stock.recommendation}</span>
+                <div class="watchlist-reason">${stock.reason}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+        }
+
+        function getScoreClass(score) {
+            if (score >= 65) return 'high';
+            if (score >= 45) return 'medium';
+            return 'low';
+        }
+
+        function getScoreColor(score) {
+            if (score >= 65) return 'var(--success)';
+            if (score >= 45) return 'var(--warning)';
+            return 'var(--danger)';
+        }
+
+        function getRiskColor(riskLevel) {
+            if (riskLevel === 'Very Low' || riskLevel === 'Low') return 'var(--success)';
+            if (riskLevel === 'Moderate') return 'var(--warning)';
+            return 'var(--danger)';
+        }
+
+        // Deep Analysis
+        let selectedStockCode = null;
+        let analysisData = null;
+
+        function renderDeepAnalysis() {
+            const { allocation } = recommendation;
+            const stocks = allocation.stocks;
+
+            if (!selectedStockCode && stocks.length > 0) {
+                selectedStockCode = stocks[0].nseCode;
+            }
+
+            return `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">🔬 Deep Analysis</h3>
+          </div>
+          
+          <div class="analysis-header">
+            <select class="stock-selector" id="stockSelector" onchange="loadAnalysis(this.value)">
+              ${stocks.map(s => `
+                <option value="${s.nseCode}" ${s.nseCode === selectedStockCode ? 'selected' : ''}>
+                  ${s.name} (${s.nseCode}) - ${s.weight}%
+                </option>
+              `).join('')}
+            </select>
+            <div id="sentimentBadge"></div>
+          </div>
+          
+          <div id="analysisContent">
+            <div class="loading-inline">
+              <div class="spinner"></div>
+              <span style="margin-left: 1rem;">Select a stock to analyze...</span>
+            </div>
+          </div>
+        </div>
+      `;
+        }
+
+        async function loadAnalysis(code) {
+            selectedStockCode = code;
+            const container = document.getElementById('analysisContent');
+            const badge = document.getElementById('sentimentBadge');
+
+            container.innerHTML = `
+              <div class="loading-inline">
+                <div class="spinner"></div>
+                <span style="margin-left: 1rem;">Loading analysis for ${code}...</span>
+              </div>
+            `;
+
+            try {
+                const res = await fetch(`${API_BASE}/analysis/${code}`);
+                const data = await res.json();
+
+                if (data.error) throw new Error(data.error);
+
+                analysisData = data;
+
+                // Update sentiment badge
+                const sentimentClass = data.overallSentiment.toLowerCase();
+                const sentimentIcon = sentimentClass === 'bullish' ? '🚀' : sentimentClass === 'bearish' ? '🐻' : '⚖️';
+                badge.innerHTML = `<span class="sentiment-badge ${sentimentClass}">${sentimentIcon} ${data.overallSentiment}</span>`;
+
+                // Render analysis content
+                container.innerHTML = renderAnalysisContent(data);
+
+            } catch (err) {
+                container.innerHTML = `<div style="color: var(--danger); padding: 2rem; text-align: center;">⚠️ ${err.message}</div>`;
+            }
+        }
+
+        function renderAnalysisContent(data) {
+            const { stock, quarterlyAnalysis, fundamentals, technicals, newsLinks, checklist } = data;
+
+            const formatValue = (val, suffix = '') => {
+                if (val === null || val === undefined) return '-';
+                return typeof val === 'number' ? val.toFixed(2) + suffix : val;
+            };
+
+            const valueClass = (val) => val > 0 ? 'positive' : val < 0 ? 'negative' : '';
+
+            // Render checklist section
+            const checklistHtml = checklist ? renderChecklist(checklist) : '';
+
+            return `
+        <div class="analysis-grid">
+          <!-- Quarterly Results -->
+          <div class="analysis-section">
+            <h4>📊 Quarterly Results</h4>
+            <div class="metric-row">
+              <span class="metric-label">YoY Quarterly Profit Growth</span>
+              <span class="metric-value ${valueClass(quarterlyAnalysis.yoyQuarterlyProfitGrowth)}">${formatValue(quarterlyAnalysis.yoyQuarterlyProfitGrowth, '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">YoY Quarterly Sales Growth</span>
+              <span class="metric-value ${valueClass(quarterlyAnalysis.yoyQuarterlySalesGrowth)}">${formatValue(quarterlyAnalysis.yoyQuarterlySalesGrowth, '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Net Profit Margin</span>
+              <span class="metric-value">${formatValue(quarterlyAnalysis.npMargin * 100, '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Operating Margin</span>
+              <span class="metric-value">${formatValue(quarterlyAnalysis.opMargin * 100, '%')}</span>
+            </div>
+            ${quarterlyAnalysis.signals.length > 0 ? `
+              <div style="margin-top: 1rem">
+                ${quarterlyAnalysis.signals.map(s => `
+                  <div class="signal-item ${s.type}">
+                    <span class="signal-icon">${s.type === 'positive' ? '✅' : '⚠️'}</span>
+                    <span class="signal-text">${s.text}</span>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+          </div>
+          
+          <!-- Fundamentals -->
+          <div class="analysis-section">
+            <h4>💎 Fundamentals</h4>
+            <div class="metric-row">
+              <span class="metric-label">ROCE</span>
+              <span class="metric-value ${fundamentals.roce > 15 ? 'positive' : ''}">${formatValue(fundamentals.roce, '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">3Y Avg ROCE</span>
+              <span class="metric-value">${formatValue(fundamentals.roce3y, '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">3Y Profit Growth</span>
+              <span class="metric-value ${valueClass(fundamentals.profitGrowth3y)}">${formatValue(fundamentals.profitGrowth3y, '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">P/E Ratio</span>
+              <span class="metric-value">${formatValue(fundamentals.pe)}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Industry P/E</span>
+              <span class="metric-value">${formatValue(fundamentals.industryPE)}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Promoter Holding</span>
+              <span class="metric-value ${fundamentals.promoterHolding > 50 ? 'positive' : ''}">${formatValue(fundamentals.promoterHolding, '%')}</span>
+            </div>
+          </div>
+          
+          <!-- Technicals -->
+          <div class="analysis-section">
+            <h4>📈 Technical Analysis</h4>
+            <div class="metric-row">
+              <span class="metric-label">Current Price</span>
+              <span class="metric-value">₹${formatValue(technicals.currentPrice)}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">50 DMA</span>
+              <span class="metric-value ${technicals.currentPrice > technicals.dma50 ? 'positive' : 'negative'}">₹${formatValue(technicals.dma50)}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">200 DMA</span>
+              <span class="metric-value ${technicals.currentPrice > technicals.dma200 ? 'positive' : 'negative'}">₹${formatValue(technicals.dma200)}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">1-Month Return</span>
+              <span class="metric-value ${valueClass(technicals.return1m)}">${formatValue(technicals.return1m, '%')}</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">3-Month Return</span>
+              <span class="metric-value ${valueClass(technicals.return3m)}">${formatValue(technicals.return3m, '%')}</span>
+            </div>
+            ${technicals.signals.length > 0 ? `
+              <div style="margin-top: 1rem">
+                ${technicals.signals.map(s => `
+                  <div class="signal-item ${s.type}">
+                    <span class="signal-icon">${s.type === 'positive' ? '✅' : '⚠️'}</span>
+                    <span class="signal-text">${s.text}</span>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+          </div>
+          
+          <!-- News & Research Links -->
+          <div class="analysis-section">
+            <h4>📰 News & Research</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Click to view latest news and quarterly results</p>
+            ${newsLinks.map(link => `
+              <a href="${link.url}" target="_blank" rel="noopener" class="news-link">
+                <span class="news-source">${link.source}</span>
+                <span class="news-arrow">→</span>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+        
+        <!-- Investment Checklist -->
+        ${checklistHtml}
+      `;
+        }
+
+        function renderChecklist(checklist) {
+            const { checks, summary, recommendation, color, guidance } = checklist;
+
+            // Group checks by category
+            const categories = {};
+            const categoryIcons = {
+                'Financial Fortitude': '🛡️',
+                'Growth Trajectory': '🚀',
+                'Valuation': '💰',
+                'Capital Efficiency': '⚙️',
+                'Institutional Action': '🏛️'
+            };
+
+            checks.forEach(check => {
+                if (!categories[check.category]) {
+                    categories[check.category] = [];
+                }
+                categories[check.category].push(check);
+            });
+
+            const progressColor = summary.passRate >= 70 ? 'var(--success)' :
+                summary.passRate >= 50 ? 'var(--warning)' : 'var(--danger)';
+
+            return `
+        <div class="card" style="margin-top: 1.5rem">
+          <div class="card-header">
+            <h3 class="card-title">✅ Investment Checklist</h3>
+            <span style="color: var(--text-muted); font-size: 0.85rem">${summary.passed}/${summary.total} checks passed</span>
+          </div>
+          
+          <!-- Summary -->
+          <div class="checklist-summary">
+            <div class="checklist-score">
+              <div class="checklist-score-value" style="color: ${progressColor}">${summary.passRate}%</div>
+              <div class="checklist-score-label">Pass Rate</div>
+            </div>
+            
+            <div class="checklist-progress">
+              <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <span>Critical: ${summary.criticalPassed}/${summary.criticalTotal}</span>
+                <span>Important: ${summary.importantPassed}/${summary.importantTotal}</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: ${summary.passRate}%; background: ${progressColor};"></div>
+              </div>
+            </div>
+            
+            <div class="checklist-recommendation ${color}">${recommendation}</div>
+          </div>
+          
+          <!-- Checklist Items by Category -->
+          ${Object.entries(categories).map(([category, items]) => {
+                const passed = items.filter(i => i.passed).length;
+                return `
+            <div class="checklist-category">
+              <div class="category-header">
+                <span>${categoryIcons[category] || '📋'}</span>
+                <span class="category-title">${category}</span>
+                <span class="category-badge">${passed}/${items.length} passed</span>
+              </div>
+              ${items.map(check => `
+                <div class="checklist-item ${check.passed ? 'passed' : 'failed'}">
+                  <div class="check-icon ${check.passed ? 'passed' : 'failed'}">
+                    ${check.passed ? '✓' : '✗'}
+                  </div>
+                  <div class="check-content">
+                    <div class="check-name">
+                      ${check.name}
+                      <span class="importance-badge ${check.importance}">${check.importance}</span>
+                    </div>
+                    <div class="check-description">${check.description}</div>
+                  </div>
+                  <div class="check-value ${check.passed ? 'passed' : 'failed'}">${check.value}</div>
+                </div>
+              `).join('')}
+            </div>
+          `}).join('')}
+          
+          <!-- Guidance -->
+          <div class="checklist-guidance">
+            <div class="guidance-title">📖 Investment Guidance</div>
+            <div class="guidance-item">🟢 <strong>Ideal:</strong> ${guidance.ideal}</div>
+            <div class="guidance-item">🟡 <strong>Acceptable:</strong> ${guidance.acceptable}</div>
+            <div class="guidance-item">🟠 <strong>Caution:</strong> ${guidance.caution}</div>
+            <div class="guidance-item">🔴 <strong>Avoid:</strong> ${guidance.avoid}</div>
+          </div>
+        </div>
+      `;
+        }
+
+        // Auto-load analysis when Deep Analysis tab is activated
+        const originalSetTab = setTab;
+        setTab = function (tab) {
+            originalSetTab(tab);
+            if (tab === 'deepAnalysis' && selectedStockCode) {
+                setTimeout(() => loadAnalysis(selectedStockCode), 100);
+            }
+        };
+    </script>
+</body>
+
+</html>
