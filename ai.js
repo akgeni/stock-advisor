@@ -52,7 +52,7 @@ Content Style: Concise, professional, bullet points where appropriate.
     // 3. Call Groq API via HTTPS (Node 14 compatible)
     return new Promise((resolve, reject) => {
         const postData = JSON.stringify({
-            model: 'moonshotai/kimi-k2-instruct-0905',
+            model: 'mixtral-8x7b-32768', // Groq models: mixtral-8x7b-32768, llama3-70b-8192
             messages: [{ role: 'user', content: prompt }],
             temperature: 0.3,
             response_format: { type: "json_object" }

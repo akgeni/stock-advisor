@@ -45,21 +45,32 @@
             min-height: 100vh;
         }
 
-        .container {
-            max-width: 1400px;
+        .app-container {
+            max-width: 1200px;
             margin: 0 auto;
             padding: 1.5rem;
         }
 
         /* Header */
-        .header {
+        .app-header {
             padding: 2rem 0;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
             margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .header h1 {
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-header h1 {
             font-size: 2.5rem;
             font-weight: 700;
             background: var(--gradient-primary);
@@ -68,7 +79,7 @@
             background-clip: text;
         }
 
-        .header p {
+        .app-header p {
             color: var(--text-secondary);
             font-size: 1.1rem;
             margin-top: 0.5rem;
@@ -205,6 +216,7 @@
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 1rem;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .tab {
