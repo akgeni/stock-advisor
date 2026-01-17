@@ -2,17 +2,59 @@
   {
     "id": "rec_2026-W03",
     "weekId": "2026-W03",
-    "timestamp": "2026-01-17T10:53:11.024Z",
+    "timestamp": "2026-01-17T11:38:37.645Z",
     "marketCondition": "NEUTRAL",
     "summary": {
       "totalAnalyzed": 71,
       "passedGates": 65,
       "failedGates": 6,
       "recommendedStocks": 20,
-      "averageScore": 80
+      "averageScore": 71
     },
     "allocation": {
       "stocks": [
+        {
+          "name": "Indus Towers",
+          "nseCode": "INDUSTOWER",
+          "bseCode": 534816,
+          "industry": "Telecom - Infrastructure",
+          "sectorGroup": "Infrastructure",
+          "currentPrice": 433.85,
+          "marketCap": 114456.69,
+          "weight": 5.2,
+          "compositeScore": 71,
+          "recommendation": "STRONG BUY",
+          "scores": {
+            "risk": 75,
+            "fundamental": 72,
+            "valuation": 72,
+            "momentum": 75,
+            "external": 53
+          },
+          "riskLevel": "Low",
+          "conviction": 53
+        },
+        {
+          "name": "Fiem Industries",
+          "nseCode": "FIEMIND",
+          "bseCode": 532768,
+          "industry": "Auto Components & Equipments",
+          "sectorGroup": "Auto",
+          "currentPrice": 2180.6,
+          "marketCap": 5739.27,
+          "weight": 5.1,
+          "compositeScore": 69,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 74.5,
+            "fundamental": 76,
+            "valuation": 59,
+            "momentum": 64,
+            "external": 62
+          },
+          "riskLevel": "Low",
+          "conviction": 51
+        },
         {
           "name": "Cigniti Tech.",
           "nseCode": "CIGNITITEC",
@@ -22,185 +64,17 @@
           "currentPrice": 1707.3,
           "marketCap": 4703.09,
           "weight": 5,
-          "compositeScore": 84,
+          "compositeScore": 74,
           "recommendation": "STRONG BUY",
           "scores": {
-            "risk": 100,
+            "risk": 68.5,
             "fundamental": 85,
             "valuation": 80,
             "momentum": 66,
             "external": 65
           },
-          "riskLevel": "Very Low",
-          "conviction": 84
-        },
-        {
-          "name": "Accelya Solution",
-          "nseCode": "ACCELYA",
-          "bseCode": 532268,
-          "industry": "Computers - Software & Consulting",
-          "sectorGroup": "Technology",
-          "currentPrice": 1352.2,
-          "marketCap": 2018.33,
-          "weight": 4.7,
-          "compositeScore": 78,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 98.5,
-            "fundamental": 78,
-            "valuation": 67,
-            "momentum": 64,
-            "external": 61
-          },
-          "riskLevel": "Very Low",
-          "conviction": 77
-        },
-        {
-          "name": "Indiamart Inter.",
-          "nseCode": "INDIAMART",
-          "bseCode": 542726,
-          "industry": "Internet & Catalogue Retail",
-          "sectorGroup": "Consumer",
-          "currentPrice": 2289,
-          "marketCap": 13753.95,
-          "weight": 4.7,
-          "compositeScore": 77,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 99.5,
-            "fundamental": 74,
-            "valuation": 63,
-            "momentum": 71,
-            "external": 55
-          },
-          "riskLevel": "Very Low",
-          "conviction": 77
-        },
-        {
-          "name": "Tips Music",
-          "nseCode": "TIPSMUSIC",
-          "bseCode": 532375,
-          "industry": "Media & Entertainment",
-          "sectorGroup": "Consumer",
-          "currentPrice": 528,
-          "marketCap": 6749.51,
-          "weight": 4.6,
-          "compositeScore": 77,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 98.5,
-            "fundamental": 81,
-            "valuation": 66,
-            "momentum": 53,
-            "external": 60
-          },
-          "riskLevel": "Very Low",
-          "conviction": 76
-        },
-        {
-          "name": "RPG LifeScience.",
-          "nseCode": "RPGLIFE",
-          "bseCode": 532983,
-          "industry": "Pharmaceuticals",
-          "sectorGroup": "Healthcare",
-          "currentPrice": 2307.2,
-          "marketCap": 3815.88,
-          "weight": 4.6,
-          "compositeScore": 78,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 97,
-            "fundamental": 89,
-            "valuation": 54,
-            "momentum": 66,
-            "external": 61
-          },
-          "riskLevel": "Very Low",
-          "conviction": 76
-        },
-        {
-          "name": "Indian Energy Ex",
-          "nseCode": "IEX",
-          "bseCode": 540750,
-          "industry": "Exchange and Data Platform",
-          "sectorGroup": "Financials",
-          "currentPrice": 139.29,
-          "marketCap": 12420.39,
-          "weight": 4.6,
-          "compositeScore": 76,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 99.5,
-            "fundamental": 80,
-            "valuation": 66,
-            "momentum": 50,
-            "external": 57
-          },
-          "riskLevel": "Very Low",
-          "conviction": 76
-        },
-        {
-          "name": "Natco Pharma",
-          "nseCode": "NATCOPHARM",
-          "bseCode": 524816,
-          "industry": "Pharmaceuticals",
-          "sectorGroup": "Healthcare",
-          "currentPrice": 859.4,
-          "marketCap": 15392.7,
-          "weight": 4.6,
-          "compositeScore": 78,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 96.5,
-            "fundamental": 77,
-            "valuation": 83,
-            "momentum": 42,
-            "external": 66
-          },
-          "riskLevel": "Very Low",
-          "conviction": 75
-        },
-        {
-          "name": "Gokul Agro",
-          "nseCode": "GOKULAGRO",
-          "bseCode": 539725,
-          "industry": "Edible Oil",
-          "sectorGroup": "Consumer",
-          "currentPrice": 167.35,
-          "marketCap": 4938.28,
-          "weight": 4.5,
-          "compositeScore": 79,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 94.5,
-            "fundamental": 85,
-            "valuation": 80,
-            "momentum": 55,
-            "external": 55
-          },
-          "riskLevel": "Very Low",
-          "conviction": 75
-        },
-        {
-          "name": "Uni Abex Alloy",
-          "nseCode": "",
-          "bseCode": 504605,
-          "industry": "Iron & Steel Products",
-          "sectorGroup": "Materials",
-          "currentPrice": 3080.15,
-          "marketCap": 608.33,
-          "weight": 4.5,
-          "compositeScore": 80,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 93.25,
-            "fundamental": 86,
-            "valuation": 77,
-            "momentum": 66,
-            "external": 50
-          },
-          "riskLevel": "Very Low",
-          "conviction": 75
+          "riskLevel": "Low",
+          "conviction": 51
         },
         {
           "name": "Authum Invest",
@@ -210,144 +84,81 @@
           "sectorGroup": "Financials",
           "currentPrice": 631.2,
           "marketCap": 53603.11,
-          "weight": 4.5,
-          "compositeScore": 80,
+          "weight": 5,
+          "compositeScore": 73,
           "recommendation": "STRONG BUY",
           "scores": {
-            "risk": 92.75,
+            "risk": 69,
             "fundamental": 74,
             "valuation": 86,
             "momentum": 75,
             "external": 55
           },
-          "riskLevel": "Very Low",
-          "conviction": 74
+          "riskLevel": "Low",
+          "conviction": 50
         },
         {
-          "name": "One Global Serv",
-          "nseCode": "",
-          "bseCode": 514330,
-          "industry": "Healthcare Service Provider",
+          "name": "Natco Pharma",
+          "nseCode": "NATCOPHARM",
+          "bseCode": 524816,
+          "industry": "Pharmaceuticals",
           "sectorGroup": "Healthcare",
-          "currentPrice": 528.6,
-          "marketCap": 1033.04,
-          "weight": 4.5,
-          "compositeScore": 81,
+          "currentPrice": 859.4,
+          "marketCap": 15392.7,
+          "weight": 4.9,
+          "compositeScore": 70,
           "recommendation": "STRONG BUY",
           "scores": {
-            "risk": 91.25,
-            "fundamental": 86,
-            "valuation": 87,
-            "momentum": 59,
-            "external": 63
+            "risk": 71.5,
+            "fundamental": 77,
+            "valuation": 83,
+            "momentum": 42,
+            "external": 66
           },
-          "riskLevel": "Very Low",
-          "conviction": 74
+          "riskLevel": "Low",
+          "conviction": 50
         },
         {
-          "name": "Indrapr.Medical",
-          "nseCode": "INDRAMEDCO",
-          "bseCode": 532150,
-          "industry": "Hospital",
+          "name": "RPG LifeScience.",
+          "nseCode": "RPGLIFE",
+          "bseCode": 532983,
+          "industry": "Pharmaceuticals",
           "sectorGroup": "Healthcare",
-          "currentPrice": 402.5,
-          "marketCap": 3689.84,
-          "weight": 4.5,
-          "compositeScore": 78,
+          "currentPrice": 2307.2,
+          "marketCap": 3815.88,
+          "weight": 4.9,
+          "compositeScore": 70,
           "recommendation": "STRONG BUY",
           "scores": {
-            "risk": 94.75,
-            "fundamental": 83,
-            "valuation": 74,
-            "momentum": 52,
-            "external": 58
+            "risk": 70.5,
+            "fundamental": 89,
+            "valuation": 54,
+            "momentum": 66,
+            "external": 61
           },
-          "riskLevel": "Very Low",
-          "conviction": 74
+          "riskLevel": "Low",
+          "conviction": 49
         },
         {
-          "name": "Alldigi Tech",
-          "nseCode": "ALLDIGI",
-          "bseCode": 532633,
-          "industry": "Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)",
-          "sectorGroup": "Other",
-          "currentPrice": 818.95,
-          "marketCap": 1247.94,
-          "weight": 4.5,
-          "compositeScore": 77,
-          "recommendation": "STRONG BUY",
+          "name": "Tips Music",
+          "nseCode": "TIPSMUSIC",
+          "bseCode": 532375,
+          "industry": "Media & Entertainment",
+          "sectorGroup": "Consumer",
+          "currentPrice": 528,
+          "marketCap": 6749.51,
+          "weight": 4.8,
+          "compositeScore": 69,
+          "recommendation": "BUY",
           "scores": {
-            "risk": 95.75,
+            "risk": 70.5,
             "fundamental": 81,
-            "valuation": 77,
-            "momentum": 46,
-            "external": 54
+            "valuation": 66,
+            "momentum": 53,
+            "external": 60
           },
-          "riskLevel": "Very Low",
-          "conviction": 74
-        },
-        {
-          "name": "Welspun Corp",
-          "nseCode": "WELCORP",
-          "bseCode": 532144,
-          "industry": "Iron & Steel Products",
-          "sectorGroup": "Materials",
-          "currentPrice": 736.85,
-          "marketCap": 19437.41,
-          "weight": 4.5,
-          "compositeScore": 77,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 95.75,
-            "fundamental": 76,
-            "valuation": 85,
-            "momentum": 45,
-            "external": 52
-          },
-          "riskLevel": "Very Low",
-          "conviction": 74
-        },
-        {
-          "name": "Indus Towers",
-          "nseCode": "INDUSTOWER",
-          "bseCode": 534816,
-          "industry": "Telecom - Infrastructure",
-          "sectorGroup": "Infrastructure",
-          "currentPrice": 433.85,
-          "marketCap": 114456.69,
-          "weight": 4.4,
-          "compositeScore": 77,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 94.25,
-            "fundamental": 72,
-            "valuation": 72,
-            "momentum": 75,
-            "external": 53
-          },
-          "riskLevel": "Very Low",
-          "conviction": 73
-        },
-        {
-          "name": "Kothari Petroche",
-          "nseCode": "KOTHARIPET",
-          "bseCode": "",
-          "industry": "Petrochemicals",
-          "sectorGroup": "Materials",
-          "currentPrice": 120.47,
-          "marketCap": 708.92,
-          "weight": 4.3,
-          "compositeScore": 77,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 93,
-            "fundamental": 76,
-            "valuation": 89,
-            "momentum": 44,
-            "external": 55
-          },
-          "riskLevel": "Very Low",
-          "conviction": 72
+          "riskLevel": "Low",
+          "conviction": 49
         },
         {
           "name": "Dynacons Sys.",
@@ -357,39 +168,249 @@
           "sectorGroup": "Technology",
           "currentPrice": 1011.2,
           "marketCap": 1286.79,
-          "weight": 4.3,
-          "compositeScore": 80,
+          "weight": 4.7,
+          "compositeScore": 73,
           "recommendation": "STRONG BUY",
           "scores": {
-            "risk": 89,
+            "risk": 66,
             "fundamental": 81,
             "valuation": 79,
             "momentum": 68,
             "external": 69
           },
-          "riskLevel": "Very Low",
-          "conviction": 71
+          "riskLevel": "Low",
+          "conviction": 48
         },
         {
-          "name": "Kamdhenu",
-          "nseCode": "KAMDHENU",
-          "bseCode": 532741,
-          "industry": "Iron & Steel Products",
-          "sectorGroup": "Materials",
-          "currentPrice": 22.16,
-          "marketCap": 624.65,
-          "weight": 4.3,
-          "compositeScore": 76,
+          "name": "Indiamart Inter.",
+          "nseCode": "INDIAMART",
+          "bseCode": 542726,
+          "industry": "Internet & Catalogue Retail",
+          "sectorGroup": "Consumer",
+          "currentPrice": 2289,
+          "marketCap": 13753.95,
+          "weight": 4.6,
+          "compositeScore": 68,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 68.5,
+            "fundamental": 74,
+            "valuation": 63,
+            "momentum": 71,
+            "external": 55
+          },
+          "riskLevel": "Low",
+          "conviction": 47
+        },
+        {
+          "name": "Gokul Agro",
+          "nseCode": "GOKULAGRO",
+          "bseCode": 539725,
+          "industry": "Edible Oil",
+          "sectorGroup": "Consumer",
+          "currentPrice": 167.35,
+          "marketCap": 4938.28,
+          "weight": 4.6,
+          "compositeScore": 71,
           "recommendation": "STRONG BUY",
           "scores": {
-            "risk": 92.5,
-            "fundamental": 80,
-            "valuation": 83,
+            "risk": 65.5,
+            "fundamental": 85,
+            "valuation": 80,
+            "momentum": 55,
+            "external": 55
+          },
+          "riskLevel": "Low",
+          "conviction": 47
+        },
+        {
+          "name": "Ganesh Housing",
+          "nseCode": "GANESHHOU",
+          "bseCode": 526367,
+          "industry": "Residential, Commercial Projects",
+          "sectorGroup": "Infrastructure",
+          "currentPrice": 741,
+          "marketCap": 6178.98,
+          "weight": 4.4,
+          "compositeScore": 67,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 67.5,
+            "fundamental": 77,
+            "valuation": 82,
+            "momentum": 40,
+            "external": 50
+          },
+          "riskLevel": "Low",
+          "conviction": 45
+        },
+        {
+          "name": "Master Trust",
+          "nseCode": "MASTERTR",
+          "bseCode": 511768,
+          "industry": "Stockbroking & Allied",
+          "sectorGroup": "Financials",
+          "currentPrice": 106.94,
+          "marketCap": 1315.53,
+          "weight": 4.4,
+          "compositeScore": 68,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 66.5,
+            "fundamental": 77,
+            "valuation": 86,
             "momentum": 41,
             "external": 51
           },
-          "riskLevel": "Very Low",
-          "conviction": 70
+          "riskLevel": "Low",
+          "conviction": 45
+        },
+        {
+          "name": "Jyoti Resins",
+          "nseCode": "",
+          "bseCode": 514448,
+          "industry": "Specialty Chemicals",
+          "sectorGroup": "Materials",
+          "currentPrice": 1152.55,
+          "marketCap": 1383.06,
+          "weight": 4.4,
+          "compositeScore": 67,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 66.5,
+            "fundamental": 73,
+            "valuation": 78,
+            "momentum": 49,
+            "external": 55
+          },
+          "riskLevel": "Low",
+          "conviction": 45
+        },
+        {
+          "name": "Welspun Corp",
+          "nseCode": "WELCORP",
+          "bseCode": 532144,
+          "industry": "Iron & Steel Products",
+          "sectorGroup": "Materials",
+          "currentPrice": 736.85,
+          "marketCap": 19437.41,
+          "weight": 4.3,
+          "compositeScore": 67,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 64.5,
+            "fundamental": 76,
+            "valuation": 85,
+            "momentum": 45,
+            "external": 52
+          },
+          "riskLevel": "Moderate",
+          "conviction": 43
+        },
+        {
+          "name": "One Global Serv",
+          "nseCode": "",
+          "bseCode": 514330,
+          "industry": "Healthcare Service Provider",
+          "sectorGroup": "Healthcare",
+          "currentPrice": 528.6,
+          "marketCap": 1033.04,
+          "weight": 4.2,
+          "compositeScore": 72,
+          "recommendation": "STRONG BUY",
+          "scores": {
+            "risk": 60,
+            "fundamental": 86,
+            "valuation": 87,
+            "momentum": 59,
+            "external": 63
+          },
+          "riskLevel": "Moderate",
+          "conviction": 43
+        },
+        {
+          "name": "Accelya Solution",
+          "nseCode": "ACCELYA",
+          "bseCode": 532268,
+          "industry": "Computers - Software & Consulting",
+          "sectorGroup": "Technology",
+          "currentPrice": 1352.2,
+          "marketCap": 2018.33,
+          "weight": 4.1,
+          "compositeScore": 67,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 62.5,
+            "fundamental": 78,
+            "valuation": 67,
+            "momentum": 64,
+            "external": 61
+          },
+          "riskLevel": "Moderate",
+          "conviction": 42
+        },
+        {
+          "name": "Indrapr.Medical",
+          "nseCode": "INDRAMEDCO",
+          "bseCode": 532150,
+          "industry": "Hospital",
+          "sectorGroup": "Healthcare",
+          "currentPrice": 402.5,
+          "marketCap": 3689.84,
+          "weight": 3.9,
+          "compositeScore": 67,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 59.5,
+            "fundamental": 83,
+            "valuation": 74,
+            "momentum": 52,
+            "external": 58
+          },
+          "riskLevel": "Moderate",
+          "conviction": 40
+        },
+        {
+          "name": "Kothari Petroche",
+          "nseCode": "KOTHARIPET",
+          "bseCode": "",
+          "industry": "Petrochemicals",
+          "sectorGroup": "Materials",
+          "currentPrice": 120.47,
+          "marketCap": 708.92,
+          "weight": 3.9,
+          "compositeScore": 67,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 59.5,
+            "fundamental": 76,
+            "valuation": 89,
+            "momentum": 44,
+            "external": 55
+          },
+          "riskLevel": "Moderate",
+          "conviction": 40
+        },
+        {
+          "name": "Ashoka Buildcon",
+          "nseCode": "ASHOKA",
+          "bseCode": 533271,
+          "industry": "Civil Construction",
+          "sectorGroup": "Infrastructure",
+          "currentPrice": 150.16,
+          "marketCap": 4215.34,
+          "weight": 3.8,
+          "compositeScore": 66,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 58.5,
+            "fundamental": 85,
+            "valuation": 85,
+            "momentum": 35,
+            "external": 45
+          },
+          "riskLevel": "Moderate",
+          "conviction": 39
         },
         {
           "name": "Waaree Renewab.",
@@ -399,39 +420,18 @@
           "sectorGroup": "Industrial",
           "currentPrice": 941.15,
           "marketCap": 9820.5,
-          "weight": 4.2,
-          "compositeScore": 77,
-          "recommendation": "STRONG BUY",
+          "weight": 3.8,
+          "compositeScore": 67,
+          "recommendation": "BUY",
           "scores": {
-            "risk": 89.75,
+            "risk": 57,
             "fundamental": 80,
             "valuation": 75,
             "momentum": 65,
             "external": 49
           },
-          "riskLevel": "Very Low",
-          "conviction": 69
-        },
-        {
-          "name": "Banco Products",
-          "nseCode": "BANCOINDIA",
-          "bseCode": 500039,
-          "industry": "Auto Components & Equipments",
-          "sectorGroup": "Auto",
-          "currentPrice": 630.05,
-          "marketCap": 9012.07,
-          "weight": 4.2,
-          "compositeScore": 76,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 90.5,
-            "fundamental": 84,
-            "valuation": 69,
-            "momentum": 55,
-            "external": 53
-          },
-          "riskLevel": "Very Low",
-          "conviction": 69
+          "riskLevel": "Moderate",
+          "conviction": 38
         }
       ],
       "totalEquity": 90,
@@ -439,53 +439,94 @@
       "sectorBreakdown": [
         {
           "sector": "Healthcare",
-          "weight": 18.2
-        },
-        {
-          "sector": "Materials",
-          "weight": 17.6
-        },
-        {
-          "sector": "Technology",
-          "weight": 14
+          "weight": 17.9
         },
         {
           "sector": "Consumer",
+          "weight": 14
+        },
+        {
+          "sector": "Technology",
           "weight": 13.8
         },
         {
-          "sector": "Financials",
-          "weight": 9.1
-        },
-        {
-          "sector": "Other",
-          "weight": 4.5
-        },
-        {
           "sector": "Infrastructure",
-          "weight": 4.4
+          "weight": 13.4
         },
         {
-          "sector": "Industrial",
-          "weight": 4.2
+          "sector": "Materials",
+          "weight": 12.6
+        },
+        {
+          "sector": "Financials",
+          "weight": 9.4
         },
         {
           "sector": "Auto",
-          "weight": 4.2
+          "weight": 5.1
+        },
+        {
+          "sector": "Industrial",
+          "weight": 3.8
         }
       ]
     },
     "topPicks": [
+      {
+        "name": "Indus Towers",
+        "code": "INDUSTOWER",
+        "weight": 5.2,
+        "price": 433.85,
+        "industry": "Telecom - Infrastructure",
+        "compositeScore": 71,
+        "recommendation": "STRONG BUY",
+        "strengths": [
+          "Low risk profile",
+          "Strong fundamentals",
+          "Attractive valuation",
+          "Positive momentum"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 75,
+          "fundamental": 72,
+          "valuation": 72,
+          "momentum": 75,
+          "external": 53
+        }
+      },
+      {
+        "name": "Fiem Industries",
+        "code": "FIEMIND",
+        "weight": 5.1,
+        "price": 2180.6,
+        "industry": "Auto Components & Equipments",
+        "compositeScore": 69,
+        "recommendation": "BUY",
+        "strengths": [
+          "Low risk profile",
+          "Strong fundamentals",
+          "Positive momentum",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 74.5,
+          "fundamental": 76,
+          "valuation": 59,
+          "momentum": 64,
+          "external": 62
+        }
+      },
       {
         "name": "Cigniti Tech.",
         "code": "CIGNITITEC",
         "weight": 5,
         "price": 1707.3,
         "industry": "IT Enabled Services",
-        "compositeScore": 84,
+        "compositeScore": 74,
         "recommendation": "STRONG BUY",
         "strengths": [
-          "Low risk profile",
           "Strong fundamentals",
           "Attractive valuation",
           "Positive momentum",
@@ -493,7 +534,7 @@
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 100,
+          "safety": 68.5,
           "fundamental": 85,
           "valuation": 80,
           "momentum": 66,
@@ -501,175 +542,130 @@
         }
       },
       {
-        "name": "Accelya Solution",
-        "code": "ACCELYA",
-        "weight": 4.7,
-        "price": 1352.2,
-        "industry": "Computers - Software & Consulting",
-        "compositeScore": 78,
+        "name": "Authum Invest",
+        "code": "AIIL",
+        "weight": 5,
+        "price": 631.2,
+        "industry": "Non Banking Financial Company (NBFC)",
+        "compositeScore": 73,
         "recommendation": "STRONG BUY",
         "strengths": [
-          "Low risk profile",
           "Strong fundamentals",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 98.5,
-          "fundamental": 78,
-          "valuation": 67,
-          "momentum": 64,
-          "external": 61
-        }
-      },
-      {
-        "name": "Indiamart Inter.",
-        "code": "INDIAMART",
-        "weight": 4.7,
-        "price": 2289,
-        "industry": "Internet & Catalogue Retail",
-        "compositeScore": 77,
-        "recommendation": "STRONG BUY",
-        "strengths": [
-          "Low risk profile",
-          "Strong fundamentals",
+          "Attractive valuation",
           "Positive momentum"
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 99.5,
+          "safety": 69,
           "fundamental": 74,
-          "valuation": 63,
-          "momentum": 71,
+          "valuation": 86,
+          "momentum": 75,
           "external": 55
         }
       },
       {
-        "name": "Tips Music",
-        "code": "TIPSMUSIC",
-        "weight": 4.6,
-        "price": 528,
-        "industry": "Media & Entertainment",
-        "compositeScore": 77,
-        "recommendation": "STRONG BUY",
-        "strengths": [
-          "Low risk profile",
-          "Strong fundamentals",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 98.5,
-          "fundamental": 81,
-          "valuation": 66,
-          "momentum": 53,
-          "external": 60
-        }
-      },
-      {
-        "name": "RPG LifeScience.",
-        "code": "RPGLIFE",
-        "weight": 4.6,
-        "price": 2307.2,
+        "name": "Natco Pharma",
+        "code": "NATCOPHARM",
+        "weight": 4.9,
+        "price": 859.4,
         "industry": "Pharmaceuticals",
-        "compositeScore": 78,
+        "compositeScore": 70,
         "recommendation": "STRONG BUY",
         "strengths": [
           "Low risk profile",
           "Strong fundamentals",
-          "Positive momentum",
+          "Attractive valuation",
           "Favorable sector trends"
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 97,
-          "fundamental": 89,
-          "valuation": 54,
-          "momentum": 66,
-          "external": 61
+          "safety": 71.5,
+          "fundamental": 77,
+          "valuation": 83,
+          "momentum": 42,
+          "external": 66
         }
       }
     ],
     "watchlist": [
       {
-        "name": "Master Trust",
-        "code": "MASTERTR",
-        "industry": "Stockbroking & Allied",
-        "compositeScore": 76,
-        "recommendation": "STRONG BUY",
+        "name": "Banco Products",
+        "code": "BANCOINDIA",
+        "industry": "Auto Components & Equipments",
+        "compositeScore": 66,
+        "recommendation": "BUY",
+        "reason": "Monitor for allocation opportunity"
+      },
+      {
+        "name": "Caplin Point Lab",
+        "code": "CAPLIPOINT",
+        "industry": "Pharmaceuticals",
+        "compositeScore": 66,
+        "recommendation": "BUY",
         "reason": "Good fundamentals, waiting for better entry point"
       },
       {
         "name": "Monarch Networth",
         "code": "MONARCH",
         "industry": "Stockbroking & Allied",
-        "compositeScore": 76,
-        "recommendation": "STRONG BUY",
+        "compositeScore": 66,
+        "recommendation": "BUY",
+        "reason": "Monitor for allocation opportunity"
+      },
+      {
+        "name": "Indian Energy Ex",
+        "code": "IEX",
+        "industry": "Exchange and Data Platform",
+        "compositeScore": 65,
+        "recommendation": "BUY",
         "reason": "Monitor for allocation opportunity"
       },
       {
         "name": "MPS",
         "code": "MPSLTD",
         "industry": "E-Learning",
-        "compositeScore": 76,
-        "recommendation": "STRONG BUY",
+        "compositeScore": 65,
+        "recommendation": "BUY",
         "reason": "Monitor for allocation opportunity"
       },
       {
         "name": "Shakti Pumps",
         "code": "SHAKTIPUMP",
         "industry": "Compressors, Pumps & Diesel Engines",
-        "compositeScore": 76,
-        "recommendation": "STRONG BUY",
+        "compositeScore": 65,
+        "recommendation": "BUY",
         "reason": "Monitor for allocation opportunity"
+      },
+      {
+        "name": "Shilchar Tech.",
+        "code": "SHILCTECH",
+        "industry": "Other Electrical Equipment",
+        "compositeScore": 65,
+        "recommendation": "BUY",
+        "reason": "Good fundamentals, waiting for better entry point"
       },
       {
         "name": "Arrow Greentech",
         "code": "ARROWGREEN",
         "industry": "Packaging",
-        "compositeScore": 75,
-        "recommendation": "STRONG BUY",
+        "compositeScore": 64,
+        "recommendation": "BUY",
         "reason": "Good fundamentals, waiting for better entry point"
       },
       {
-        "name": "Ashoka Buildcon",
-        "code": "ASHOKA",
-        "industry": "Civil Construction",
-        "compositeScore": 75,
-        "recommendation": "STRONG BUY",
-        "reason": "Good fundamentals, waiting for better entry point"
-      },
-      {
-        "name": "Caplin Point Lab",
-        "code": "CAPLIPOINT",
-        "industry": "Pharmaceuticals",
-        "compositeScore": 75,
-        "recommendation": "STRONG BUY",
-        "reason": "Good fundamentals, waiting for better entry point"
-      },
-      {
-        "name": "Fiem Industries",
-        "code": "FIEMIND",
-        "industry": "Auto Components & Equipments",
-        "compositeScore": 75,
-        "recommendation": "STRONG BUY",
+        "name": "Ashapura Minech.",
+        "code": "ASHAPURMIN",
+        "industry": "Industrial Minerals",
+        "compositeScore": 64,
+        "recommendation": "BUY",
         "reason": "Monitor for allocation opportunity"
       },
       {
-        "name": "Ganesh Housing",
-        "code": "GANESHHOU",
-        "industry": "Residential, Commercial Projects",
-        "compositeScore": 75,
-        "recommendation": "STRONG BUY",
-        "reason": "Good fundamentals, waiting for better entry point"
-      },
-      {
-        "name": "Intl. Conveyors",
-        "code": "INTLCONV",
-        "industry": "Industrial Products",
-        "compositeScore": 75,
-        "recommendation": "STRONG BUY",
+        "name": "Colgate-Palmoliv",
+        "code": "COLPAL",
+        "industry": "Personal Care",
+        "compositeScore": 64,
+        "recommendation": "BUY",
         "reason": "Monitor for allocation opportunity"
       }
     ],
@@ -697,8 +693,8 @@
         "stockCount": 20,
         "totalWeight": 90,
         "cashAllocation": 10,
-        "sectorCount": 9,
-        "top5Weight": 23.6
+        "sectorCount": 8,
+        "top5Weight": 25.2
       }
     }
   }
