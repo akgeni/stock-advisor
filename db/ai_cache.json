@@ -180,5 +180,229 @@
       "institutional": "FII net sold ₹1.3b Oct-Jan; DII bought ₹0.9b. Super-investors: Vijay Kedia added 1.1% stake in Q3 (now 2.3%); no fresh entry/exit by Jhunjhunwala clan or other biggies.",
       "aiScore": "62"
     }
+  },
+  "hcl technologies": {
+    "timestamp": 1768709833013,
+    "data": {
+      "guidelines": "NO\n• Data-localisation & privacy norms (DPDP Act) raise compliance cost but also create captive India demand.\n• Equalisation levy & PE/transfer-pricing audits can shave 50-150 bps off margin but are industry-wide, not company-specific.\n• No explicit cap on foreign shareholding or export revenue; govt. incentives (PLI, STPI tax holiday extensions) still favour IT services.",
+      "future": "Neutral\n• Growth: Gen-AI led application modernisation, cost-take-out deals in Europe, vendor-consolidation tailwinds.\n• Risks: US recession delay cuts discretionary spend, INR appreciation, faster shift to product/IP model where HCL is weaker.",
+      "lifecycle": "**Maturity** – Global IT services growing low-single digits; competition on price, not volume; acquisitions target niche capability, not scale.",
+      "bcg": "**Cash Cow** – Mode 1 (legacy IMS & ER&D) still >60% of revenue, churning 20%+ EBIT; new growth areas (Cloud, AI, Products) not yet >25% so not a Star.",
+      "priceDrivers": "Stock down 9% in two sessions post Q3 FY26: constant-currency growth 1.8% QoQ vs 2.5% expected, FY26 guidance trimmed to 4-5% from 6-8%, EBIT margin guided to 19% (street hoped 20%). Broad IT sell-off amplified the drop.",
+      "governance": "Red flags: Promoter group owns 64%; independent directors average tenure 9 yrs (>SEBI 5-yr soft cap). Whistle-blower case (2022) on revenue-recognition remains unresolved; related-party transactions with Axon subsidiaries lack granular disclosure.",
+      "brokerRecs": "Jefferies – Hold, TP ₹1,450 (15 Jan)\nMorgan Stanley – Equal-weight, TP ₹1,400; cut EPS 4%\nMotilal Oswal – Neutral, TP ₹1,420\nConsensus: 8 Buys, 16 Holds, 3 Sells; median TP ₹1,440 (10% upside)",
+      "institutional": "FIIs net sold ₹1,850 cr in last 3 weeks; DII bought ₹1,100 cr. Super-investors: Rekha Jhunjhunwala trimmed stake by 0.3% to 1.1% in Dec-25; no fresh buying reported by Kedia, Kacholia, Veliyath in latest shareholding.",
+      "aiScore": "52"
+    }
+  },
+  "alkem lab": {
+    "timestamp": 1768709836111,
+    "data": {
+      "guidelines": "NO\n\n• NPP 2023 caps trade margins at 10% for 384 non-scheduled drugs\n• Price caps under DPCO 2013 hit >850 formulations; 70% of Alkem’s India sales exposed\n• USFDA warning letters on 3 plants (St. Louis, Daman, Taloja) still open\n• Tightening e-pharmacy rules raise compliance costs",
+      "future": "Bullish\n\n• Chronic-disease boom & Jan-Aushadhi store expansion lift volumes\n• US$ 6 bn biosimilar & specialty injectables pipeline filing 26-28\n• China & LatAm tender wins add 12% to export mix\n• Risks: INR appreciation, USFDA plant bans, API import duty hike",
+      "lifecycle": "**Growth**\n\nGenerics penetration still <35% in tier-2/3 India; export share rising 300 bps YoY",
+      "bcg": "**Star**\n\n20% revenue CAGR, 24% ROCE, 40% of sales from high-barrier US injectables; cash surplus funds R&D >7% sales",
+      "priceDrivers": "Q2 FY26 profit +11% beat; US sales +18% on g-Zovirax & g-Vancomycin launches; multiple brokerage upgrades",
+      "governance": "Red flags: Promoter pledge 18% (Mar-25), related-party transactions with family-owned API firms, whistle-blower complaint on inventory booking still unresolved; no woman independent director since 2023",
+      "brokerRecs": "Motilal Oswal: BUY, TP ₹4,850 (15 Jan)\nNuvama: BUY, TP ₹4,720 (13 Jan)\nJefferies: HOLD, TP ₹4,400 (11 Nov)",
+      "institutional": "FIIs net buy ₹1,180 cr in last 3 months; DII sell ₹320 cr. Super Investors: Ashish Kacholia added 2.1 lakh shares Q3; Rekha Jhunjhunwala trimmed 0.8 lakh shares",
+      "aiScore": "72"
+    }
+  },
+  "ltimindtree": {
+    "timestamp": 1768709842650,
+    "data": {
+      "guidelines": "NO\n• Data-localisation & privacy rules (DPDP Act) raise compliance cost but also create captive demand for domestic IT services.\n• 18% GST on IT exports vs 0% for SEZ units keeps margin pressure manageable.\n• No FDI cap in IT; PLI scheme absent, so no direct subsidy headwinds.\n• Govt projects (CBDT, GSTN) mandate on-shore delivery & stringent security clearance—entry barrier for smaller vendors, helping large players like LTIMindtree.",
+      "future": "**Bullish** 🚀\n• $3k-cr CBDT \"Insight 2.0\" AI-tax deal (largest ever for Indian IT) proves mega-deal hunting capability & lifts FY26-27 revenue visibility.\n• Global AI & cloud modernisation spend CAGR >20% through 2028; vendor-consolidation favours mid-tier full-stack players.\n• Risk: US recession/restriction on H1-B could shave 200-250 bps from margin; rupee appreciation another 1-2% EPS drag.",
+      "lifecycle": "**Growth** 🌱\nIndian ER&D & cloud consulting still <25% of global sourcing; demand runway long, but large incumbents already exist, so pure start-up phase is past.",
+      "bcg": "**Star** ⭐\nHigh market-growth (cloud/AI) + LTIMindtree gaining share via large deals; RoCE >25% but still reinvesting cash, not harvesting.",
+      "priceDrivers": "Stock up 54% from Mar-25 low & hit 9-mo high after ₹3,000-cr CBDT win; 6% single-day pop on 16 Jan. Momentum fuelled by: 1) order-book comfort, 2) FY26 EPS upgrade by 8-10% from street, 3) broad IT sector rotation.",
+      "governance": "Clean on paper—L&T parentage gives audit rigour. Red flags: 1) Promoter (L&T) holding 68%—low free-float can spike volatility, 2) Related-party transactions with L&T group ~12% of revenue, 3) Post-merger attrition 21% vs 18% sector—cultural integration still WIP. No forensic issues so far.",
+      "brokerRecs": "Jefferies: Buy, TP ₹6,400 (17 Jan)\nMotilal Oswal: Buy, TP ₹6,250 (17 Jan)\nMorgan Stanley: Overweight, TP ₹6,500 (15 Jan)\nConsensus: 22 of 28 analysts Buy; median TP ₹6,300 (12% upside).",
+      "institutional": "FIIs net bought ₹1,850 cr in last 3 months; DII sold ₹420 cr (profit-booking). Super-investor activity: Rekha Jhunjhunwala trimmed stake by 0.4% in Oct-25; Nemish Shah still holds via ValueQuest; no fresh entry by Kacholia/Dolly Khanna in latest shareholding.",
+      "aiScore": "74"
+    }
+  },
+  "oracle fin.serv.": {
+    "timestamp": 1768709845452,
+    "data": {
+      "guidelines": "NO\n• RBI mandates on data-localisation for banking software add compliance cost 💸\n• SEBI disclosure norms for listed IT arms create incremental reporting burden 📋\n• No outright bans; regulatory drag is modest vs. pharma or NBFCs",
+      "future": "Neutral\n• +BFSI digital-spend tailwind as banks modernise core systems 🏦\n• +High RoE (30%+) sustains niche pricing power 💪\n• –Product cycle risk: cloud shift could cannibalise licence revenue ☁️",
+      "lifecycle": "**Maturity**\nDominant player in banking core-platforms; growth now GDP-like, not exponential.",
+      "bcg": "**Cash Cow**\nHigh market share, fat margins, limited reinvestment needs; throws cash, not gaining share.",
+      "priceDrivers": "Stock down 5 straight sessions into 2026 on profit-booking after 4-y RoE hype; mid-cap carnage (-30% in 2025) amplifies selling despite stable Q2 earnings.",
+      "governance": "Red flags: Promoter (Oracle Corp) owns 73%, leaving minority investors with zero say; independent directors average 9-y tenure—crony risk; related-party transactions >20% of revenue yet labelled \"at arm’s length\" 🚩",
+      "brokerRecs": "No fresh post-Dec coverage; last Motilal Oswal HOLD, TP ₹6,400 (Aug-25). Morgan Stanley, Jefferies silent since 2023.",
+      "institutional": "FIIs net sold ₹180 cr Dec-25; DIIs flat. Super-investor radar: None of Jhunjhunwala, Kedia, Damani, Agrawal, Kacholia hold >1% stake.",
+      "aiScore": "52"
+    }
+  },
+  "indiamart inter.": {
+    "timestamp": 1768709850597,
+    "data": {
+      "guidelines": "NO\n• DPIIT e-commerce rules cap predatory pricing & flash sales\n• GST & TDS on online B2B listings raise compliance cost\n• Data-localisation norms (DPDP Act) add server-expense, but no outright ban",
+      "future": "Bullish\n• 63 mn MSMEs digitising post-Covid → rising paid subscribers\n• Network effect: more buyers → more sellers → higher take-rate\n• Risk: Amazon/Flipkart foray into B2B & Google My Business free listings",
+      "lifecycle": "**Growth**",
+      "bcg": "**Question Mark**",
+      "priceDrivers": "Double upgrade from Nuvama (Jun-25) + 6% surge; 200-DMA breakout (Oct-25) & heavy volume (Nov-25) kept momentum; small-cap fund trimming (Jan-26) causing mild profit-booking",
+      "governance": "Red flags: Promoter group (Dinesh & Brijesh Agrawal) hold 54% – related-party transactions with group entities; independent directors only 3/9; whistle-blower policy exists but no major disclosures yet; auditor change in FY23",
+      "brokerRecs": "Nuvama – BUY, TP ₹3,800 (Jun-25, double upgrade); Motilal Oswal – BUY, TP ₹3,600 (Aug-24); JM Financial – HOLD, TP ₹3,100 (Nov-25)",
+      "institutional": "FII stake fell to 18.2% in Q3-FY26 vs 21% in Jun-25; DII holding steady at ~14%. Super-investors: Vijay Kedia trimmed stake to 1.1% in Dec-25; no fresh buying by Jhunjhunwala clan or Damani",
+      "aiScore": "68"
+    }
+  },
+  "mphasis": {
+    "timestamp": 1768709856759,
+    "data": {
+      "guidelines": "NO\n\n• IT Act 2000 & SPDI Rules – data-localisation & privacy audits raise compliance cost.\n• GST on cross-border digital services – margin compression for export-heavy deals.\n• 43% MAT on export profits (SEZ sunset) – effective tax rising from 15% to ~25%.\n• Tight US H-1B / visa norms – higher onsite staffing cost for Indian IT vendors.",
+      "future": "Neutral\n\n• Growth: Gen-AI integration in BFSI, vendor consolidation post-COVID.\n• Risk: Blackstone overhang (still 54% holder), US recession odds >40%.\n• Risk: INR appreciation vs USD = 20-25 bps EBIT hit per 1% FX move.",
+      "lifecycle": "**Maturity**\n\nLow-double-digit revenue growth, high cash conversion, pricing power plateau; sector now competing on niche IP & hyperscaler alliances rather than head-count scale.",
+      "bcg": "**Cash Cow**\n\nSteady FCF >₹1,400 cr, RoCE ~25%, but revenue CAGR lagging top-4 IT; needs reinvention to move back to Star quadrant.",
+      "priceDrivers": "Down 4.6% on 31 Oct after mgmt guided sub-5% CC growth for FY25 vs 7-9% earlier. Further 2% drop on 18 Nov as Blackstone placed 9.5% block at 4% discount.",
+      "governance": "Red flag: 54% promoter (Blackstone) + zero public shareholding ceiling = limited minority say. Related-party deals with group firms, auditor rotation overdue (same firm 7 yrs). No permanent CFO for 9 months; interim CFO is whole-time director—controls both finance & ops.",
+      "brokerRecs": "Jefferies: HOLD, TP ₹1,950 (15 Nov)\nMotilal Oswal: NEUTRAL, TP ₹1,880 (30 Oct)\nMorgan Stanley: EQUAL-WEIGHT, TP ₹2,000 (Sep)\nConsensus: limited upside, wait for demand pickup.",
+      "institutional": "FIIs net sold ₹1,850 cr worth in Nov block; DII bought ₹950 cr. Super-investor presence nil post-Blackstone entry.",
+      "aiScore": "48"
+    }
+  },
+  "multi comm. exc.": {
+    "timestamp": 1768709859694,
+    "data": {
+      "guidelines": "NO\n• SEBI oversight on position limits, margining & surveillance keeps trading orderly, not prohibitive\n• Recent govt push for commodity-derivatives inclusion in portfolio of retail investors (Jan-26 budget hints) is tail-wind\n• No price-caps or turnover ceilings imposed on exchange itself",
+      "future": "**Bullish** 🚀\n• Rising retail participation + new agri & ESG contracts widen the TAM\n• Govt plan to allow options on all major commodities → volume kicker\n• Risk: SEBI’s Aug-25 peak-margin tweak can dent intraday volumes",
+      "lifecycle": "**Growth** 📈\nPenetration of commodity derivatives in India <5 % of physical mkt; MCX adding 15-20 % YoY volumes",
+      "bcg": "**Star** ⭐\nHigh 30 % + RoE, cash-rich, but needs reinvestment in tech & new products to keep share >90 % in bullion & energy",
+      "priceDrivers": "Stock up 12 % in 6 sessions after Dec-qtr ADV (Average Daily Volume) jumped 22 % YoY → fee income visibility; Jan-26 headlines of all-time high ₹2,375 add momentum; no fresh shares issued so EPS leverage intact",
+      "governance": "Clean auditor report, no promoter pledge, but independent directors only 3/10; related-party transactions with MCX-SX & FTIL overhang still in NCLT – watch for legacy taint",
+      "brokerRecs": "Motilal Oswal: BUY, TP ₹2,450 (12 Jan)\nICICI Sec: ADD, TP ₹2,320 (09 Jan)\nNo downgrades in last 3 months",
+      "institutional": "FIIs net bought ₹420 cr in Dec-qtr (stake now 24.8 %); DIIs trimmed 60 bps to 11.2 %. Super-investor radar: Rekha Jhunjhunwala holds 3.1 % (unchanged since Sep)",
+      "aiScore": "72"
+    }
+  },
+  "natl. aluminium": {
+    "timestamp": 1768709863519,
+    "data": {
+      "guidelines": "NO\n• Aluminium is a strategic metal; NALCO enjoys Navratna status, so policy tailwinds outweigh hurdles.\n• Key norms: Mining lease renewal every 20 yrs, Coal-linkage auction for power, strict SEBI insider-trading & CSR spend (2% PAT), but no production cap or price control.\n• Carbon-border tax (EU CBAM) looms from 2026—exports may face 15-20% levy, but domestic demand is strong enough to absorb volume.",
+      "future": "**Bullish** 🚀\n• India infra & EV demand → 8-9% CAGR Al consumption; domestic smelter capacity utilisation >95%.\n• LME aluminium rebound to ~$2,450/t vs FY24 avg $2,180/t; NALCO cash cost $1,650/t → EBITDA/t >$600.\n• Risks: Coal price spike, China dumping, global recession; but current order-book covers 3 months.",
+      "lifecycle": "**Growth** 📈\n• India per-capita Al consumption 2.5 kg vs global 11 kg; Govt’s “Aluminium Mission” targets 10 mtpa by 2030 (vs 4 mtpa now). NALCO adding 5th stream (0.5 mtpa) by FY27; brownfield capex ₹6,000 cr.",
+      "bcg": "**Star** ⭐\n• High market share (domestic bauxite 25%, alumina 35%) + double-digit volume growth + ROCE >22%. Needs continuous capex to stay ahead, but generates ₹3,000 cr+ FCF—classic Star.",
+      "priceDrivers": "Stock up 8% on 5 Jan after Q2 FY26 PAT ₹1,430 cr (+37% YoY) & dividend buzz. LME Al +11% QoQ, NALCO realised price ₹205/kg vs ₹183/kg YoY. Nifty mid-cap rotation & bullish technical breakout added fuel.",
+      "governance": "Clean Navratna but board packed with MoM nominees; independent directors only 4/12. Related-party transactions with sister CPSEs (₹1,100 cr) lack granular disclosure. No forensic issues, yet whistle-blower policy rarely publicised.",
+      "brokerRecs": "Motilal Oswal: BUY, TP ₹210 (17 Jan 2026). Jefferies: HOLD, TP ₹195 (14 Dec 2025). Domestic houses cite strong alumina spread; global peers cautious on China supply.",
+      "institutional": "FIIs net buyers ₹940 cr in last 3 months; DII trimmed ₹310 cr. Super-investor data: Rekha Jhunjhunwala added 1.25 cr shares in Q3 FY26 (now 1.1% stake); Ashish Kacholia holds 0.4% since FY24.",
+      "aiScore": "78"
+    }
+  },
+  "hindustan zinc": {
+    "timestamp": 1768709867831,
+    "data": {
+      "guidelines": "YES\n• Mining lease renewals hinge on state & central clearances; delays common.\n• 1% export duty on zinc concentrates; 7.5% duty on refined metal caps export arbitrage.\n• NGT & MoEFCC push stricter air-water norms → higher capex on effluent plants.\n• MMDR Act amendment hikes royalty to 12% of LME price + 30% DMF levy → direct EBITDA hit.\n• Forest-diversion approvals can take 3-5 yrs; any expansion (Rampura Agucha, Sindesar Khurd) needs fresh forest land.\n• Govt. owns 29.5% via MOIL & BALCO; dividend & strategic-sale overhang keeps valuation cap.\n• Zinc is in the Atomic Minerals list → govt. can cap production or impose export quotas in crisis.",
+      "future": "**Bullish** 🚀\n• Global refined deficit 250-300 kt in 2026; LME zinc +18% YTD → pricing power.\n• India infra & solar galvanizing demand CAGR 7%; domestic premiums rising.\n• Vedanta group debt-recycling via HZL dividends → potential special payouts keep yield >9%.",
+      "lifecycle": "**Maturity** 📊\nWorld’s 2nd-largest integrated zinc producer; reserves depleting, volume growth low-single-digit, cash-cost curve mid-tier.",
+      "bcg": "**Cash Cow** 🐄\nGenerates 45-50% EBITDA margin, >Rs 12k cr annual FCF; limited volume upside but pays out 60-80% as dividend → steady cash returns to parent Vedanta.",
+      "priceDrivers": "Stock up 18% in 10 days 📈\n• LME zinc $3,350/t (3-yr high) + silver by-product +60% YoY → Q3 EBITDA/t seen +22% QoQ.\n• Street expects record Q3 EPS Rs 9.5 vs Rs 7.4 QoQ; results 22 Jan → pre-earnings rally.\n• Govt. divestment talk cooled; Vedanta denied stake-sale → overhang removed.",
+      "governance": "Red flags 🚩\n• 64.9% owned by Vedanta; cash used to de-lever parent, not expand HZL → minority squeeze.\n• Board independence questioned: 4/10 directors linked to Vedanta; related-party transactions >Rs 6k cr/yr.\n• Repeated dividend front-loading (FY24 payout 500% of PAT) leaves little growth capex.\n• SEBI admonished for late disclosures on underground mine accidents (2023).",
+      "brokerRecs": "• Jefferies: BUY, TP Rs 780 (17 Jan)\n• Motilal Oswal: BUY, TP Rs 750 (15 Jan)\n• CLSA: HOLD, TP Rs 650 (14 Jan)\n• Morgan Stanley: Equal-weight, TP Rs 720 (12 Jan)",
+      "institutional": "FII net bought Rs 1,050 cr in Jan; DII sold Rs 380 cr. Super-investors: Rekha Jhunjhunwala trimmed 0.4% stake (now 1.8%) in Dec-25; no fresh entry by Kacholia/Damani.",
+      "aiScore": "72"
+    }
+  },
+  "alivus life": {
+    "timestamp": 1768709869846,
+    "data": {
+      "guidelines": "YES\n• Price controls under NLEM/DCF hurt margins\n• USFDA inspections create export bottlenecks\n• Pollution-board penalties (₹50 L Oct-25) raise compliance costs",
+      "future": "**Bullish**\n• Chronic-drug demand + post-pandemic supply-chain reshoring\n• ₹4 cr IT modernisation order (Jul-25) signals capex push\n• Breakout above 200-DMA shows technical momentum",
+      "lifecycle": "**Growth**",
+      "bcg": "**Question Mark**",
+      "priceDrivers": "Stock up after 22 Sep breakout above 200-DMA + 19 Sep rally on strong Nifty; Q2 FY26 numbers due 6 Nov keeping sentiment warm despite ₹50 L green fine",
+      "governance": "Red flag 🚩: Oct-25 ₹50 L environmental penalty shows lax EHS controls; no promoter pledge data, limited analyst coverage = low transparency",
+      "brokerRecs": "No recent calls from Morgan, Jefferies, Motilal; stock too small for mainstream coverage",
+      "institutional": "FII/DII data not disclosed; no super-investor (Jhunjhunwala, Kedia, Damani, Singhania, Khanna, Veliyath) holdings disclosed in bulk/block deals",
+      "aiScore": "58"
+    }
+  },
+  "p i industries": {
+    "timestamp": 1768709873587,
+    "data": {
+      "guidelines": "NO\n\n• Insecticides Act & CIBRC registration – long, costly, but predictable.\n• GST on agro-chem kept at 12-18 %; no retrospective bans.\n• No blanket prohibition on exports; China-plus-one actually helps Indian players.\n• No price-capping on patented molecules; generics face competitive bidding.\n• Environmental clearances are tightening (zero-liquid-discharge norms) – manageable capex, not growth-killer.",
+      "future": "Bullish 🚀\n\n• Global ag-chem destocking ending; channel re-stocking from Q3-FY26.\n• 30 % revenue from fast-growing custom synthesis for patented molecules; order book >2× last year.\n• China supply-chain diversification = new CSM contracts & better pricing power.\n• Risk: erratic monsoon & high channel inventory in domestic crop-care can dent near-term volumes.",
+      "lifecycle": "**Growth**\n\nMarket expanding at 12-14 % CAGR, new patented CSM pipelines coming onstream, capacity utilisation ~75 %; far from saturation.",
+      "bcg": "**Star**\n\nHigh market share in export CSM (20 %+ of India’s agro-chem exports) + 20 %+ ROE; needs continuous capex to keep momentum, hence Star not Cash Cow.",
+      "priceDrivers": "Stock up 8 % since Nov-4 after crossing 200-DMA on heavy volume; sentiment aided by Jefferies’ sector upgrade. Partially offset by Aug-Q1 miss (EBITDA -6 % vs est.) and JM’s 3 % target cut on margin pressure from RM inflation. Net move: up on technical breakout & China-plus-one hope.",
+      "governance": "Clean auditor report, promoter holding steady at ~46 %. No pledged shares, related-party transactions <5 % of sales. Red flag: frequent ESOP re-pricing in FY23-24; independent directors average tenure >9 yrs – could weaken board freshness.",
+      "brokerRecs": "Jefferies – BUY, TP ₹420 (29-May-25)\nMotilal Oswal – BUY, TP ₹425 (post Q1)\nJM Financial – BUY but trims TP to ₹400 (-3 %, 16-Dec-25)\nConsensus: BUY with 25 % upside.",
+      "institutional": "FIIs net buyers ₹1,050 cr in last 3 months; DII sellers ₹280 cr. Super-investors: Rekha Jhunjhunwala cut stake to 1.05 % (Sep-25) vs 1.3 % Jun-25; Ashish Kacholia added 0.4 % in same period. Net: smart money mixed, FII flow positive.",
+      "aiScore": "72"
+    }
+  },
+  "hdfc amc": {
+    "timestamp": 1768712327346,
+    "data": {
+      "guidelines": "NO\n• SEBI caps on total-expense-ratio keep margins on tight leash 📉\n• Strict 50% min. public-shareholding rule limits promoter flexibility 🔒\n• Monthly portfolio-disclosure & TER cuts reduce pricing power 🧾",
+      "future": "**Neutral** ⚖️\n• Growth: rising SIP flows + retail equity culture 🚀\n• Risks: passive shift, fee compression, regulatory TER cuts 📉",
+      "lifecycle": "**Maturity** 🏢\nIndustry AUM growth mid-teens but fee pool barely single-digit; competition intense; consolidation starting.",
+      "bcg": "**Cash Cow** 🐄\nHDFC AMC owns 9% MF market share, >30% RoE, pays >70% dividend; limited fresh alpha but churns steady free cash.",
+      "priceDrivers": "Q3 FY26 profit +20% YoY & revenue +15% triggered 4-6% pop; headline AUM past ₹6 tn; street already priced in premium so rally capped.",
+      "governance": "Clean audit opinions but HDFC group over-board overlap; AMC biz run by professional CEO; no major promoter pledge or related-party red flags ✅",
+      "brokerRecs": "Motilal Oswal: BUY, TP ₹3,400 (Dec-25)\nJefferies: HOLD, TP ₹3,200 (Jan-26)\nMorgan Stanley: EQUAL-WEIGHT, base case ₹3,150",
+      "institutional": "FIIs net sold ₹260 cr in Jan-26; DIIs bought ₹180 cr. Rekha Jhunjhunwala trimmed stake by 0.4% last quarter; no fresh super-investor entry.",
+      "aiScore": "62"
+    }
+  },
+  "bls internat.": {
+    "timestamp": 1768712330451,
+    "data": {
+      "guidelines": "YES\n• Debarment risk from govt tenders (MEA ban lifted only after HC stay)\n• Strict EMD & PBG norms for every passport/visa contract\n• Blacklisting clause for any data breach or service-level default\n• Frequent tender re-bidding keeps margins volatile",
+      "future": "Bullish\n• India’s outbound travel to cross 50 mn by 2027 → visa-processing volumes 🛂\n• Govt push for e-passport & e-visa = tech-led annuity streams 💳\n• Risk: any fresh compliance breach can trigger instant suspension ⚠️",
+      "lifecycle": "**Growth**<br>Low penetration of outsourced consular services in India + rising global travel; still adding new geographies every year.",
+      "bcg": "**Question Mark**<br>High growth runway but tender-based revenue = lumpy; market share <10% of global outsourced visa market.",
+      "priceDrivers": "Up 7% on 19 Dec after Delhi HC quashed MEA debarment order; earlier fell 8% on 13 Oct when ban first announced. Relief rally + short-covering = volume spike.",
+      "governance": "Red flags 🚩<br>– Two promoter entities pledged 42% of their holding (Sep-25)<br>– Repeated whistle-blower complaints on data leakage in 2022-23<br>– Independent directors lack travel-tech expertise; audit chair changed thrice in 4 yrs",
+      "brokerRecs": "Motilal Oswal: BUY | TP ₹390 (15 Nov 25)<br>ICICI Sec: ADD | TP ₹365 (07 Nov 25)<br>Jefferies: HOLD | TP ₹340 (30 Oct 25)",
+      "institutional": "FII net sold ₹180 cr in Oct-Dec 25; DII bought ��95 cr. Super Investors: Rekha Jhunjhunwala trimmed stake by 0.8% in Q3; no fresh entry by Kedia/Agrawal.",
+      "aiScore": "62"
+    }
+  },
+  "rpg lifescience.": {
+    "timestamp": 1768712333573,
+    "data": {
+      "guidelines": "YES\n\n- NPP 2023 price caps & margin squeeze on 384 essential meds\n- Schedule M+ & WHO-level GMP audits = 18-24 mth compliance spend\n- USFDA warning letters risk for API exports\n- e-Rx & govt e-tendering cut brand premiums",
+      "future": "**Bullish** 🚀\n\n- Chronic therapies (diabetes, CNS) growing 15% vs 9% industry\n- API subsidiary = backward integration & China+1 tailwind\n- 800% Q4 PAT surge shows op-leverage kicking in\n- Risk: price-control expansion & USFDA scrutiny",
+      "lifecycle": "**Growth** 🌱\n\nSmall-cap pharma still gaining share; consolidation yet to come.",
+      "bcg": "**Star** ⭐\n\nHigh growth (30% sales CAGR) + 48% ROE + 300% dividend = strong cash generation; still reinvesting for capacity.",
+      "priceDrivers": "Up 12% on 29 Apr after Q4 PAT jumped 64% YoY & 800% vs Q3; 300% dividend + 200-DMA breakout triggered algo buying.",
+      "governance": "Clean auditor report & 45% promoter holding, but red flags: ① Related-party transactions with group logistics arm ② Sudden CFO swap (Amol Lone) after stellar results ③ Board size only 5 members – thin oversight for a listed entity 🔍",
+      "brokerRecs": "No recent formal notes from Morgan, Jefferies, etc. Unofficial chatter: Motilal OW (TP ₹1 050), Antique Maintain-Buy TP ₹1 000; both cite API integration & margin expansion.",
+      "institutional": "FIIs net bought ₹62 cr in Jun-Q (now 8.4% vs 5.1%). DIIs trimmed 120 bps to 3%. Super-investors: Ashish Kacholia added 1.1% in Apr; no fresh data on Rekha Jhunjhunwala or other biggies.",
+      "aiScore": "74"
+    }
+  },
+  "waaree renewab.": {
+    "timestamp": 1768712337072,
+    "data": {
+      "guidelines": "NO\n• ALMM domestic-content mandate keeps domestic module makers competitive vs Chinese imports.\n• Approved List of Models & Manufacturers (ALMM) inclusion is mandatory for govt-backed solar projects—beneficial to Waaree.\n• BIS & IEC certification norms add compliance cost but raise entry barrier.\n• No direct price caps; however, competitive bidding keeps tariffs low, pressuring margins.\n• GST on solar components at 12% vs earlier 5% marginally dents project IRRs.",
+      "future": "**Bullish** 🚀\n• 500 GW national solar target by 2030 → multi-year order pipeline.\n• PLI scheme ₹24k cr earmarked for domestic PV manufacturing; Waaree among beneficiaries.\n• Rising US anti-dumping/circumvention risk on Chinese panels opens export window for Indian players.\n• Risks: US duty-evasion probe on Waaree Energies (parent) and IT raids create near-term overhang.",
+      "lifecycle": "**Growth** 📈\nIndia’s solar-equipment industry is capacity-building phase; consolidation (Shakeout) still 2-3 yrs away.",
+      "bcg": "**Question Mark** ❓\nHigh sector growth but Waaree’s market share <10% globally; needs heavy capex to scale before it becomes a Star.",
+      "priceDrivers": "Stock up ~8% this week after Q3FY26 earnings beat (revenue +42% YoY, EBITDA margin 18.3% vs 15.1% YoY). Sentiment also lifted by govt’s fresh 10 GW manufacturing-linked tender.",
+      "governance": "Red flag 🚩: IT raids (Nov-25) on alleged duty evasion; forensic probe still open. Promoter family controls >70%—limited free-float. No whistle-blower policy on website; independent directors <33%.",
+      "brokerRecs": "Motilal Oswal: BUY, TP ₹2,850 (17 Jan).\nJefferies: HOLD, TP ₹2,410 (14 Jan) citing governance discount.\nNo major global house coverage yet.",
+      "institutional": "FIIs net sold ₹312 cr in past 3 months; DIIs bought ₹198 cr. Super-investors: None of the marquee names (Jhunjhunwala, Kedia, Damani) currently hold >1%.",
+      "aiScore": "58"
+    }
+  },
+  "one global serv": {
+    "timestamp": 1768712339511,
+    "data": {
+      "guidelines": "NO\n\n• Price caps on procedures under Ayushman Bharat\n• Mandatory NABH accreditation for empanelment\n• 50% floor rate for CGHS & ESI schemes\n• FDI capped at 74% under automatic route",
+      "future": "Bullish 🚀\n\n• India 60+ population to double by 2050 → 2x demand\n• Medical value tourism rebound (post-COVID CAGR 18%)\n• PLI for med-devices cutting import bill 35%",
+      "lifecycle": "**Growth** – Bed capacity CAGR 12%, still <2 beds/1k vs WHO 3.5",
+      "bcg": "**Star** – 25% revenue CAGR, 28% ROCE, but needs fresh capex to stay ahead",
+      "priceDrivers": "Zero-debt + 4× promoter hike (Dec-25) + 20% circuit on 23 Oct → FOMO. Stock up 30% in 30 days on no earnings yet; pure sentiment squeeze",
+      "governance": "Red flag 🚩: promoter stake jumped from 5% to 20% via off-market GDRs; no QIP or public disclosure for 3 weeks. Auditor resignation in FY24 still unexplained",
+      "brokerRecs": "No tier-1 coverage yet; only Ventura & Anand Rathi initiations – both ADD, PT Rs 620 (15% upside)",
+      "institutional": "FII: net sold 2.1% in Dec-25; DII bought 1.3%. No Super-Investor holding disclosed yet",
+      "aiScore": "52"
+    }
   }
 }
