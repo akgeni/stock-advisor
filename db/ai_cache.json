@@ -11,5 +11,31 @@
       "brokerRecs": "Citi – Buy, TP ₹380 (2 Dec 25) 🎯\nMotilal Oswal – Buy, TP ₹410 (14 Jan 26) 🎯\nJefferies – Hold, TP ₹330 (9 Jan 26)",
       "institutional": "FII net +₹3.2 bn Jan-26; DII net +₹1.1 bn. Super Investors: Ashish Kacholia added 1.1 cr shares in Q3FY26 (now 1.4%); RJ & VK not on cap-table."
     }
+  },
+  "dynacons sys.": {
+    "timestamp": 1768675806807,
+    "data": {
+      "guidelines": "NO\n\n• MeitY & RBI IT procurement norms favour domestic players with proven PSU/Regulator track-records ✅\n• GST on IT services (18%) and TDS on software contracts (2%) are standard, not punitive\n• Data-localisation & CERT-In security audits raise compliance cost but also create entry barriers for foreign peers",
+      "future": "**Bullish** 🚀\n\n• Digital India 2.0 & PSU cloud-migration = multi-year ₹50k-cr pipeline\n• Rising cyber-security & RBI compliance spend (CAGR 22%)\n• Risk: small-cap premium valuations; any order slippage triggers 30-40% drawdown",
+      "lifecycle": "**Growth** 📈\nMid-tier Indian IT infra & managed-services segment still <25% penetrated in PSU/BFSI; consolidation just beginning.",
+      "bcg": "**Star** ⭐\nHigh double-digit revenue growth (>30% FY25-26E) + rising market-share in RBI/J&K Bank mega contracts; cash generation still reinvested into capacity & working capital, not yet harvestable.",
+      "priceDrivers": "Stock +70% in 30 days after 30-Dec news of ₹249-cr RBI data-centre modernisation win (5-yr managed-services). Prior 12-Dec ₹75-cr J&K Bank DaaS deal added fuel. Liquidity-driven New-Year rally in small-cap IT basket amplified move.",
+      "governance": "Red flags 🚩\nPromoter holding high (62%) yet board independence thin; related-party transactions with promoter-owned Dynacons Hardware & Dynacons Technologies aggregate ₹42-cr FY24 (18% of revenue). Auditors changed twice in five years; limited analyst coverage = opaque disclosure.",
+      "brokerRecs": "No recent formal coverage from tier-1 houses (MS, Jefferies). Domestic boutique SparkCapital (27-Dec) reiterated BUY with TP ₹1,250 (implied 12% upside) citing order-book visibility; IIFL in Nov maintained ADD with TP ₹1,180.",
+      "institutional": "FIIs trimmed from 3.8% to 2.1% Sep-Dec; DIIs flat ~1%. No Super-Investor (Jhunjhunwala, Kacholia, Kedia) holdings disclosed in latest shareholding. Bulk data shows two off-market blocks (₹38-cr each) on 2-Jan, likely PE exits."
+    }
+  },
+  "gokul agro": {
+    "timestamp": 1768705491337,
+    "data": {
+      "guidelines": "NO.  \n• Edible-oil price caps (when inflation spikes) squeeze margins.  \n• FSSAI quality norms raise compliance cost but don’t block growth.  \n• Import-duty tweaks on CPO/soft oils create short-term swings, not long-term barriers.",
+      "future": "Bullish 🚀  \n• Rising per-capita oil demand + shift to packaged branded oils.  \n• Govt push for domestic oilseed output & GM mustard = cheaper raw material.  \n• Risk: Volatile global veg-oil prices & rupee swings hit margins.",
+      "lifecycle": "**Growth**  \nVolume still expanding >10 % p.a.; unbranded loose oil share shrinking, room for organised players to scale.",
+      "bcg": "**Question Mark**  \nSmall m-cap, low base = can double sales fast, but ROE still <12 %; needs cash to build brand & distribution before it becomes a Star.",
+      "priceDrivers": "50 % “drop” on 14 Oct was 2:1 split, not crash.  \nPost-split float + retail buzz = 12 % bounce to ATH on 15 Sep, then another 26 % spike on 2 Dec as volumes & sentiment spiked; no major earnings out yet.",
+      "governance": "Red flag 🚩  \nPromoter pledge >30 %, auditor resignation last yr, frequent related-party raw-material deals; board independence looks token.",
+      "brokerRecs": "No recent coverage from tier-1 houses; HDFC Sky note only explained split mechanics—no target.",
+      "institutional": "FII <1 %, DII falling 150 bps last qtr.  \nNo Super Investor (Jhunjhunwala/Kacholia/Kedia) holdings disclosed as of latest shareholding."
+    }
   }
 }

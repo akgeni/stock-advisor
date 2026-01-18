@@ -1344,7 +1344,7 @@
 
             document.getElementById('content').innerHTML = `
         <!-- Controls -->
-        <div class="card">
+        <div class="card" style="display: none !important">
           <div class="card-header">
             <h3 class="card-title">📤 Update Watchlist</h3>
           </div>
@@ -1372,7 +1372,7 @@
         </div>
 
         <!-- Stats -->
-        <div class="stats-grid">
+        <div class="stats-grid" style="display: none !important">
 
           <div class="stat-card">
             <div class="stat-value">${allocation.totalEquity}%</div>
@@ -1447,7 +1447,7 @@
         }
 
         function renderAllocationTable() {
-            const stocks = recommendation.allocation.stocks;
+            const stocks = [...recommendation.allocation.stocks].sort((a, b) => (b.compositeScore || 0) - (a.compositeScore || 0));
             return `
         <div class="card">
           <div class="card-header">
