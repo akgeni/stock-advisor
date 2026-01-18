@@ -11,7 +11,14 @@ import { calculatePortfolioWeights, validateWeights } from './positionSizing.js'
  * @param {Array} stocks - Raw stock data
  * @returns {Object} Complete recommendation with weights
  */
-export function generateRecommendation(stocks) {
+import { checkAI } from '../ai.js';
+
+/**
+ * Generate weekly recommendation
+ * @param {Array} stocks - Raw stock data
+ * @returns {Object} Complete recommendation with weights
+ */
+export async function generateRecommendation(stocks) {
     const timestamp = new Date().toISOString();
     const weekId = getWeekId(new Date());
 
@@ -27,7 +34,52 @@ export function generateRecommendation(stocks) {
     // 4. Validate weights
     const validation = validateWeights(portfolioResult);
 
-    // 5. Build recommendation object
+    // 5. Get Top Picks (Initially based on quant score)
+    let topPicks = getTopPicks(portfolioResult.stocks);
+
+    // 6. ENHANCE with AI Checks (Top 15 only to save time)
+    // We only run AI on the best candidates to refine the scoring
+    const enhancedPicks = [];
+    console.log(`🧠 Running AI Analysis on Top ${topPicks.length} candidates...`);
+
+    for (const pick of topPicks) {
+        try {
+            // Check AI
+            const aiData = await checkAI(pick.name, pick.industry);
+
+            // Parse Score
+            let aiScore = 50; // Neutral default
+            if (aiData && aiData.aiScore) {
+                const parsed = parseInt(aiData.aiScore);
+                if (!isNaN(parsed)) aiScore = parsed;
+            }
+
+            // Update Composite Score (80% Quant + 20% AI)
+            // Existing composite is 0-100
+            const oldScore = pick.compositeScore || 50;
+            const newComposite = Math.round((oldScore * 0.8) + (aiScore * 0.2));
+
+            enhancedPicks.push({
+                ...pick,
+                aiScore, // Store raw AI score
+                compositeScore: newComposite, // Update main score
+                scoreBreakdown: {
+                    ...pick.scoreBreakdown,
+                    ai: aiScore
+                }
+            });
+
+        } catch (e) {
+            console.error(`AI Check failed for ${pick.name}:`, e.message);
+            enhancedPicks.push(pick); // Keep original if fail
+        }
+    }
+
+    // Re-sort based on new scores
+    topPicks = enhancedPicks.sort((a, b) => b.compositeScore - a.compositeScore);
+
+
+    // 7. Build recommendation object
     const recommendation = {
         id: `rec_${weekId}`,
         weekId,
@@ -47,14 +99,18 @@ export function generateRecommendation(stocks) {
 
         // Portfolio allocation
         allocation: {
-            stocks: portfolioResult.stocks,
+            stocks: portfolioResult.stocks.map(s => {
+                // Update allocation stocks with AI score if they are in top picks
+                const enhanced = topPicks.find(p => p.code === s.nseCode);
+                return enhanced ? { ...s, compositeScore: enhanced.compositeScore, aiScore: enhanced.aiScore } : s;
+            }),
             totalEquity: portfolioResult.totalWeight,
             cash: portfolioResult.cashAllocation,
             sectorBreakdown: portfolioResult.sectorAllocation
         },
 
         // Top picks with reasoning
-        topPicks: getTopPicks(portfolioResult.stocks),
+        topPicks,
 
         // Watchlist (good stocks but not in main allocation)
         watchlist: getWatchlist(scoringResult.passed, portfolioResult.stocks),

@@ -597,7 +597,7 @@ app.get('/api/recommendations/:weekId', (req, res) => {
 /**
  * Generate new recommendation (analyze stocks)
  */
-app.post('/api/analyze', (req, res) => {
+app.post('/api/analyze', async (req, res) => {
     try {
         // Clear cache to get fresh data
         stockDataCache = null;
@@ -605,7 +605,7 @@ app.post('/api/analyze', (req, res) => {
         const data = getStockData();
 
         // Generate new recommendation
-        const recommendation = generateRecommendation(data.stocks);
+        const recommendation = await generateRecommendation(data.stocks);
 
         // Get previous for comparison
         const previous = getLatestRecommendation();
@@ -635,7 +635,7 @@ app.post('/api/analyze', (req, res) => {
 /**
  * Upload new watchlist CSV and analyze
  */
-app.post('/api/upload', (req, res) => {
+app.post('/api/upload', async (req, res) => {
     try {
         let csvContent = req.body;
 
@@ -667,7 +667,7 @@ app.post('/api/upload', (req, res) => {
         const data = getStockData();
 
         // Generate new recommendation
-        const recommendation = generateRecommendation(data.stocks);
+        const recommendation = await generateRecommendation(data.stocks);
 
         // Get previous for comparison
         const previous = getLatestRecommendation();

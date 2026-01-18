@@ -82,8 +82,13 @@ Questions to Answer (Be Decisive and Direct):
 6. Corporate Governance: Critical analysis of governance standards. highlighting any red flags, trust issues, or management quality concerns. Be critical.
 7. Broker Recommendations: Summarize recent buy/sell calls from major brokerage houses (e.g. Morgan Stanley, Jefferies, Motilal Oswal). Include target prices if known.
 8. Institutional Activity: Analyze FII and DII flows for this stock. Also mention any recent buying/selling by Super Investors (e.g. Jhunjhunwala, Vijay Kedia, Radhakishan Damani, Rakesh Jhunjhunwala, Rekha Jhunjhunwala, Raamdeo Agrawal, Ashish Kacholia, Sunil Singhania, Dolly Khanna, Nemish S Shah, Porinju Veliyath). Be specific with names if possible.
+9. AI Score: Rate the stock from 0 (High Risk/Sell) to 100 (Strong Buy) based on the above analysis. Be strict. Use the logic: 
+   - <40: Bearish/Issues 
+   - 40-60: Neutral 
+   - 60-80: Good 
+   - >80: Exceptional. Return ONLY the number (e.g. "75").
 
-Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg", "priceDrivers", "governance", "brokerRecs", "institutional". All values MUST be strings, not objects.
+Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg", "priceDrivers", "governance", "brokerRecs", "institutional", "aiScore". All values MUST be strings, not objects.
 Content Style: Use short paragraphs and emojis. Use \n for line breaks. Avoid hedging (e.g. "It depends").
 `;
 

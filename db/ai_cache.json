@@ -1,41 +1,184 @@
 {
   "indus towers": {
-    "timestamp": 1768674769036,
+    "timestamp": 1768708462943,
     "data": {
-      "guidelines": "NO\n• 5G rollout mandates – faster tower fiberisation & rural roll-outs 🚀\n• Right-of-way clearances – state-level delays & fee caps 🚧\n• EMF radiation norms – tight limits but no new tightening 📡\n• AGR relief – Supreme Court order (Jan-26) removes ₹1.9 tn overhang ✅",
-      "future": "Bullish 📈\n• 5G densification + 6G prep = 40k new tenancies/yr\n• Vi survival = 35% of Indus’ receivables now collectible\n• Risk: Jio’s in-house towers & fiber could cannibalise 10-12% tenancies",
-      "lifecycle": "**Maturity** – India tower penetration >1.1x pop; new builds driven only by 5G small cells; pricing power flat; sector consolidating into 3 large players.",
-      "bcg": "**Cash Cow** – 200k towers churn steady 7% EBITDA margin; 90% payout ratio; low capex; no volume growth but generates ₹11-12 bn FCF/yr.",
-      "priceDrivers": "Up 29% in 3 mo – Vi’s AGR relief removes bankruptcy fear; Q3FY26 tenancy addition 4.3k vs 1.9k QoQ; Citi upgrade; MF inflow ₹1.4 bn Nov-Jan.",
-      "governance": "Red flags 🚩 – 40% of FY25 revenue from Vi which still owes ₹77 bn (net receivables); independent directors only 3/8; promoter Bharti Infratel merged via 1:1 swap without cash exit option for minorities; related-party transactions with Airtel at arm’s length but not auctioned.",
-      "brokerRecs": "Citi – Buy, TP ₹380 (2 Dec 25) 🎯\nMotilal Oswal – Buy, TP ₹410 (14 Jan 26) 🎯\nJefferies – Hold, TP ₹330 (9 Jan 26)",
-      "institutional": "FII net +₹3.2 bn Jan-26; DII net +₹1.1 bn. Super Investors: Ashish Kacholia added 1.1 cr shares in Q3FY26 (now 1.4%); RJ & VK not on cap-table."
+      "guidelines": "NO\n• RoW caps & EMF rules exist but are manageable; no blanket freeze on new towers.\n• 5G rollout mandates & security clearance slow permits, not block them.\n• No price-ceilings on tenancies; contracts are private.\n• Right-of-way fees capped by DOT in most states, aiding rollout speed.",
+      "future": "**Bullish** 📈\n• 5G tenancies + fiber-heavy small cells to add ~30k new sites over 3 yrs.\n• Vodafone-Idea survival removes major churn risk; AGR overhang gone.\n• Energy-pass-through + diesel-free push lifts EBITDA 300-400 bps.",
+      "lifecycle": "**Growth** 🚀\nStill adding >5k towers/qtr; tenancy ratio <2 vs 2.5+ global peers = runway left.",
+      "bcg": "**Star** ⭐\nHigh single-digit revenue growth, 45%+ ROCE, but needs fresh capex to stay ahead; generates cash yet reinvests for 5G.",
+      "priceDrivers": "Surged 29% in 3 mo after Citi upgrade, AGR relief for VIL, and 16 mutual funds added in Nov. Q2 FY26 beat: revenue +8% YoY, EBITDA margin +220 bps.",
+      "governance": "Red flags: 41% revenue from single weak promoter VIL; past related-party receivables >₹7k cr; independent directors only 3/8; no woman on board since 2023.",
+      "brokerRecs": "Citi: Buy, TP ₹380 (2 Dec). Motilal Oswal: Buy, TP ₹375 (Nov). Jefferies: Hold, TP ₹330. Morgan Stanley: OW, TP ₹400.",
+      "institutional": "FIIs net bought ₹1.3k cr in Nov-Dec; DIIs trimmed ₹180 cr. Rekha Jhunjhunwala raised stake to 2.1% (Sep quarter); no other super-investor holds >1%.",
+      "aiScore": "72"
+    }
+  },
+  "fiem industries": {
+    "timestamp": 1768708465524,
+    "data": {
+      "guidelines": "NO\n• No draconian rules; auto-ancillary benefits from PLI, localisation push & EV subsidies.\n• Must meet AIS, BIS & upcoming CAFE-III norms—compliance cost is modest, not growth-killer.",
+      "future": "**Bullish** 🚀\n• EV & ADAS lighting boom = 2× content per vehicle.\n• China-plus-One & PLI 2.0 = export orders +20% CAGR.\n• Risk: fire-hit Rajasthan plant = 8% capacity; quick restart key.",
+      "lifecycle": "**Growth** 📈\nLED/EV lighting penetration <30% in 2-W/4-W; replacement cycle shortening; still adding capacity.",
+      "bcg": "**Star** ⭐\nHigh double-digit sales growth, 20%+ ROCE, but needs fresh capex to keep share in fast-expanding LED/EV lighting space.",
+      "priceDrivers": "Stock +130% YTD on EV lighting wins, Q2 revenue beat, Diwali small-cap frenzy & fire seen temporary.",
+      "governance": "Red flag 🔥: Aug-25 fire at Rajasthan unit; no forensic report yet. Promoter pledge 18%, independent directors only 33% board strength; ESG disclosure sparse.",
+      "brokerRecs": "Motilal Oswal: BUY, TP ₹3,050 (Oct-25). JM Financial: ADD, TP ₹2,880 (Oct-25). No major global house coverage.",
+      "institutional": "FIIs net +2.1% QoQ to 14.3% (Sep-25). DII flat at 8%. No Super-Investor >1% yet; Vijay Kedia exited in Jun-25.",
+      "aiScore": "72"
+    }
+  },
+  "authum invest": {
+    "timestamp": 1768708467684,
+    "data": {
+      "guidelines": "YES\n• RBI caps leverage at 4-7× net owned funds\n• Daily liquidity & CRAR ≥ 15% mandatory\n• 90-day NPA recognition vs 120-day earlier\n• Prior-approval for every 10% shareholding change",
+      "future": "Bullish\n• Credit demand from Tier-2/3 cities 🚀\n• Govt push for MSME & infra funding\n• Risk: Rising cost of funds & bond yields",
+      "lifecycle": "**Growth**",
+      "bcg": "**Question Mark**",
+      "priceDrivers": "Stock +30% in a month after 100% buy of BIC Cello India for ₹153 cr – street pricing in synergy & EPS bump.",
+      "governance": "Red flag: promoter sold 2.7% stake for ₹1,165 cr (Aug-25) – largest ever cash-out; no buyback plan signalled.",
+      "brokerRecs": "No tier-1 house coverage; only small domestic desk at HDFC Sky flagged the deal as \"positive\" – no formal target.",
+      "institutional": "FII net sold ₹42 cr last 30 days; DII flat. No super-investor holding disclosed post promoter dump.",
+      "aiScore": "46"
+    }
+  },
+  "tips music": {
+    "timestamp": 1768708471026,
+    "data": {
+      "guidelines": "NO\n\n• Copyright Act 1957 & 2012 amendments: statutory licensing for radio/TV but no royalty floor for streaming\n• No price-ceilings on music licensing; free-market negotiation with OTTs\n• FDI up to 74% allowed under automatic route; no separate content-code for music labels\n• No censorship on audio; only video content needs CBFC clearance",
+      "future": "Bullish 🚀\n\n• 650m+ short-form video users → exploding sync-licensing demand\n• OTT originals rebound post-strike; new seasons drive catalogue reuse\n• Car-radio, smart-speakers, 5G rural data → rising audio-streaming ARPU\n• Risk: TikTok-style ban or over-the-top royalty rulings could dent margins",
+      "lifecycle": "**Growth**\n\nIndia’s recorded-music industry is still adding 25-30m paying subscribers yearly; penetration <15% of smartphone base.",
+      "bcg": "**Question Mark** 🌱\n\nHigh streaming growth but sub-scale catalogue vs. T-Series/Saregama; needs cash to acquire new content or it risks losing share.",
+      "priceDrivers": "Stock up 5-session streak (+2.9% 1-Dec) after Q2 FY26 EPS beat (+38% YoY) and JM note flagging 24% upside target. Valuation re-rating from 14× to 18× FY26e P/E on improving OTT realisations.",
+      "governance": "Red flag 🚩: Promoter group holds 73%; low free-float invites volatility. Related-party transactions (studio rentals, ad agency) lack granular disclosure. No woman independent director since 2022. Audit committee chairman sits on 6 other boards—time-skinny.",
+      "brokerRecs": "JM Financial – BUY, TP ₹420 (24% upside) – 4 Aug 2025\nMotilal Oswal – NEUTRAL, TP ₹345 – 17 Oct 2025 (valuation after 70% YTD rally)",
+      "institutional": "FII: net sold ₹46cr in Nov-25; DII bought ₹31cr. No super-investor holding >1% as per Sep-25 shareholding.",
+      "aiScore": "68"
     }
   },
   "dynacons sys.": {
-    "timestamp": 1768675806807,
+    "timestamp": 1768708473791,
     "data": {
-      "guidelines": "NO\n\n• MeitY & RBI IT procurement norms favour domestic players with proven PSU/Regulator track-records ✅\n• GST on IT services (18%) and TDS on software contracts (2%) are standard, not punitive\n• Data-localisation & CERT-In security audits raise compliance cost but also create entry barriers for foreign peers",
-      "future": "**Bullish** 🚀\n\n• Digital India 2.0 & PSU cloud-migration = multi-year ₹50k-cr pipeline\n• Rising cyber-security & RBI compliance spend (CAGR 22%)\n• Risk: small-cap premium valuations; any order slippage triggers 30-40% drawdown",
-      "lifecycle": "**Growth** 📈\nMid-tier Indian IT infra & managed-services segment still <25% penetrated in PSU/BFSI; consolidation just beginning.",
-      "bcg": "**Star** ⭐\nHigh double-digit revenue growth (>30% FY25-26E) + rising market-share in RBI/J&K Bank mega contracts; cash generation still reinvested into capacity & working capital, not yet harvestable.",
-      "priceDrivers": "Stock +70% in 30 days after 30-Dec news of ₹249-cr RBI data-centre modernisation win (5-yr managed-services). Prior 12-Dec ₹75-cr J&K Bank DaaS deal added fuel. Liquidity-driven New-Year rally in small-cap IT basket amplified move.",
-      "governance": "Red flags 🚩\nPromoter holding high (62%) yet board independence thin; related-party transactions with promoter-owned Dynacons Hardware & Dynacons Technologies aggregate ₹42-cr FY24 (18% of revenue). Auditors changed twice in five years; limited analyst coverage = opaque disclosure.",
-      "brokerRecs": "No recent formal coverage from tier-1 houses (MS, Jefferies). Domestic boutique SparkCapital (27-Dec) reiterated BUY with TP ₹1,250 (implied 12% upside) citing order-book visibility; IIFL in Nov maintained ADD with TP ₹1,180.",
-      "institutional": "FIIs trimmed from 3.8% to 2.1% Sep-Dec; DIIs flat ~1%. No Super-Investor (Jhunjhunwala, Kacholia, Kedia) holdings disclosed in latest shareholding. Bulk data shows two off-market blocks (₹38-cr each) on 2-Jan, likely PE exits."
+      "guidelines": "NO\n• MeitY & RBI compliance on data-localisation & cyber-security\n• GST rate 18% on IT services; no sector-specific cap on margins\n• No licence raj—open entry for ITeS vendors",
+      "future": "**Bullish** 📈\n• Digital infra push by govt & PSBs → multi-year deal pipeline\n• Device-as-a-Service (DaaS) adoption replacing capex with opex\n• Risk: small-cap premium can vanish if working-cap balloons",
+      "lifecycle": "**Growth** 🌱\nOrder book >₹320 cr (vs FY24 revenue ₹550 cr) with 30%+ YoY guidance; still sub-scale vs tier-1 IT",
+      "bcg": "**Question Mark** 🤔\nHigh growth (recent 19% pop) but low market share (<0.1% of India ITeS pie); needs cash to scale delivery & talent",
+      "priceDrivers": "Spiked 19% after ₹249 cr RBI infra-modernisation win (30 Dec) + 14% on ₹75 cr J&K Bank DaaS (12 Dec). Momentum sustained by low float & small-cap FOMO",
+      "governance": "Red flags: Promoter pledge 38% (Sept 25), related-party transactions with private DynaCons Infotech, auditor resignation (Dec 24) citing \"inability to get adequate evidence\"",
+      "brokerRecs": "No tier-1 coverage; Ventura & Anand Rathi have \"Subscribe\" on past IPO but no fresh note post RBI win—hence no target",
+      "institutional": "FII 0.9%, DII 0.2% (Sept 25). No Super-Investor holding; Ashish Kacholia exited in Q4 FY24",
+      "aiScore": "52"
     }
   },
   "gokul agro": {
-    "timestamp": 1768705491337,
+    "timestamp": 1768708476192,
     "data": {
-      "guidelines": "NO.  \n• Edible-oil price caps (when inflation spikes) squeeze margins.  \n• FSSAI quality norms raise compliance cost but don’t block growth.  \n• Import-duty tweaks on CPO/soft oils create short-term swings, not long-term barriers.",
-      "future": "Bullish 🚀  \n• Rising per-capita oil demand + shift to packaged branded oils.  \n• Govt push for domestic oilseed output & GM mustard = cheaper raw material.  \n• Risk: Volatile global veg-oil prices & rupee swings hit margins.",
-      "lifecycle": "**Growth**  \nVolume still expanding >10 % p.a.; unbranded loose oil share shrinking, room for organised players to scale.",
-      "bcg": "**Question Mark**  \nSmall m-cap, low base = can double sales fast, but ROE still <12 %; needs cash to build brand & distribution before it becomes a Star.",
-      "priceDrivers": "50 % “drop” on 14 Oct was 2:1 split, not crash.  \nPost-split float + retail buzz = 12 % bounce to ATH on 15 Sep, then another 26 % spike on 2 Dec as volumes & sentiment spiked; no major earnings out yet.",
-      "governance": "Red flag 🚩  \nPromoter pledge >30 %, auditor resignation last yr, frequent related-party raw-material deals; board independence looks token.",
-      "brokerRecs": "No recent coverage from tier-1 houses; HDFC Sky note only explained split mechanics—no target.",
-      "institutional": "FII <1 %, DII falling 150 bps last qtr.  \nNo Super Investor (Jhunjhunwala/Kacholia/Kedia) holdings disclosed as of latest shareholding."
+      "guidelines": "NO\n• FSSAI quality norms on aflatoxin & solvent residues\n• Import duty tweaks on CPO/rapeseed swing margins\n• State VAT on packaging & interstate movement",
+      "future": "Bullish\n• Rising per-capita edible-oil demand & premiumisation\n• 5-year low global CPO prices → cheaper raw-material\n• Govt push for domestic oilseed output & PLI for packaging",
+      "lifecycle": "**Shakeout**\nOver-capacity, thin margins, price wars; only cost leaders & branded players survive",
+      "bcg": "**Question Mark**\nSmall share vs Adani, Ruchi; high capex on refineries & brand ads; cash-flow thin",
+      "priceDrivers": "Up 26% in Dec on thin free-float & split euphoria; no earnings upgrade yet",
+      "governance": "Red flags: promoter pledge 38%, related-party sales 12% of revenue, auditor resignation FY23",
+      "brokerRecs": "No recent coverage from top houses; micro-brokers only – all ‘ADD’ with ₹180-220 PT",
+      "institutional": "FII 0.9% ▼, DII 1.2% ▼; no Super Investor holding disclosed in last 6 quarters",
+      "aiScore": "42"
+    }
+  },
+  "master trust": {
+    "timestamp": 1768708479204,
+    "data": {
+      "guidelines": "YES\n• SEBI caps MF sponsor net-worth at ₹50 cr & 5-yr track record\n• Daily mark-to-market, quarterly audits, strict client-fund segregation\n• New MF biz = extra compliance, higher capital lock-in",
+      "future": "**Neutral** 📊\n• Growth: SEBI nod opens ₹60 trn MF pie; cross-sell to broking clients\n• Risk: Oct-25 price crash (-10% in B-group) shows weak equity arm\n• Risk: MF biz burns cash first 3 yrs; ROE dilution likely",
+      "lifecycle": "**Shakeout** ⚠️ Broking is hyper-competitive; discount brokers eating share. MF entry late vs Zerodha, Groww; only survivors with scale or niche win.",
+      "bcg": "**Question Mark** ❓MF arm = low-share/high-growth biz needing cash; broking = declining Cash Cow. Success hinges on fast AUM ramp-up; else becomes Dog.",
+      "priceDrivers": "Stock slammed 10% on 6 Oct after being B-group top loser—no Q2 earnings bump, weak ADTV, plus broad mid-cap sell-off. MF approval came mid-Nov but price flat; market waits proof of AUM traction.",
+      "governance": "Red flag 🚩: Oct price crash on thin volumes hints poor liquidity & possible operator action; no independent MF CEO named yet. Promoter holding 72%—high pledge risk if MF losses spike.",
+      "brokerRecs": "No major house (Morgan, Jefferies, Motilal) covers the stock post approval; no published target price.",
+      "institutional": "FII/DII holding <2% each—negligible. No Super Investor (Jhunjhunwala, Kedia, Damani, etc.) disclosed stake in latest shareholding.",
+      "aiScore": "42"
+    }
+  },
+  "cigniti tech.": {
+    "timestamp": 1768708482132,
+    "data": {
+      "guidelines": "NO\n• Minimal sector-specific licensing; IT services benefit from India’s export-friendly STPI/SEZ regime.\n• Data-privacy (DPDP Act 2023) & GDPR compliance add documentation cost but not blockers.\n• No FDI cap in IT; 100 % foreign ownership allowed.",
+      "future": "Bullish 📈\n• AI-led digital engineering & cloud QA demand from US/EU clients.\n• Margin tailwind from rupee depreciation & offshore mix >80 %.\n• Risk: US recession → discretionary spend cuts; niche scale vs Tier-1 vendors.",
+      "lifecycle": "**Growth** – Mid-tier IT services still gaining share from legacy vendors; revenue CAGR >15 % last 3 yrs.",
+      "bcg": "**Question Mark** – High growth but sub-scale vs leaders; needs cash to build AI labs & vertical IP to become Star.",
+      "priceDrivers": "Up 12 % in a week after Morgan Stanley bought ₹26 cr block & ET guide flagged 7 % swing trade; Q2 FY25 earnings beat (EPS +28 % YoY) added fuel.",
+      "governance": "Red flags 🚩\n• Promoter pledge at 38 % of holding – risk of margin calls.\n• Related-party transactions with promoter entity for infra lease; quantum small but recurring.\n• Auditor resignation in FY22 citing \"limited cooperation\"; new auditor appointed since.",
+      "brokerRecs": "Morgan Stanley (Overweight) – TP ₹1 650; Antique Stock Broking (Buy) – TP ₹1 720; Motilal Oswal (Neutral) – TP ₹1 480.",
+      "institutional": "FII stake up 240 bps QoQ to 21.3 % (highest in 10 qtrs); Morgan Stanley Asia Singapore added 1.6 lakh sh (Jul). No DII change. Super-investor presence nil – none of Jhunjhunwala, Kedia, Damani, Singhania hold >1 %.",
+      "aiScore": "64"
+    }
+  },
+  "natco pharma": {
+    "timestamp": 1768708485187,
+    "data": {
+      "guidelines": "YES\n• Price caps via NPPA on key molecules\n• Mandatory price reduction for off-patent essential drugs\n• 18% GST on formulations\n• Stringent Phase-III trial rules for FTF launches",
+      "future": "**Bearish** 📉\n• Revlimid cliff eroding 30%+ of FY25 core sales\n• US generic glut compressing margins\n• China+1 shift yet to convert for Indian mid-caps",
+      "lifecycle": "**Shakeout** 🌪️\nGeneric oncology is overcrowded; Revlimid cash is drying up and next-gen pipeline (Risdiplam, Copaxone 40 mg) faces legal/regulatory delays.",
+      "bcg": "**Dog** 🐕\nHigh R&D spend but shrinking cash flow from legacy launches; limited patent cliff left to chase and pricing power is gone.",
+      "priceDrivers": "38% crash after Oct-25 US court ruling that keeps Revlimid generics at bay till 2026; 5% relief rally on Axis Securities buy reco, but volumes still below 200-DMA.",
+      "governance": "Red flag: FY24 auditor emphasis on revenue-recognition policy for milestone payments; independent directors average tenure >9 yrs; promoter pledge 11%.",
+      "brokerRecs": "Axis Sec BUY, TP ₹1,050 (21 Nov-25) | Motilal Oswal REDUCE, TP ₹850 (post-Q2) | Jefferies HOLD, TP ₹900 (cut from ₹1,100 in Aug-25)",
+      "institutional": "FIIs net sell ₹420 cr Oct-Dec 25; DIIs net buy ₹180 cr (LIC, UTI MF). Super-investors: Rekha Jhunjhunwala trimmed 0.8% stake in Sep-25; no fresh buy from Kedia/Agrawal.",
+      "aiScore": "42"
+    }
+  },
+  "indrapr.medical": {
+    "timestamp": 1768708490676,
+    "data": {
+      "guidelines": "NO\n\n• Price caps on CGHS & ESI patients cap ARPU growth\n• NABH/JCI accreditation mandatory for brand pull\n• 50% bed reservation for lower-income groups in Delhi NCR\n• Anti-profiteering clause in CGHS tariff revision caps upside\n• Pollution-control norms add 3-4% opex for diesel gensets",
+      "future": "Bullish\n\n• CGHS tariff revision = +18% ARPU on 30% revenue base\n• Delhi NCR bed density 1.3/1000 vs WHO 3.5 → room to expand\n• Medical tourism rebound (e-visas + e-rupee) = 25% YoY jump\n• Risk: Delhi govt mulling 70% reservation → supply shock",
+      "lifecycle": "**Growth**  \nHospital utilisation rising from 68% → 78% in 18 months; still adding 200 beds/capex cycle",
+      "bcg": "**Star**  \nHigh single-site growth (>20% EPS CAGR) + 28% ROCE, but needs constant capex to stay ahead",
+      "priceDrivers": "CGHS tariff hike (8 Oct) triggered 20% gap-up; Q2 FY26 PAT +47% YoY but EBITDA margin slipped 90 bps → profit-taking; volumes +38% vs 3-m avg = retail FOMO",
+      "governance": "Red flags 🚩  \nPromoter holding only 31.6%; 58% of equity pledged (Sep 25). Independent directors >8 yrs tenure → lack true independence. Related-party transactions with promoter diagnostics arm = 6% of revenue; no formal RPT policy on website.",
+      "brokerRecs": "Anand Rathi: BUY, TP ₹186 (40% upside)  \nMotilal Oswal: Not actively covering  \nJefferies/Morgan Stanley: No recent notes  \nSimplyWallSt: Downgrades to Fair Value ₹108 vs CMP ₹142",
+      "institutional": "FII: net sold ₹82 cr (Oct 25)  \nDII: net bought ₹31 cr  \nSuper Investors: Rekha Jhunjhunwala cut stake by 0.9% to 1.2% in Sep 25; no other big names on cap table",
+      "aiScore": "62"
+    }
+  },
+  "mps": {
+    "timestamp": 1768708497148,
+    "data": {
+      "guidelines": "NO\n• No sector-specific red tape; edu-tech benefits from Digital India, PM e-Vidya, SWAYAM & NEP 2020 push.\n• Light-touch FDI (100 % automatic) & GST 18 % slab; no licence raj.\n��� Minor irritant: 2 % TDS on online services & occasional state-level textbook price caps.",
+      "future": "**Bullish** 🚀\n• NEP-driven K-12 digitisation & NEET/JEE prep tailwind; 30 % CAGR content outsourcing by publishers.\n• AI-powered adaptive learning & vernacular voice bots open large TAM in Tier-2/3.\n• Risk: free UGC/NCERT content & deep-pocket BYJU’S-rivals can squeeze pricing power.",
+      "lifecycle": "**Growth** 📈\nIndia’s e-Learning spend < 4 % of education budget vs 15 % global avg; low penetration + rising broadband = double-digit runway ahead.",
+      "bcg": "**Question Mark** ❓\nHigh growth but sub-scale (₹<400 cr rev) vs global peers; needs AI capex & sales push to flip to Star, else risks niche-domestic Dog status.",
+      "priceDrivers": "Up 1,000 % in 12 m on AI pivot hype + strong FY25 H1 (32 % rev growth, 450 bps margin expansion). No adverse news on MPS yet; broader small-cap melt-up & low float amplified move.",
+      "governance": "Clean auditor report, 50 % independent board; promoter holding 57 % with nil pledges. Red flag: related-party content deals with promoter-owned publisher (~8 % rev) & ESOP re-pricing in FY24; disclosure sparse.",
+      "brokerRecs": "No recent coverage by tier-1 houses; Micro-cap desk at Ventura (Sep-25) – BUY, PT ₹1,450 (implied 25× FY26E).",
+      "institutional": "FII 3.2 % → 5.1 % in Dec quarter; DII stable ~1 %. No super-investor entry yet; Vijay Kedia mentioned “watch-list” on CNBC (Oct-25) but no disclosed stake.",
+      "aiScore": "68"
+    }
+  },
+  "kothari petroche": {
+    "timestamp": 1768708500213,
+    "data": {
+      "guidelines": "NO\n• No sector-specific bans, but petchem units must meet strict PCB norms on effluents & emissions.\n• GST input-credit mismatches & rising state-level green-capex keep small plants cash-strapped.\n• PLI schemes favour downstream plastics, not upstream resin makers like Kothari.\n• Anti-dumping duty reviews on key feed-stocks (C4/C5) swing margins sharply.",
+      "future": "Bearish 📉\n• Global ethylene over-capacity + China dumping = pricing power gone.\n• Crude volatility & rupee weakness compress spreads; no long-term supply contracts.\n• Domestic demand slowing (auto, infra) while new mega-refinery complexes (Reliance, Nayara) integrate forward.",
+      "lifecycle": "**Shakeout**\nPlenty of small plants, consolidation starting; only cost leaders or specialty niches will survive.",
+      "bcg": "**Dog**\nLow market share in a low-growth segment; ROCE below cost of capital for 3 straight years; capex mostly maintenance, not growth.",
+      "priceDrivers": "Stock down 28 % in 3 mo after Q2 FY26 PAT fell 42 % YoY on inventory write-downs; technical downgrade & bearish momentum stories amplified selling; no buyback/dividend cushion.",
+      "governance": "Red flags 🚩: Promoter group keeps >70 %, float <10 %; related-party sales to group trading cos at thin margins; auditor resignation in FY24 citing ‘scope limitations’; no woman independent director since 2022; ESOP re-pricing done twice in 18 mo.",
+      "brokerRecs": "No tier-1 coverage. Anand Rathi (Sep-25) ‘REDUCE’ with TP ₹138 (then ₹152). Motilal Oswal & Jefferies dropped coverage after FY24 results.",
+      "institutional": "FII holding 0.6 % (Mar-25) vs 1.1 % yoy; DII at 0.3 %. No super-investor presence—Jhunjhunwala, Kedia, Kacholia portfolios show zero exposure.",
+      "aiScore": "28"
+    }
+  },
+  "banco products": {
+    "timestamp": 1768708504667,
+    "data": {
+      "guidelines": "NO\n• No sector-specific \"growth hindering\" regulations; auto-component makers follow standard GST, environmental norms & PLI eligibility criteria.\n• Tightening CAFE-III emission & BS-VII (2027) rules actually favour suppliers of lightweight aluminium cooling modules (Banco’s core line).",
+      "future": "**Bullish** 🚀\n• EV thermal-management & battery-cooling demand = new ₹120 bn TAM by 2028.\n• PLI-Auto & China+1 sourcing shift already adding 15-20% incremental export orders (EU & NA).",
+      "lifecycle": "**Growth** 🌱\nDomestic replacement market still under-penetrated (30% vs 55% China) while export share rising; capacity utilisation moving from 70→90%—classic mid-growth phase.",
+      "bcg": "**Question Mark** ❓\nFast-growing export & EV cooling segments (20%+ CAGR) but domestic OEM pricing pressure keeps RoCE <15%; needs capex to convert share into Star.",
+      "priceDrivers": "Sept rally (+34% in 4d) driven by record Q2FY25 margin beat (EBITDA +38% YoY) + Diwali small-cap frenzy; Jan ₹5.8b wipe-out after Dec quarter margin guidance cut (raw-material spike) & broad mid-cap sell-off.",
+      "governance": "Red flag 🚩: promoter holding 68% yet independent directors only 2/7; FY24 related-party sales 18% of revenue (vs 12% FY22) & remuneration 4.4% of PAT (SEBI norm 5%). No forensic issues but disclosure quality below peer avg.",
+      "brokerRecs": "Motilal Oswal: Hold, TP ₹575 (Dec-25) | HDFC Sec: ADD, TP ₹610 | ICICI Sec: Hold, TP ₹540—consensus 12-mo upside <8%.",
+      "institutional": "FII net sold ₹1.3b Oct-Jan; DII bought ₹0.9b. Super-investors: Vijay Kedia added 1.1% stake in Q3 (now 2.3%); no fresh entry/exit by Jhunjhunwala clan or other biggies.",
+      "aiScore": "62"
     }
   }
 }

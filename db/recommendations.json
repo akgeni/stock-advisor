@@ -2,7 +2,7 @@
   {
     "id": "rec_2026-W04",
     "weekId": "2026-W04",
-    "timestamp": "2026-01-17T18:49:37.799Z",
+    "timestamp": "2026-01-18T03:54:19.150Z",
     "marketCondition": "NEUTRAL",
     "summary": {
       "totalAnalyzed": 76,
@@ -32,7 +32,8 @@
             "external": 53
           },
           "riskLevel": "Low",
-          "conviction": 53
+          "conviction": 53,
+          "aiScore": 72
         },
         {
           "name": "Fiem Industries",
@@ -43,7 +44,7 @@
           "currentPrice": 2180.6,
           "marketCap": 5739.27,
           "weight": 5.4,
-          "compositeScore": 69,
+          "compositeScore": 70,
           "recommendation": "BUY",
           "scores": {
             "risk": 74.5,
@@ -53,7 +54,8 @@
             "external": 62
           },
           "riskLevel": "Low",
-          "conviction": 51
+          "conviction": 51,
+          "aiScore": 72
         },
         {
           "name": "Authum Invest",
@@ -64,7 +66,7 @@
           "currentPrice": 631.2,
           "marketCap": 53603.11,
           "weight": 5.3,
-          "compositeScore": 73,
+          "compositeScore": 68,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 69,
@@ -74,7 +76,8 @@
             "external": 55
           },
           "riskLevel": "Low",
-          "conviction": 50
+          "conviction": 50,
+          "aiScore": 46
         },
         {
           "name": "Tips Music",
@@ -95,7 +98,8 @@
             "external": 60
           },
           "riskLevel": "Low",
-          "conviction": 49
+          "conviction": 49,
+          "aiScore": 68
         },
         {
           "name": "Dynacons Sys.",
@@ -106,7 +110,7 @@
           "currentPrice": 1011.2,
           "marketCap": 1286.79,
           "weight": 5,
-          "compositeScore": 73,
+          "compositeScore": 69,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 66,
@@ -116,7 +120,8 @@
             "external": 69
           },
           "riskLevel": "Low",
-          "conviction": 48
+          "conviction": 48,
+          "aiScore": 52
         },
         {
           "name": "Gokul Agro",
@@ -127,7 +132,7 @@
           "currentPrice": 167.35,
           "marketCap": 4938.28,
           "weight": 4.9,
-          "compositeScore": 71,
+          "compositeScore": 65,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 65.5,
@@ -137,7 +142,8 @@
             "external": 55
           },
           "riskLevel": "Low",
-          "conviction": 47
+          "conviction": 47,
+          "aiScore": 42
         },
         {
           "name": "Master Trust",
@@ -148,7 +154,7 @@
           "currentPrice": 106.94,
           "marketCap": 1315.53,
           "weight": 4.7,
-          "compositeScore": 68,
+          "compositeScore": 63,
           "recommendation": "BUY",
           "scores": {
             "risk": 66.5,
@@ -158,7 +164,8 @@
             "external": 51
           },
           "riskLevel": "Low",
-          "conviction": 45
+          "conviction": 45,
+          "aiScore": 42
         },
         {
           "name": "Cigniti Tech.",
@@ -169,7 +176,7 @@
           "currentPrice": 1707.3,
           "marketCap": 4703.09,
           "weight": 4.6,
-          "compositeScore": 72,
+          "compositeScore": 70,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 61,
@@ -179,7 +186,8 @@
             "external": 65
           },
           "riskLevel": "Moderate",
-          "conviction": 44
+          "conviction": 44,
+          "aiScore": 64
         },
         {
           "name": "Natco Pharma",
@@ -190,7 +198,7 @@
           "currentPrice": 859.4,
           "marketCap": 15392.7,
           "weight": 4.6,
-          "compositeScore": 68,
+          "compositeScore": 63,
           "recommendation": "BUY",
           "scores": {
             "risk": 64,
@@ -200,7 +208,8 @@
             "external": 66
           },
           "riskLevel": "Moderate",
-          "conviction": 44
+          "conviction": 44,
+          "aiScore": 42
         },
         {
           "name": "RPG LifeScience.",
@@ -232,7 +241,7 @@
           "currentPrice": 402.5,
           "marketCap": 3689.84,
           "weight": 4.2,
-          "compositeScore": 67,
+          "compositeScore": 66,
           "recommendation": "BUY",
           "scores": {
             "risk": 59.5,
@@ -242,7 +251,8 @@
             "external": 58
           },
           "riskLevel": "Moderate",
-          "conviction": 40
+          "conviction": 40,
+          "aiScore": 62
         },
         {
           "name": "Indiamart Inter.",
@@ -274,7 +284,7 @@
           "currentPrice": 1887.7,
           "marketCap": 3229.06,
           "weight": 4.1,
-          "compositeScore": 65,
+          "compositeScore": 66,
           "recommendation": "BUY",
           "scores": {
             "risk": 60.5,
@@ -284,7 +294,8 @@
             "external": 55
           },
           "riskLevel": "Moderate",
-          "conviction": 39
+          "conviction": 39,
+          "aiScore": 68
         },
         {
           "name": "Kothari Petroche",
@@ -295,7 +306,7 @@
           "currentPrice": 120.47,
           "marketCap": 708.92,
           "weight": 4.1,
-          "compositeScore": 66,
+          "compositeScore": 58,
           "recommendation": "BUY",
           "scores": {
             "risk": 59.5,
@@ -305,7 +316,8 @@
             "external": 55
           },
           "riskLevel": "Moderate",
-          "conviction": 39
+          "conviction": 39,
+          "aiScore": 28
         },
         {
           "name": "Shakti Pumps",
@@ -337,7 +349,7 @@
           "currentPrice": 630.05,
           "marketCap": 9012.07,
           "weight": 4.1,
-          "compositeScore": 66,
+          "compositeScore": 65,
           "recommendation": "BUY",
           "scores": {
             "risk": 59,
@@ -347,7 +359,8 @@
             "external": 53
           },
           "riskLevel": "Moderate",
-          "conviction": 39
+          "conviction": 39,
+          "aiScore": 62
         },
         {
           "name": "Accelya Solution",
@@ -492,8 +505,10 @@
           "fundamental": 72,
           "valuation": 72,
           "momentum": 75,
-          "external": 53
-        }
+          "external": 53,
+          "ai": 72
+        },
+        "aiScore": 72
       },
       {
         "name": "Fiem Industries",
@@ -501,7 +516,7 @@
         "weight": 5.4,
         "price": 2180.6,
         "industry": "Auto Components & Equipments",
-        "compositeScore": 69,
+        "compositeScore": 70,
         "recommendation": "BUY",
         "strengths": [
           "Low risk profile",
@@ -515,30 +530,35 @@
           "fundamental": 76,
           "valuation": 59,
           "momentum": 64,
-          "external": 62
-        }
+          "external": 62,
+          "ai": 72
+        },
+        "aiScore": 72
       },
       {
-        "name": "Authum Invest",
-        "code": "AIIL",
-        "weight": 5.3,
-        "price": 631.2,
-        "industry": "Non Banking Financial Company (NBFC)",
-        "compositeScore": 73,
+        "name": "Cigniti Tech.",
+        "code": "CIGNITITEC",
+        "weight": 4.6,
+        "price": 1707.3,
+        "industry": "IT Enabled Services",
+        "compositeScore": 70,
         "recommendation": "STRONG BUY",
         "strengths": [
           "Strong fundamentals",
           "Attractive valuation",
-          "Positive momentum"
+          "Positive momentum",
+          "Favorable sector trends"
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 69,
-          "fundamental": 73,
-          "valuation": 86,
-          "momentum": 75,
-          "external": 55
-        }
+          "safety": 61,
+          "fundamental": 85,
+          "valuation": 80,
+          "momentum": 66,
+          "external": 65,
+          "ai": 64
+        },
+        "aiScore": 64
       },
       {
         "name": "Tips Music",
@@ -559,8 +579,10 @@
           "fundamental": 81,
           "valuation": 66,
           "momentum": 53,
-          "external": 60
-        }
+          "external": 60,
+          "ai": 68
+        },
+        "aiScore": 68
       },
       {
         "name": "Dynacons Sys.",
@@ -568,7 +590,7 @@
         "weight": 5,
         "price": 1011.2,
         "industry": "IT Enabled Services",
-        "compositeScore": 73,
+        "compositeScore": 69,
         "recommendation": "STRONG BUY",
         "strengths": [
           "Strong fundamentals",
@@ -582,95 +604,56 @@
           "fundamental": 81,
           "valuation": 79,
           "momentum": 68,
-          "external": 69
-        }
+          "external": 69,
+          "ai": 52
+        },
+        "aiScore": 52
       },
       {
-        "name": "Gokul Agro",
-        "code": "GOKULAGRO",
-        "weight": 4.9,
-        "price": 167.35,
-        "industry": "Edible Oil",
-        "compositeScore": 71,
-        "recommendation": "STRONG BUY",
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 65.5,
-          "fundamental": 85,
-          "valuation": 80,
-          "momentum": 55,
-          "external": 55
-        }
-      },
-      {
-        "name": "Master Trust",
-        "code": "MASTERTR",
-        "weight": 4.7,
-        "price": 106.94,
-        "industry": "Stockbroking & Allied",
-        "compositeScore": 68,
+        "name": "One Global Serv",
+        "code": "",
+        "weight": 3.8,
+        "price": 528.6,
+        "industry": "Healthcare Service Provider",
+        "compositeScore": 69,
         "recommendation": "BUY",
         "strengths": [
           "Strong fundamentals",
-          "Attractive valuation"
+          "Attractive valuation",
+          "Favorable sector trends"
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 66.5,
-          "fundamental": 77,
+          "safety": 52.5,
+          "fundamental": 86,
+          "valuation": 81,
+          "momentum": 59,
+          "external": 63
+        }
+      },
+      {
+        "name": "Authum Invest",
+        "code": "AIIL",
+        "weight": 5.3,
+        "price": 631.2,
+        "industry": "Non Banking Financial Company (NBFC)",
+        "compositeScore": 68,
+        "recommendation": "STRONG BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation",
+          "Positive momentum"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 69,
+          "fundamental": 73,
           "valuation": 86,
-          "momentum": 41,
-          "external": 51
-        }
-      },
-      {
-        "name": "Cigniti Tech.",
-        "code": "CIGNITITEC",
-        "weight": 4.6,
-        "price": 1707.3,
-        "industry": "IT Enabled Services",
-        "compositeScore": 72,
-        "recommendation": "STRONG BUY",
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 61,
-          "fundamental": 85,
-          "valuation": 80,
-          "momentum": 66,
-          "external": 65
-        }
-      },
-      {
-        "name": "Natco Pharma",
-        "code": "NATCOPHARM",
-        "weight": 4.6,
-        "price": 859.4,
-        "industry": "Pharmaceuticals",
-        "compositeScore": 68,
-        "recommendation": "BUY",
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 64,
-          "fundamental": 77,
-          "valuation": 83,
-          "momentum": 42,
-          "external": 66
-        }
+          "momentum": 75,
+          "external": 55,
+          "ai": 46
+        },
+        "aiScore": 46
       },
       {
         "name": "RPG LifeScience.",
@@ -695,12 +678,34 @@
         }
       },
       {
+        "name": "Waaree Renewab.",
+        "code": "WAAREERTL",
+        "weight": 4,
+        "price": 941.15,
+        "industry": "Other Electrical Equipment",
+        "compositeScore": 67,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation",
+          "Positive momentum"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 57,
+          "fundamental": 79,
+          "valuation": 75,
+          "momentum": 65,
+          "external": 49
+        }
+      },
+      {
         "name": "Indrapr.Medical",
         "code": "INDRAMEDCO",
         "weight": 4.2,
         "price": 402.5,
         "industry": "Hospital",
-        "compositeScore": 67,
+        "compositeScore": 66,
         "recommendation": "BUY",
         "strengths": [
           "Strong fundamentals",
@@ -712,8 +717,77 @@
           "fundamental": 83,
           "valuation": 74,
           "momentum": 52,
-          "external": 58
+          "external": 58,
+          "ai": 62
+        },
+        "aiScore": 62
+      },
+      {
+        "name": "MPS",
+        "code": "MPSLTD",
+        "weight": 4.1,
+        "price": 1887.7,
+        "industry": "E-Learning",
+        "compositeScore": 66,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 60.5,
+          "fundamental": 83,
+          "valuation": 65,
+          "momentum": 50,
+          "external": 55,
+          "ai": 68
+        },
+        "aiScore": 68
+      },
+      {
+        "name": "Accelya Solution",
+        "code": "ACCELYA",
+        "weight": 4,
+        "price": 1352.2,
+        "industry": "Computers - Software & Consulting",
+        "compositeScore": 66,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Positive momentum",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 58,
+          "fundamental": 77,
+          "valuation": 67,
+          "momentum": 64,
+          "external": 61
         }
+      },
+      {
+        "name": "Gokul Agro",
+        "code": "GOKULAGRO",
+        "weight": 4.9,
+        "price": 167.35,
+        "industry": "Edible Oil",
+        "compositeScore": 65,
+        "recommendation": "STRONG BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 65.5,
+          "fundamental": 85,
+          "valuation": 80,
+          "momentum": 55,
+          "external": 55,
+          "ai": 42
+        },
+        "aiScore": 42
       },
       {
         "name": "Indiamart Inter.",
@@ -733,47 +807,6 @@
           "fundamental": 74,
           "valuation": 60,
           "momentum": 71,
-          "external": 55
-        }
-      },
-      {
-        "name": "MPS",
-        "code": "MPSLTD",
-        "weight": 4.1,
-        "price": 1887.7,
-        "industry": "E-Learning",
-        "compositeScore": 65,
-        "recommendation": "BUY",
-        "strengths": [
-          "Strong fundamentals"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 60.5,
-          "fundamental": 83,
-          "valuation": 65,
-          "momentum": 50,
-          "external": 55
-        }
-      },
-      {
-        "name": "Kothari Petroche",
-        "code": "KOTHARIPET",
-        "weight": 4.1,
-        "price": 120.47,
-        "industry": "Petrochemicals",
-        "compositeScore": 66,
-        "recommendation": "BUY",
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 59.5,
-          "fundamental": 76,
-          "valuation": 86,
-          "momentum": 44,
           "external": 55
         }
       },
@@ -804,7 +837,7 @@
         "weight": 4.1,
         "price": 630.05,
         "industry": "Auto Components & Equipments",
-        "compositeScore": 66,
+        "compositeScore": 65,
         "recommendation": "BUY",
         "strengths": [
           "Strong fundamentals"
@@ -815,52 +848,10 @@
           "fundamental": 84,
           "valuation": 69,
           "momentum": 55,
-          "external": 53
-        }
-      },
-      {
-        "name": "Accelya Solution",
-        "code": "ACCELYA",
-        "weight": 4,
-        "price": 1352.2,
-        "industry": "Computers - Software & Consulting",
-        "compositeScore": 66,
-        "recommendation": "BUY",
-        "strengths": [
-          "Strong fundamentals",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 58,
-          "fundamental": 77,
-          "valuation": 67,
-          "momentum": 64,
-          "external": 61
-        }
-      },
-      {
-        "name": "Waaree Renewab.",
-        "code": "WAAREERTL",
-        "weight": 4,
-        "price": 941.15,
-        "industry": "Other Electrical Equipment",
-        "compositeScore": 67,
-        "recommendation": "BUY",
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Positive momentum"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 57,
-          "fundamental": 79,
-          "valuation": 75,
-          "momentum": 65,
-          "external": 49
-        }
+          "external": 53,
+          "ai": 62
+        },
+        "aiScore": 62
       },
       {
         "name": "Intl. Conveyors",
@@ -883,12 +874,35 @@
         }
       },
       {
-        "name": "One Global Serv",
-        "code": "",
-        "weight": 3.8,
-        "price": 528.6,
-        "industry": "Healthcare Service Provider",
-        "compositeScore": 69,
+        "name": "Master Trust",
+        "code": "MASTERTR",
+        "weight": 4.7,
+        "price": 106.94,
+        "industry": "Stockbroking & Allied",
+        "compositeScore": 63,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 66.5,
+          "fundamental": 77,
+          "valuation": 86,
+          "momentum": 41,
+          "external": 51,
+          "ai": 42
+        },
+        "aiScore": 42
+      },
+      {
+        "name": "Natco Pharma",
+        "code": "NATCOPHARM",
+        "weight": 4.6,
+        "price": 859.4,
+        "industry": "Pharmaceuticals",
+        "compositeScore": 63,
         "recommendation": "BUY",
         "strengths": [
           "Strong fundamentals",
@@ -897,12 +911,37 @@
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 52.5,
-          "fundamental": 86,
-          "valuation": 81,
-          "momentum": 59,
-          "external": 63
-        }
+          "safety": 64,
+          "fundamental": 77,
+          "valuation": 83,
+          "momentum": 42,
+          "external": 66,
+          "ai": 42
+        },
+        "aiScore": 42
+      },
+      {
+        "name": "Kothari Petroche",
+        "code": "KOTHARIPET",
+        "weight": 4.1,
+        "price": 120.47,
+        "industry": "Petrochemicals",
+        "compositeScore": 58,
+        "recommendation": "BUY",
+        "strengths": [
+          "Strong fundamentals",
+          "Attractive valuation"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 59.5,
+          "fundamental": 76,
+          "valuation": 86,
+          "momentum": 44,
+          "external": 55,
+          "ai": 28
+        },
+        "aiScore": 28
       }
     ],
     "watchlist": [

@@ -1094,6 +1094,106 @@
             padding: 0.25rem 0;
         }
     </style>
+    <style>
+        /* Top Picks Styles - Injected Fix */
+        .top-picks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .pick-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .pick-rank {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 30px;
+            height: 30px;
+            background: var(--accent-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .pick-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .pick-weight {
+            font-family: monospace;
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .scores-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .score-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--bg-secondary);
+            padding: 0.5rem;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 50px;
+        }
+
+        .score-item-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .score-item-value {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .strength-tag,
+        .risk-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .strength-tag {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+        }
+
+        .risk-tag {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+    </style>
 </head>
 
 <body>
@@ -1497,7 +1597,8 @@
         }
 
         function renderTopPicks() {
-            const picks = recommendation.topPicks;
+            // Sort by Composite Score Descending (Highest First)
+            const picks = [...recommendation.topPicks].sort((a, b) => (b.compositeScore || 0) - (a.compositeScore || 0));
             return `
         <div class="top-picks-grid">
           ${picks.map((pick, i) => `
@@ -1536,6 +1637,10 @@
                 <div class="score-item">
                   <div class="score-item-label">Ext.</div>
                   <div class="score-item-value" style="color: ${getScoreColor(pick.scoreBreakdown?.external)}">${pick.scoreBreakdown?.external || '-'}</div>
+                </div>
+                <div class="score-item">
+                  <div class="score-item-label">AI</div>
+                  <div class="score-item-value" style="color: ${getScoreColor(pick.scoreBreakdown?.ai)}">${pick.scoreBreakdown?.ai || '-'}</div>
                 </div>
               </div>
               
