@@ -1444,7 +1444,7 @@
 
             document.getElementById('content').innerHTML = `
         <!-- Controls -->
-        <div class="card" style="display: none !important">
+        <div class="card" style="display: none !important;">
           <div class="card-header">
             <h3 class="card-title">📤 Update Watchlist</h3>
           </div>
@@ -1494,6 +1494,7 @@
         <div class="tabs">
           <button class="tab ${activeTab === 'allocation' ? 'active' : ''}" onclick="setTab('allocation')">Risk Check</button>
           <button class="tab ${activeTab === 'topPicks' ? 'active' : ''}" onclick="setTab('topPicks')">Multi Factor Score Analysis</button>
+          <button class="tab ${activeTab === 'forecast' ? 'active' : ''}" onclick="setTab('forecast')">🎯 Return Forecast</button>
           <button class="tab ${activeTab === 'contrarian' ? 'active' : ''}" onclick="setTab('contrarian')">📉 Contrarian Picks</button>
           <button class="tab ${activeTab === 'sectors' ? 'active' : ''}" onclick="setTab('sectors')">📊 Sector Trend</button>
           <button class="tab ${activeTab === 'deepAnalysis' ? 'active' : ''}" onclick="setTab('deepAnalysis')">🔬 Deep Analysis</button>
@@ -1516,7 +1517,7 @@
         function setTab(tab) {
             activeTab = tab;
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            const tabIndex = ['allocation', 'topPicks', 'contrarian', 'sectors', 'deepAnalysis', 'aiCheck', 'watchlist'].indexOf(tab);
+            const tabIndex = ['allocation', 'topPicks', 'forecast', 'contrarian', 'sectors', 'deepAnalysis', 'aiCheck', 'watchlist'].indexOf(tab);
             document.querySelector(`.tab:nth-child(${tabIndex + 1})`)?.classList.add('active');
             renderTabContent();
         }
@@ -1543,6 +1544,9 @@
                     break;
                 case 'contrarian':
                     container.innerHTML = renderContrarianPicks();
+                    break;
+                case 'forecast':
+                    container.innerHTML = renderReturnForecast();
                     break;
                 case 'watchlist':
                     container.innerHTML = renderWatchlist();
@@ -1720,6 +1724,121 @@
                 `).join('')}
               </tbody>
             </table>
+          </div>
+        </div>
+      `;
+        }
+
+        function renderReturnForecast() {
+            const forecast = recommendation.returnForecast || {};
+            const topPredictions = forecast.topPredictions || [];
+            const riskAlerts = forecast.riskAlerts || [];
+
+            if (topPredictions.length === 0 && riskAlerts.length === 0) {
+                return `
+          <div class="card empty-state">
+            <h3>🎯 No Forecast Data Available</h3>
+            <p>Run a fresh analysis to see return forecasts.</p>
+          </div>
+        `;
+            }
+
+            // Helper to render a forecast table row
+            const renderRow = (f, i, isRisk) => `
+              <tr onclick="viewDeepAnalysis('${f.code}')" style="cursor: pointer;">
+                <td style="font-weight: 700; color: ${isRisk ? 'var(--danger)' : 'var(--accent-primary)'}">${isRisk ? '⚠️' : '#' + (i + 1)}</td>
+                <td>
+                  <div class="stock-name">${f.name}</div>
+                  <div class="stock-industry">${f.industry || ''}</div>
+                </td>
+                ${isRisk ? '' : `<td>
+                  <span class="score-badge ${getScoreClass(f.predictionScore)}" style="width:45px;height:45px;font-size:1.1rem">${f.predictionScore}</span>
+                </td>`}
+                ${isRisk ? '' : `<td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem">
+                    <span style="font-size: 1.5rem">${f.returnIcon}</span>
+                    <div>
+                      <div style="font-weight: 600; color: ${f.returnLabel === 'Strong Buy' || f.returnLabel === 'Buy' ? 'var(--success)' : f.returnLabel === 'Avoid' || f.returnLabel === 'Caution' ? 'var(--danger)' : 'var(--text-muted)'}">${f.returnLabel}</div>
+                      <div style="font-size: 0.85rem; color: var(--text-secondary)">${f.expectedReturn}</div>
+                    </div>
+                  </div>
+                </td>`}
+                <td>
+                  <div class="factor-breakdown" style="display: flex; gap: 0.25rem; flex-wrap: wrap; font-size: 0.7rem">
+                    <span title="Mean Reversion" style="background: rgba(99, 102, 241, 0.2); padding: 2px 6px; border-radius: 4px; color: #818cf8">MR:${f.factors.meanReversion}</span>
+                    <span title="Trend" style="background: rgba(16, 185, 129, 0.2); padding: 2px 6px; border-radius: 4px; color: #34d399">T:${f.factors.trend}</span>
+                    <span title="Quality" style="background: rgba(245, 158, 11, 0.2); padding: 2px 6px; border-radius: 4px; color: #fbbf24">Q:${f.factors.quality}</span>
+                    <span title="Valuation" style="background: rgba(236, 72, 153, 0.2); padding: 2px 6px; border-radius: 4px; color: #f472b6">V:${f.factors.valuation}</span>
+                    <span title="AI Signal" style="background: rgba(139, 92, 246, 0.2); padding: 2px 6px; border-radius: 4px; color: #a78bfa">AI:${f.factors.aiSignal}</span>
+                  </div>
+                </td>
+                <td style="color: ${f.return3m > 0 ? 'var(--success)' : 'var(--danger)'}; font-weight: 600">
+                  ${f.return3m?.toFixed(1) || '0'}%
+                </td>
+              </tr>
+            `;
+
+            return `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">📈 Top Picks - Expected Positive Returns</h3>
+            <span style="color: var(--success)">Stocks ranked by highest predicted upside</span>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Stock</th>
+                  <th>Prediction</th>
+                  <th>Expected Return</th>
+                  <th>Factors</th>
+                  <th>3M Return</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${topPredictions.map((f, i) => renderRow(f, i, false)).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="card" style="margin-top: 1.5rem; border-left: 3px solid var(--danger);">
+          <div class="card-header">
+            <h3 class="card-title">🚨 Risk Alerts - Stocks to Avoid</h3>
+            <span style="color: var(--danger)">Highest risk of negative returns next quarter</span>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Alert</th>
+                  <th>Stock</th>
+                  <th>Factors</th>
+                  <th>3M Return</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${riskAlerts.map((f, i) => renderRow(f, i, true)).join('')}
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top: 1rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.3);">
+            <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--danger)">⚠️ Why These Stocks Are Risky</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary)">
+              Low prediction scores due to: weak momentum, poor fundamentals, high valuation, bearish AI signals, or overbought conditions.
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-secondary); border-radius: 8px;">
+          <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary)">📖 Factor Legend</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--text-secondary)">
+            <span><strong>MR</strong>: Mean Reversion (quality + dip = bounce)</span>
+            <span><strong>T</strong>: Trend (momentum continuation)</span>
+            <span><strong>Q</strong>: Quality (fundamentals + safety)</span>
+            <span><strong>V</strong>: Valuation (undervalued = upside)</span>
+            <span><strong>AI</strong>: AI Signal (forward-looking)</span>
           </div>
         </div>
       `;
@@ -2240,9 +2359,9 @@
             formatted = String(formatted);
 
             // Highlight key terms (Case insensitive)
-            formatted = formatted.replace(/\b(Bullish|Strong|Growth|Star|YES|Positive)\b/gi, '<span style="color: var(--success); font-weight: 500;">$1</span>');
-            formatted = formatted.replace(/\b(Bearish|Weak|Decline|Dog|NO|Negative|Risk)\b/gi, '<span style="color: var(--danger); font-weight: 500;">$1</span>');
-            formatted = formatted.replace(/\b(Neutral|Maturity|Shakeout|Question Mark|Cash Cow)\b/gi, '<span style="color: var(--warning); font-weight: 500;">$1</span>');
+            formatted = formatted.replace(/\b(Bullish|Strong|Growth|Star|YES|Positive|FAVORABLE)\b/gi, '<span style="color: var(--success); font-weight: 500;">$1</span>');
+            formatted = formatted.replace(/\b(Bearish|Weak|Decline|Dog|NO|Negative|Risk|UNFAVORABLE)\b/gi, '<span style="color: var(--danger); font-weight: 500;">$1</span>');
+            formatted = formatted.replace(/\b(Neutral|Maturity|Shakeout|Question Mark|Cash Cow|NEUTRAL)\b/gi, '<span style="color: var(--warning); font-weight: 500;">$1</span>');
 
             // Bold markdown
             formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--text-primary)">$1</strong>');
@@ -2346,8 +2465,14 @@
                             <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
                                 <span style="font-size: 2rem">🏦</span>
                                 <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Institutional Activity</div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">FII/DII flows and Super Investor moves.</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">FII/DII flows and Super Investor moves (last 6 months).</div>
                                 <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.institutional)}</div>
+                            </div>
+                            <div class="stat-card" style="text-align: left; flex: 1 1 300px; max-width: none;">
+                                <span style="font-size: 2rem">⚖️</span>
+                                <div class="stat-label" style="font-size: 1.1rem; color: var(--text-primary); margin: 0.5rem 0 0.25rem 0">Demand Supply Analysis</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; font-style: italic;">Market research: Finished products & raw materials dynamics.</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${formatAIText(aiResult.demandSupply || 'Run fresh AI analysis to see demand-supply data.')}</div>
                             </div>
                         </div>
                     ` : `

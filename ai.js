@@ -80,15 +80,19 @@ Questions to Answer (Be Decisive and Direct):
 4. BCG Matrix: Classify as Star, Cash Cow, Dog, or Question Mark. Start with the classification in bold. Explain logic.
 5. Price Drivers: Explain why the stock price is moving up or down recently. Cite factual reasons (earnings, news, market sentiment) if available in context.
 6. Corporate Governance: Critical analysis of governance standards. highlighting any red flags, trust issues, or management quality concerns. Be critical.
-7. Broker Recommendations: Summarize recent buy/sell calls from major brokerage houses (e.g. Morgan Stanley, Jefferies, Motilal Oswal). Include target prices if known.
-8. Institutional Activity: Analyze FII and DII flows for this stock. Also mention any recent buying/selling by Super Investors (e.g. Jhunjhunwala, Vijay Kedia, Radhakishan Damani, Rakesh Jhunjhunwala, Rekha Jhunjhunwala, Raamdeo Agrawal, Ashish Kacholia, Sunil Singhania, Dolly Khanna, Nemish S Shah, Porinju Veliyath). Be specific with names if possible.
-9. AI Score: Rate the stock from 0 (High Risk/Sell) to 100 (Strong Buy) based on the above analysis. Be strict. Use the logic: 
+7. Broker Recommendations: Summarize buy/sell calls from major brokerage houses (e.g. Morgan Stanley, Jefferies, Motilal Oswal) from the LAST 6 MONTHS ONLY. Ignore older recommendations. Include target prices if known. If no recent recommendations exist, state "No recent broker recommendations available."
+8. Institutional Activity: Analyze FII and DII flows for this stock from the LAST 2 QUARTERS (6 months) ONLY. Also mention current holdings AND any recent buying/selling by Super Investors (e.g. Vijay Kedia, Radhakishan Damani, Rakesh Jhunjhunwala, Rekha Jhunjhunwala, Raamdeo Agrawal, Ashish Kacholia, Sunil Singhania, Dolly Khanna, Nemish S Shah, Porinju Veliyath). Show their current holding % if known. Be specific with names.
+9. Demand Supply Analysis: Use market research approach. Start with evaluation label in CAPS: FAVORABLE / NEUTRAL / UNFAVORABLE. Then analyze:
+   • Finished Products: Current demand vs supply dynamics for company's main products/services. Is there shortage or oversupply in the market?
+   • Raw Materials: Availability and pricing pressure on key inputs/raw materials. Are costs rising or falling?
+   • Competitive Position: How does the company compare to peers in meeting demand?
+10. AI Score: Rate the stock from 0 (High Risk/Sell) to 100 (Strong Buy) based on the above analysis. Be strict. Use the logic: 
    - <40: Bearish/Issues 
    - 40-60: Neutral 
    - 60-80: Good 
    - >80: Exceptional. Return ONLY the number (e.g. "75").
 
-Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg", "priceDrivers", "governance", "brokerRecs", "institutional", "aiScore". All values MUST be strings, not objects.
+Output Format: JSON object with keys: "guidelines", "future", "lifecycle", "bcg", "priceDrivers", "governance", "brokerRecs", "institutional", "demandSupply", "aiScore". All values MUST be strings, not objects.
 Content Style: Use short paragraphs and emojis. Use \n for line breaks. Avoid hedging (e.g. "It depends").
 `;
 

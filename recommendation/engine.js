@@ -37,8 +37,8 @@ export async function generateRecommendation(stocks) {
     // 5. Get Top Picks (Initially based on quant score)
     let topPicks = getTopPicks(portfolioResult.stocks);
 
-    // 6. ENHANCE with AI Checks (Top 15 only to save time)
-    // We only run AI on the best candidates to refine the scoring
+    // 6. ENHANCE with AI Checks (All 20 Top Picks)
+    // Run AI analysis on all top picks to integrate AI scores into composite
     const enhancedPicks = [];
     console.log(`🧠 Running AI Analysis on Top ${topPicks.length} candidates...`);
 
@@ -71,7 +71,15 @@ export async function generateRecommendation(stocks) {
 
         } catch (e) {
             console.error(`AI Check failed for ${pick.name}:`, e.message);
-            enhancedPicks.push(pick); // Keep original if fail
+            // Still add the stock with default AI score of 50 so it shows in UI
+            enhancedPicks.push({
+                ...pick,
+                aiScore: 50, // Default score for failed checks
+                scoreBreakdown: {
+                    ...pick.scoreBreakdown,
+                    ai: 50
+                }
+            });
         }
     }
 
@@ -121,6 +129,9 @@ export async function generateRecommendation(stocks) {
         // Sector Trends (calculated from ALL passed stocks)
         sectorTrends: calculateSectorTrends(scoringResult.passed),
 
+        // Return Forecast (Next Quarter Prediction - includes both best and worst)
+        returnForecast: calculateReturnForecast(portfolioResult.stocks, topPicks),
+
         // Failed stocks info
         excluded: {
             count: scoringResult.failed.length,
@@ -146,6 +157,11 @@ function getTopPicks(stocks) {
         industry: stock.industry,
         compositeScore: stock.compositeScore,
         recommendation: stock.recommendation,
+
+        // Return data for forecast calculations
+        return1w: stock.return1w || 0,
+        return1m: stock.return1m || 0,
+        return3m: stock.return3m || 0,
 
         // Key strengths
         strengths: getStrengths(stock),
@@ -356,6 +372,155 @@ function calculateSectorTrends(allPassedStocks) {
 
     // Sort by sector score (highest first)
     return sectors.sort((a, b) => b.sectorScore - a.sectorScore);
+}
+
+/**
+ * Calculate Return Forecast for Next Quarter
+ * Uses 5-factor model: Mean Reversion, Trend, Quality, Valuation, AI Signals
+ */
+function calculateReturnForecast(allStocks, topPicks) {
+    // Helper to calculate prediction for a single stock
+    const calculatePrediction = (stock) => {
+        // Get score components - handle both scoreBreakdown (flat) and scores (nested) formats
+        const scores = stock.scoreBreakdown || {};
+        const rawScores = stock.scores || {};
+
+        // Extract scores - prefer scoreBreakdown, fallback to scores.X.score or scores.X
+        const fundamental = scores.fundamental || (typeof rawScores.fundamental === 'object' ? rawScores.fundamental.score : rawScores.fundamental) || 50;
+        const safety = scores.safety || scores.risk || (typeof rawScores.risk === 'object' ? rawScores.risk.score : rawScores.risk) || 50;
+        const valuation = scores.valuation || (typeof rawScores.valuation === 'object' ? rawScores.valuation.score : rawScores.valuation) || 50;
+        const momentum = scores.momentum || (typeof rawScores.momentum === 'object' ? rawScores.momentum.score : rawScores.momentum) || 50;
+        const aiScore = stock.aiScore || 50;
+        const return3m = stock.return3m || 0;
+        const return1m = stock.return1m || 0;
+        const return1w = stock.return1w || 0;
+
+        // Factor 1: Mean Reversion (20%)
+        // Quality stocks with recent drops have bounce potential
+        let meanReversionScore = 50;
+        if (fundamental >= 70 && return3m < -15) {
+            meanReversionScore = 95; // Strong contrarian signal
+        } else if (fundamental >= 70 && return3m < -10) {
+            meanReversionScore = 85;
+        } else if (fundamental >= 60 && return3m < -5) {
+            meanReversionScore = 70;
+        } else if (fundamental >= 50 && return3m < 0) {
+            meanReversionScore = 55;
+        } else if (return3m > 20) {
+            meanReversionScore = 35; // Overbought risk
+        } else {
+            meanReversionScore = 45;
+        }
+
+        // Factor 2: Trend Continuation (25%)
+        // Strong momentum often continues
+        let trendScore = momentum;
+        // Bonus for confirmed trend (all timeframes positive)
+        if (return1w > 0 && return1m > 0 && return3m > 0) {
+            trendScore = Math.min(100, trendScore + 10);
+        }
+        // Penalty for weakening trend
+        if (return1w < -3 && return1m > 0) {
+            trendScore = Math.max(0, trendScore - 10);
+        }
+
+        // Factor 3: Quality (20%)
+        const qualityScore = (fundamental + safety) / 2;
+
+        // Factor 4: Valuation (15%)
+        const valuationScore = valuation;
+
+        // Factor 5: AI Signal (20%)
+        // Start with AI score
+        let aiSignalScore = aiScore;
+
+        // Final Prediction Score
+        const predictionScore = Math.round(
+            0.20 * meanReversionScore +
+            0.25 * trendScore +
+            0.20 * qualityScore +
+            0.15 * valuationScore +
+            0.20 * aiSignalScore
+        );
+
+        // Determine expected return - more granular calculation
+        // Maps prediction score (0-100) to expected quarterly return (-15% to +25%)
+        // Linear interpolation: score 0 = -15%, score 50 = 0%, score 100 = +25%
+        let expectedReturnPct;
+        if (predictionScore >= 50) {
+            // Score 50-100 maps to 0% to +25%
+            expectedReturnPct = ((predictionScore - 50) / 50) * 25;
+        } else {
+            // Score 0-50 maps to -15% to 0%
+            expectedReturnPct = ((predictionScore - 50) / 50) * 15;
+        }
+        expectedReturnPct = Math.round(expectedReturnPct * 10) / 10; // Round to 1 decimal
+
+        let expectedReturn, returnLabel, returnIcon;
+        if (predictionScore >= 80) {
+            expectedReturn = `+${expectedReturnPct.toFixed(0)}%`;
+            returnLabel = 'Strong Buy';
+            returnIcon = '🚀';
+        } else if (predictionScore >= 65) {
+            expectedReturn = `+${expectedReturnPct.toFixed(0)}%`;
+            returnLabel = 'Buy';
+            returnIcon = '📈';
+        } else if (predictionScore >= 50) {
+            expectedReturn = `+${expectedReturnPct.toFixed(0)}%`;
+            returnLabel = 'Hold';
+            returnIcon = '➡️';
+        } else if (predictionScore >= 35) {
+            expectedReturn = `${expectedReturnPct.toFixed(0)}%`;
+            returnLabel = 'Caution';
+            returnIcon = '⚠️';
+        } else {
+            expectedReturn = `${expectedReturnPct.toFixed(0)}%`;
+            returnLabel = 'Avoid';
+            returnIcon = '🔴';
+        }
+
+        return {
+            name: stock.name,
+            code: stock.code || stock.nseCode,
+            industry: stock.industry,
+            currentPrice: stock.currentPrice,
+            predictionScore,
+            expectedReturn,
+            returnLabel,
+            returnIcon,
+            // Factor breakdown for transparency
+            factors: {
+                meanReversion: Math.round(meanReversionScore),
+                trend: Math.round(trendScore),
+                quality: Math.round(qualityScore),
+                valuation: Math.round(valuationScore),
+                aiSignal: Math.round(aiSignalScore)
+            },
+            // Raw data for context
+            return3m: return3m,
+            aiScore: aiScore,
+            compositeScore: stock.compositeScore
+        };
+    };
+
+    // Calculate predictions for top picks (already have AI scores)
+    const topForecasts = topPicks.map(calculatePrediction);
+
+    // Calculate predictions for ALL stocks to find worst performers
+    const allForecasts = allStocks.map(calculatePrediction);
+
+    // Get bottom 10 as risk alerts (stocks with lowest prediction scores - highest risk)
+    const riskAlerts = [...allForecasts]
+        .sort((a, b) => a.predictionScore - b.predictionScore)
+        .slice(0, 10);
+
+    // Sort top forecasts by prediction score (highest first)
+    const topPredictions = topForecasts.sort((a, b) => b.predictionScore - a.predictionScore);
+
+    return {
+        topPredictions,
+        riskAlerts
+    };
 }
 
 /**
