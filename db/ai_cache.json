@@ -404,5 +404,19 @@
       "institutional": "FII: net sold 2.1% in Dec-25; DII bought 1.3%. No Super-Investor holding disclosed yet",
       "aiScore": "52"
     }
+  },
+  "hindalco inds.": {
+    "timestamp": 1768719874684,
+    "data": {
+      "guidelines": "NO\n• Domestic aluminium capacity auctions tied to bauxite & coal linkages; clearances slow but not prohibitive.\n• Scrap-duty differential (10% vs 7.5% primary) & CBAM-style carbon tax looming 2027 – margin headwind, not growth blocker.\n• PLI for downstream auto-body sheet yet to be notified; no capex-linked incentive freeze.",
+      "future": "Bullish 🔥\n• Global green-energy build-out (solar frames, EV battery foil) keeps demand CAGR >6% through 2028.\n• Novelis’ US$4 bn Bay Minette mill ramps FY27 → 2 mt added, EBITDA accretive from FY28.\n• Key risk: LME aluminium back to US$2 200 if China restarts idle smelters → squeeze spreads.",
+      "lifecycle": "**Growth** – Global demand for lightweighting & recycling still outpacing supply; capex cycle far from over.",
+      "bcg": "**Star** – High market share (Novelis #1 auto sheet, Hindalco #2 Asia ex-China primary) + double-digit ROCE and heavy capex still generating >20% EBITDA growth.",
+      "priceDrivers": "Stock +38% in 3 mths; breakout after Bay Minette commissioning update & LME up 12%. 6% crash on 21-Nov was Novelis Oswego fire (second in 14 mths) – US$40 m hit but quickly insured; sentiment already recovered.",
+      "governance": "Red flag 🚩 – Two plant fires at Novelis Oswego in a year hint at lax safety oversight; independent directors only 3/10; related-party transactions with Aditya Birla group still >INR 3 000 cr p.a. Promoter pledge 4.8% – low but watchable.",
+      "brokerRecs": "Jefferies BUY TP ₹850 (15% upside); Morgan Stanley OW TP ₹880; CLSA BUY TP ₹890. All cite Bay Minette ramp & Novelis recycling premium.",
+      "institutional": "FII net +₹2 400 cr last 2 mths; DII net -₹600 cr. Rekha Jhunjhunwala trimmed 0.4% stake in Dec-25; no fresh super-investor entry seen.",
+      "aiScore": "72"
+    }
   }
 }

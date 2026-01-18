@@ -115,6 +115,12 @@ export async function generateRecommendation(stocks) {
         // Watchlist (good stocks but not in main allocation)
         watchlist: getWatchlist(scoringResult.passed, portfolioResult.stocks),
 
+        // Contrarian Picks (quality stocks with recent corrections)
+        contrarianPicks: getContrarianPicks(scoringResult.passed),
+
+        // Sector Trends (calculated from ALL passed stocks)
+        sectorTrends: calculateSectorTrends(scoringResult.passed),
+
         // Failed stocks info
         excluded: {
             count: scoringResult.failed.length,
@@ -210,6 +216,146 @@ function getWatchlist(allPassed, allocated) {
             recommendation: s.recommendation,
             reason: getWatchlistReason(s)
         }));
+}
+
+/**
+ * Get Contrarian Picks - Quality stocks with recent corrections
+ * "Buy the Dip" opportunities: Strong fundamentals + Undervalued + Weak Momentum
+ */
+function getContrarianPicks(allPassed) {
+    return allPassed
+        .filter(s => {
+            const fundamental = s.scores?.fundamental?.score || s.scores?.fundamental || 0;
+            const valuation = s.scores?.valuation?.score || s.scores?.valuation || 0;
+            const momentum = s.scores?.momentum?.score || s.scores?.momentum || 0;
+
+            // Contrarian criteria:
+            // 1. Strong fundamentals (>= 70)
+            // 2. Good valuation / undervalued (>= 60)
+            // 3. Weak momentum (< 45) - recent correction
+            return fundamental >= 70 && valuation >= 60 && momentum < 45;
+        })
+        .sort((a, b) => {
+            // Sort by fundamental strength (best quality first)
+            const fundA = a.scores?.fundamental?.score || a.scores?.fundamental || 0;
+            const fundB = b.scores?.fundamental?.score || b.scores?.fundamental || 0;
+            return fundB - fundA;
+        })
+        .slice(0, 10)
+        .map(s => {
+            const fundamental = s.scores?.fundamental?.score || s.scores?.fundamental || 0;
+            const valuation = s.scores?.valuation?.score || s.scores?.valuation || 0;
+            const momentum = s.scores?.momentum?.score || s.scores?.momentum || 0;
+
+            return {
+                name: s.name,
+                code: s.nseCode,
+                industry: s.industry,
+                currentPrice: s.currentPrice,
+                compositeScore: s.compositeScore,
+                recommendation: s.recommendation,
+                // Score breakdown
+                scores: {
+                    fundamental,
+                    valuation,
+                    momentum,
+                    safety: s.scores?.risk?.score || s.scores?.risk || 0
+                },
+                // Correction metrics - now using direct fields
+                return1w: s.return1w || 0,
+                return1m: s.return1m || 0,
+                return3m: s.return3m || 0,
+                // Why it's a contrarian pick - with detailed reason
+                contrarian_reason: getContrarianReason(s, fundamental, valuation, momentum)
+            };
+        });
+}
+
+/**
+ * Get detailed reason for contrarian pick
+ */
+function getContrarianReason(stock, fundamental, valuation, momentum) {
+    const return3m = stock.return3m || 0;
+    const return1m = stock.return1m || 0;
+
+    // Build a specific reason based on the stock's characteristics
+    if (fundamental >= 80 && valuation >= 80 && return3m < -15) {
+        return `🌟 Top-tier quality (F:${fundamental}) crashed ${return3m.toFixed(0)}% in 3M - rare deep value`;
+    } else if (fundamental >= 80 && valuation >= 70) {
+        return `💎 Premium fundamentals (${fundamental}) at discount valuation (${valuation})`;
+    } else if (valuation >= 80 && return3m < -10) {
+        return `💰 Heavily undervalued (V:${valuation}) after ${return3m.toFixed(0)}% correction`;
+    } else if (momentum < 35 && return1m < -10) {
+        return `📉 Oversold (M:${momentum}) with ${return1m.toFixed(0)}% drop - mean reversion play`;
+    } else if (fundamental >= 75 && return3m < -20) {
+        return `🔥 Quality stock (F:${fundamental}) down ${return3m.toFixed(0)}% - contrarian opportunity`;
+    } else {
+        return `🎯 Strong base (F:${fundamental}, V:${valuation}) + weak momentum (${momentum}) = entry zone`;
+    }
+}
+
+/**
+ * Calculate Sector Trends from ALL passed stocks
+ * Groups stocks by industry/sector and calculates aggregate metrics
+ */
+function calculateSectorTrends(allPassedStocks) {
+    const sectorMap = {};
+
+    // Group stocks by industry
+    for (const stock of allPassedStocks) {
+        const sector = stock.industry || 'Other';
+        if (!sectorMap[sector]) {
+            sectorMap[sector] = {
+                sector,
+                stocks: [],
+                totalScore: 0,
+                totalReturn3m: 0,
+                totalMomentum: 0
+            };
+        }
+        sectorMap[sector].stocks.push(stock);
+        sectorMap[sector].totalScore += stock.compositeScore || 0;
+        sectorMap[sector].totalReturn3m += stock.return3m || 0;
+        sectorMap[sector].totalMomentum += (stock.scores?.momentum?.score || stock.scores?.momentum || 0);
+        // Add external score for sector trend calculation
+        sectorMap[sector].totalExternal = (sectorMap[sector].totalExternal || 0) + (stock.scores?.external?.score || stock.scores?.external || 0);
+    }
+
+    // Calculate averages and determine trends
+    const sectors = Object.values(sectorMap).map(s => {
+        const count = s.stocks.length;
+        const avgMomentum = count > 0 ? Math.round(s.totalMomentum / count) : 0;
+        const avgExternal = count > 0 ? Math.round((s.totalExternal || 0) / count) : 0;
+        const avgReturn3m = count > 0 ? s.totalReturn3m / count : 0;
+
+        // Sector Score = 50% Momentum + 50% External
+        const avgScore = Math.round(0.5 * avgMomentum + 0.5 * avgExternal);
+
+        // Determine trend based on momentum score (correlates better with sector quality)
+        // High momentum = stocks in uptrend, Low momentum = stocks in downtrend
+        let trend = 'neutral';
+        let trendIcon = '➡️';
+        if (avgMomentum >= 55 || (avgMomentum >= 45 && avgReturn3m > 5)) {
+            trend = 'bullish';
+            trendIcon = '🚀';
+        } else if (avgMomentum < 40 || (avgMomentum < 50 && avgReturn3m < -10)) {
+            trend = 'bearish';
+            trendIcon = '📉';
+        }
+
+        return {
+            sector: s.sector,
+            stockCount: count,
+            sectorScore: avgScore,
+            avgReturn3m: parseFloat(avgReturn3m.toFixed(1)),
+            avgMomentum,
+            trend,
+            trendIcon
+        };
+    });
+
+    // Sort by sector score (highest first)
+    return sectors.sort((a, b) => b.sectorScore - a.sectorScore);
 }
 
 /**

@@ -1494,7 +1494,8 @@
         <div class="tabs">
           <button class="tab ${activeTab === 'allocation' ? 'active' : ''}" onclick="setTab('allocation')">Risk Check</button>
           <button class="tab ${activeTab === 'topPicks' ? 'active' : ''}" onclick="setTab('topPicks')">Multi Factor Score Analysis</button>
-          <button class="tab ${activeTab === 'sectors' ? 'active' : ''}" onclick="setTab('sectors')">Sector Breakdown</button>
+          <button class="tab ${activeTab === 'contrarian' ? 'active' : ''}" onclick="setTab('contrarian')">📉 Contrarian Picks</button>
+          <button class="tab ${activeTab === 'sectors' ? 'active' : ''}" onclick="setTab('sectors')">📊 Sector Trend</button>
           <button class="tab ${activeTab === 'deepAnalysis' ? 'active' : ''}" onclick="setTab('deepAnalysis')">🔬 Deep Analysis</button>
           <button class="tab ${activeTab === 'aiCheck' ? 'active' : ''}" onclick="setTab('aiCheck')">🤖 AI Check</button>
           <button class="tab ${activeTab === 'watchlist' ? 'active' : ''}" onclick="setTab('watchlist')">Watchlist</button>
@@ -1515,7 +1516,7 @@
         function setTab(tab) {
             activeTab = tab;
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            const tabIndex = ['allocation', 'topPicks', 'sectors', 'deepAnalysis', 'watchlist'].indexOf(tab);
+            const tabIndex = ['allocation', 'topPicks', 'contrarian', 'sectors', 'deepAnalysis', 'aiCheck', 'watchlist'].indexOf(tab);
             document.querySelector(`.tab:nth-child(${tabIndex + 1})`)?.classList.add('active');
             renderTabContent();
         }
@@ -1539,6 +1540,9 @@
                     break;
                 case 'aiCheck':
                     container.innerHTML = renderAICheck();
+                    break;
+                case 'contrarian':
+                    container.innerHTML = renderContrarianPicks();
                     break;
                 case 'watchlist':
                     container.innerHTML = renderWatchlist();
@@ -1662,36 +1666,139 @@
         }
 
         function renderSectors() {
-            const sectors = recommendation.allocation.sectorBreakdown;
-            const colors = ['#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e', '#f97316', '#eab308'];
+            // Use pre-calculated sector trends from backend (ALL passed stocks)
+            const sectors = recommendation.sectorTrends || [];
+            const colors = ['#10b981', '#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e', '#f97316'];
+
+            if (!sectors || sectors.length === 0) {
+                return `
+          <div class="card empty-state">
+            <h3>📊 No Sector Data Available</h3>
+            <p>Run a fresh analysis to see sector trends.</p>
+          </div>
+        `;
+            }
 
             return `
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Sector Allocation</h3>
+            <h3 class="card-title">📊 Sector Trend Analysis</h3>
+            <span style="color: var(--text-secondary)">Ranked by sector score (all qualifying stocks)</span>
           </div>
           
-          <div class="sector-grid" style="margin-bottom: 2rem">
-            ${sectors.map((s, i) => `
-              <div class="sector-item">
-                <span class="sector-name">${s.sector}</span>
-                <span class="sector-weight">${s.weight}%</span>
-              </div>
-            `).join('')}
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Sector</th>
+                  <th>Trend</th>
+                  <th>Sector Score</th>
+                  <th>3M Return</th>
+                  <th>Stocks</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${sectors.map((s, i) => `
+                  <tr>
+                    <td style="font-weight: 700; color: var(--accent-primary)">#${i + 1}</td>
+                    <td>
+                      <div class="stock-name">${s.sector}</div>
+                    </td>
+                    <td>
+                      <span style="font-size: 1.2rem">${s.trendIcon}</span>
+                      <span style="color: ${s.trend === 'bullish' ? 'var(--success)' : s.trend === 'bearish' ? 'var(--danger)' : 'var(--text-muted)'}; font-size: 0.85rem; text-transform: capitalize">${s.trend}</span>
+                    </td>
+                    <td>
+                      <span class="score-badge ${getScoreClass(s.sectorScore)}" style="width:40px;height:40px">${s.sectorScore}</span>
+                    </td>
+                    <td style="color: ${s.avgReturn3m > 0 ? 'var(--success)' : 'var(--danger)'}; font-weight: 600">
+                      ${s.avgReturn3m}%
+                    </td>
+                    <td style="color: var(--text-secondary)">${s.stockCount}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
           </div>
-          
-          <div>
-            ${sectors.map((s, i) => `
-              <div class="sector-bar-item">
-                <div class="sector-bar-header">
-                  <span class="sector-bar-label">${s.sector}</span>
-                  <span class="sector-bar-value">${s.weight}%</span>
-                </div>
-                <div class="weight-bar-container" style="width: 100%">
-                  <div class="weight-bar" style="width: ${Math.min(s.weight * 4, 100)}%; background: ${colors[i % colors.length]}"></div>
-                </div>
-              </div>
-            `).join('')}
+        </div>
+      `;
+        }
+
+        function renderContrarianPicks() {
+            const picks = recommendation.contrarianPicks || [];
+
+            if (!picks || picks.length === 0) {
+                return `
+          <div class="card empty-state">
+            <h3>📉 No Contrarian Picks Found</h3>
+            <p>No quality stocks with recent corrections matching the criteria.</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Criteria: Fundamental Score ≥70, Valuation Score ≥60, Momentum Score <45
+            </p>
+          </div>
+        `;
+            }
+
+            return `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">📉 Contrarian Picks - Buy the Dip</h3>
+            <span style="color: var(--text-secondary)">${picks.length} quality stocks with recent corrections</span>
+          </div>
+          <p style="padding: 0 1.5rem; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+            🎯 These are fundamentally strong stocks that have corrected recently. Contrarian view: weakness in quality = opportunity.
+          </p>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Stock</th>
+                  <th>Fund.</th>
+                  <th>Value</th>
+                  <th>Mom.</th>
+                  <th>1W</th>
+                  <th>1M</th>
+                  <th>3M</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${picks.map(stock => `
+                  <tr onclick="viewDeepAnalysis('${stock.code}')" style="cursor: pointer">
+                    <td>
+                      <div class="stock-name" style="color: var(--accent-secondary)">${stock.name}</div>
+                      <div class="stock-code">${stock.code || '-'}</div>
+                    </td>
+                    <td>
+                      <span class="score-badge ${getScoreClass(stock.scores?.fundamental)}" style="width:40px;height:40px">
+                        ${stock.scores?.fundamental || '-'}
+                      </span>
+                    </td>
+                    <td>
+                      <span class="score-badge ${getScoreClass(stock.scores?.valuation)}" style="width:40px;height:40px">
+                        ${stock.scores?.valuation || '-'}
+                      </span>
+                    </td>
+                    <td>
+                      <span class="score-badge ${getScoreClass(stock.scores?.momentum)}" style="width:40px;height:40px">
+                        ${stock.scores?.momentum || '-'}
+                      </span>
+                    </td>
+                    <td style="color: ${stock.return1w < 0 ? 'var(--danger)' : 'var(--success)'}; font-weight: 600">
+                      ${stock.return1w?.toFixed(1) || 0}%
+                    </td>
+                    <td style="color: ${stock.return1m < 0 ? 'var(--danger)' : 'var(--success)'}; font-weight: 600">
+                      ${stock.return1m?.toFixed(1) || 0}%
+                    </td>
+                    <td style="color: ${stock.return3m < 0 ? 'var(--danger)' : 'var(--success)'}; font-weight: 600">
+                      ${stock.return3m?.toFixed(1) || 0}%
+                    </td>
+                    <td style="font-size: 0.85rem; max-width: 200px">${stock.contrarian_reason || ''}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
           </div>
         </div>
       `;

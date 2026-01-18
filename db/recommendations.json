@@ -2,14 +2,14 @@
   {
     "id": "rec_2026-W04",
     "weekId": "2026-W04",
-    "timestamp": "2026-01-18T04:58:44.306Z",
+    "timestamp": "2026-01-18T08:01:04.919Z",
     "marketCondition": "NEUTRAL",
     "summary": {
-      "totalAnalyzed": 124,
-      "passedGates": 94,
-      "failedGates": 30,
+      "totalAnalyzed": 119,
+      "passedGates": 90,
+      "failedGates": 29,
       "recommendedStocks": 20,
-      "averageScore": 73
+      "averageScore": 72
     },
     "allocation": {
       "stocks": [
@@ -21,7 +21,7 @@
           "sectorGroup": "Other",
           "currentPrice": 2596.4,
           "marketCap": 111206.02,
-          "weight": 5.2,
+          "weight": 5.5,
           "compositeScore": 70,
           "recommendation": "STRONG BUY",
           "scores": {
@@ -31,6 +31,9 @@
             "momentum": 70,
             "external": 57
           },
+          "return1w": 2.89,
+          "return1m": -2.84,
+          "return3m": -9.15,
           "riskLevel": "Low",
           "conviction": 57,
           "aiScore": 62
@@ -53,28 +56,9 @@
             "momentum": 75,
             "external": 59
           },
-          "riskLevel": "Low",
-          "conviction": 54,
-          "aiScore": 72
-        },
-        {
-          "name": "Indus Towers",
-          "nseCode": "INDUSTOWER",
-          "bseCode": 534816,
-          "industry": "Telecom - Infrastructure",
-          "sectorGroup": "Infrastructure",
-          "currentPrice": 433.85,
-          "marketCap": 114456.69,
-          "weight": 5.2,
-          "compositeScore": 72,
-          "recommendation": "STRONG BUY",
-          "scores": {
-            "risk": 75,
-            "fundamental": 72,
-            "valuation": 72,
-            "momentum": 75,
-            "external": 59
-          },
+          "return1w": 0.1,
+          "return1m": 6.14,
+          "return3m": 26.49,
           "riskLevel": "Low",
           "conviction": 54,
           "aiScore": 72
@@ -87,7 +71,7 @@
           "sectorGroup": "Auto",
           "currentPrice": 2180.6,
           "marketCap": 5739.27,
-          "weight": 4.9,
+          "weight": 5,
           "compositeScore": 70,
           "recommendation": "BUY",
           "scores": {
@@ -97,31 +81,37 @@
             "momentum": 64,
             "external": 62
           },
+          "return1w": -2.25,
+          "return1m": -6.66,
+          "return3m": 12.77,
           "riskLevel": "Low",
           "conviction": 51,
           "aiScore": 72
         },
         {
-          "name": "Authum Invest",
-          "nseCode": "AIIL",
-          "bseCode": 539177,
-          "industry": "Non Banking Financial Company (NBFC)",
-          "sectorGroup": "Financials",
-          "currentPrice": 631.2,
-          "marketCap": 53603.11,
-          "weight": 4.8,
-          "compositeScore": 68,
-          "recommendation": "STRONG BUY",
+          "name": "HCL Technologies",
+          "nseCode": "HCLTECH",
+          "bseCode": 532281,
+          "industry": "Computers - Software & Consulting",
+          "sectorGroup": "Technology",
+          "currentPrice": 1698,
+          "marketCap": 460780.33,
+          "weight": 5,
+          "compositeScore": 64,
+          "recommendation": "BUY",
           "scores": {
-            "risk": 69,
-            "fundamental": 73,
-            "valuation": 86,
-            "momentum": 75,
-            "external": 55
+            "risk": 76.5,
+            "fundamental": 67,
+            "valuation": 49,
+            "momentum": 76,
+            "external": 65
           },
+          "return1w": 2.2,
+          "return1m": 3.39,
+          "return3m": 13.55,
           "riskLevel": "Low",
-          "conviction": 50,
-          "aiScore": 46
+          "conviction": 51,
+          "aiScore": 52
         },
         {
           "name": "Authum Invest",
@@ -131,7 +121,7 @@
           "sectorGroup": "Financials",
           "currentPrice": 631.2,
           "marketCap": 53603.11,
-          "weight": 4.8,
+          "weight": 4.9,
           "compositeScore": 68,
           "recommendation": "STRONG BUY",
           "scores": {
@@ -141,6 +131,9 @@
             "momentum": 75,
             "external": 55
           },
+          "return1w": 3.55,
+          "return1m": 16.79,
+          "return3m": -0.2,
           "riskLevel": "Low",
           "conviction": 50,
           "aiScore": 46
@@ -163,6 +156,9 @@
             "momentum": 70,
             "external": 72
           },
+          "return1w": 3.89,
+          "return1m": 29.84,
+          "return3m": 59.98,
           "riskLevel": "Low",
           "conviction": 50,
           "aiScore": 78
@@ -185,6 +181,9 @@
             "momentum": 76,
             "external": 67
           },
+          "return1w": 0.65,
+          "return1m": 5.06,
+          "return3m": 5.03,
           "riskLevel": "Low",
           "conviction": 50,
           "aiScore": 72
@@ -207,6 +206,9 @@
             "momentum": 53,
             "external": 60
           },
+          "return1w": 0.23,
+          "return1m": -0.98,
+          "return3m": 3.05,
           "riskLevel": "Low",
           "conviction": 49,
           "aiScore": 68
@@ -219,7 +221,7 @@
           "sectorGroup": "Technology",
           "currentPrice": 1011.2,
           "marketCap": 1286.79,
-          "weight": 4.6,
+          "weight": 4.7,
           "compositeScore": 69,
           "recommendation": "STRONG BUY",
           "scores": {
@@ -229,6 +231,9 @@
             "momentum": 68,
             "external": 69
           },
+          "return1w": -1.86,
+          "return1m": 5.81,
+          "return3m": 10.21,
           "riskLevel": "Low",
           "conviction": 48,
           "aiScore": 52
@@ -251,6 +256,9 @@
             "momentum": 55,
             "external": 55
           },
+          "return1w": 0.68,
+          "return1m": -10.85,
+          "return3m": -2.48,
           "riskLevel": "Low",
           "conviction": 47,
           "aiScore": 42
@@ -273,6 +281,9 @@
             "momentum": 72,
             "external": 63
           },
+          "return1w": 5.16,
+          "return1m": 8.32,
+          "return3m": 31.12,
           "riskLevel": "Low",
           "conviction": 46,
           "aiScore": 72
@@ -285,7 +296,7 @@
           "sectorGroup": "Financials",
           "currentPrice": 106.94,
           "marketCap": 1315.53,
-          "weight": 4.3,
+          "weight": 4.4,
           "compositeScore": 63,
           "recommendation": "BUY",
           "scores": {
@@ -295,6 +306,9 @@
             "momentum": 41,
             "external": 51
           },
+          "return1w": -4.09,
+          "return1m": -10.27,
+          "return3m": -14.68,
           "riskLevel": "Low",
           "conviction": 45,
           "aiScore": 42
@@ -317,6 +331,9 @@
             "momentum": 50,
             "external": 55
           },
+          "return1w": 0.07,
+          "return1m": -7.1,
+          "return3m": -6.43,
           "riskLevel": "Moderate",
           "conviction": 45,
           "aiScore": 62
@@ -329,7 +346,7 @@
           "sectorGroup": "Technology",
           "currentPrice": 1707.3,
           "marketCap": 4703.09,
-          "weight": 4.2,
+          "weight": 4.3,
           "compositeScore": 70,
           "recommendation": "STRONG BUY",
           "scores": {
@@ -339,6 +356,9 @@
             "momentum": 66,
             "external": 65
           },
+          "return1w": 3.08,
+          "return1m": -5.29,
+          "return3m": 3.73,
           "riskLevel": "Moderate",
           "conviction": 44,
           "aiScore": 64
@@ -361,6 +381,9 @@
             "momentum": 42,
             "external": 70
           },
+          "return1w": -3.46,
+          "return1m": -6.06,
+          "return3m": 4.02,
           "riskLevel": "Moderate",
           "conviction": 44,
           "aiScore": 42
@@ -383,9 +406,37 @@
             "momentum": 66,
             "external": 65
           },
+          "return1w": -1.49,
+          "return1m": -1.44,
+          "return3m": 1.29,
           "riskLevel": "Moderate",
           "conviction": 43,
           "aiScore": 74
+        },
+        {
+          "name": "Hindalco Inds.",
+          "nseCode": "HINDALCO",
+          "bseCode": 500440,
+          "industry": "Aluminium",
+          "sectorGroup": "Other",
+          "currentPrice": 934.65,
+          "marketCap": 210037.03,
+          "weight": 4.1,
+          "compositeScore": 68,
+          "recommendation": "BUY",
+          "scores": {
+            "risk": 63,
+            "fundamental": 65,
+            "valuation": 72,
+            "momentum": 75,
+            "external": 65
+          },
+          "return1w": 3.74,
+          "return1m": 9.7,
+          "return3m": 18.86,
+          "riskLevel": "Moderate",
+          "conviction": 42,
+          "aiScore": 72
         },
         {
           "name": "Indrapr.Medical",
@@ -395,7 +446,7 @@
           "sectorGroup": "Healthcare",
           "currentPrice": 402.5,
           "marketCap": 3689.84,
-          "weight": 3.8,
+          "weight": 3.9,
           "compositeScore": 66,
           "recommendation": "BUY",
           "scores": {
@@ -405,6 +456,9 @@
             "momentum": 52,
             "external": 58
           },
+          "return1w": -2.47,
+          "return1m": -12.48,
+          "return3m": -27.64,
           "riskLevel": "Moderate",
           "conviction": 40,
           "aiScore": 62
@@ -427,6 +481,9 @@
             "momentum": 65,
             "external": 49
           },
+          "return1w": 5.43,
+          "return1m": 0.98,
+          "return3m": -25.88,
           "riskLevel": "Moderate",
           "conviction": 38,
           "aiScore": 58
@@ -449,6 +506,9 @@
             "momentum": 59,
             "external": 63
           },
+          "return1w": -6.14,
+          "return1m": -23.88,
+          "return3m": 102.49,
           "riskLevel": "Moderate",
           "conviction": 36,
           "aiScore": 52
@@ -458,32 +518,32 @@
       "cash": 10,
       "sectorBreakdown": [
         {
-          "sector": "Healthcare",
-          "weight": 20.4
+          "sector": "Other",
+          "weight": 23.1
         },
         {
-          "sector": "Other",
-          "weight": 18.7
+          "sector": "Healthcare",
+          "weight": 20.5
+        },
+        {
+          "sector": "Technology",
+          "weight": 14
         },
         {
           "sector": "Financials",
-          "weight": 13.9
-        },
-        {
-          "sector": "Infrastructure",
-          "weight": 10.4
+          "weight": 9.3
         },
         {
           "sector": "Consumer",
           "weight": 9.2
         },
         {
-          "sector": "Technology",
-          "weight": 8.8
+          "sector": "Infrastructure",
+          "weight": 5.2
         },
         {
           "sector": "Auto",
-          "weight": 4.9
+          "weight": 5
         },
         {
           "sector": "Industrial",
@@ -543,34 +603,9 @@
         "aiScore": 72
       },
       {
-        "name": "Indus Towers",
-        "code": "INDUSTOWER",
-        "weight": 5.2,
-        "price": 433.85,
-        "industry": "Telecom - Infrastructure",
-        "compositeScore": 72,
-        "recommendation": "STRONG BUY",
-        "strengths": [
-          "Low risk profile",
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Positive momentum"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 75,
-          "fundamental": 72,
-          "valuation": 72,
-          "momentum": 75,
-          "external": 59,
-          "ai": 72
-        },
-        "aiScore": 72
-      },
-      {
         "name": "HDFC AMC",
         "code": "HDFCAMC",
-        "weight": 5.2,
+        "weight": 5.5,
         "price": 2596.4,
         "industry": "Asset Management Company",
         "compositeScore": 70,
@@ -594,7 +629,7 @@
       {
         "name": "Fiem Industries",
         "code": "FIEMIND",
-        "weight": 4.9,
+        "weight": 5,
         "price": 2180.6,
         "industry": "Auto Components & Equipments",
         "compositeScore": 70,
@@ -619,7 +654,7 @@
       {
         "name": "Cigniti Tech.",
         "code": "CIGNITITEC",
-        "weight": 4.2,
+        "weight": 4.3,
         "price": 1707.3,
         "industry": "IT Enabled Services",
         "compositeScore": 70,
@@ -668,7 +703,7 @@
       {
         "name": "Dynacons Sys.",
         "code": "DSSL",
-        "weight": 4.6,
+        "weight": 4.7,
         "price": 1011.2,
         "industry": "IT Enabled Services",
         "compositeScore": 69,
@@ -741,31 +776,7 @@
       {
         "name": "Authum Invest",
         "code": "AIIL",
-        "weight": 4.8,
-        "price": 631.2,
-        "industry": "Non Banking Financial Company (NBFC)",
-        "compositeScore": 68,
-        "recommendation": "STRONG BUY",
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Positive momentum"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 69,
-          "fundamental": 73,
-          "valuation": 86,
-          "momentum": 75,
-          "external": 55,
-          "ai": 46
-        },
-        "aiScore": 46
-      },
-      {
-        "name": "Authum Invest",
-        "code": "AIIL",
-        "weight": 4.8,
+        "weight": 4.9,
         "price": 631.2,
         "industry": "Non Banking Financial Company (NBFC)",
         "compositeScore": 68,
@@ -834,9 +845,33 @@
         "aiScore": 62
       },
       {
+        "name": "Hindalco Inds.",
+        "code": "HINDALCO",
+        "weight": 4.1,
+        "price": 934.65,
+        "industry": "Aluminium",
+        "compositeScore": 68,
+        "recommendation": "BUY",
+        "strengths": [
+          "Attractive valuation",
+          "Positive momentum",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 63,
+          "fundamental": 65,
+          "valuation": 72,
+          "momentum": 75,
+          "external": 65,
+          "ai": 72
+        },
+        "aiScore": 72
+      },
+      {
         "name": "Indrapr.Medical",
         "code": "INDRAMEDCO",
-        "weight": 3.8,
+        "weight": 3.9,
         "price": 402.5,
         "industry": "Hospital",
         "compositeScore": 66,
@@ -928,9 +963,33 @@
         "aiScore": 58
       },
       {
+        "name": "HCL Technologies",
+        "code": "HCLTECH",
+        "weight": 5,
+        "price": 1698,
+        "industry": "Computers - Software & Consulting",
+        "compositeScore": 64,
+        "recommendation": "BUY",
+        "strengths": [
+          "Low risk profile",
+          "Positive momentum",
+          "Favorable sector trends"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 76.5,
+          "fundamental": 67,
+          "valuation": 49,
+          "momentum": 76,
+          "external": 65,
+          "ai": 52
+        },
+        "aiScore": 52
+      },
+      {
         "name": "Master Trust",
         "code": "MASTERTR",
-        "weight": 4.3,
+        "weight": 4.4,
         "price": 106.94,
         "industry": "Stockbroking & Allied",
         "compositeScore": 63,
@@ -976,22 +1035,6 @@
       }
     ],
     "watchlist": [
-      {
-        "name": "HCL Technologies",
-        "code": "HCLTECH",
-        "industry": "Computers - Software & Consulting",
-        "compositeScore": 67,
-        "recommendation": "BUY",
-        "reason": "Monitor for allocation opportunity"
-      },
-      {
-        "name": "Hindalco Inds.",
-        "code": "HINDALCO",
-        "industry": "Aluminium",
-        "compositeScore": 67,
-        "recommendation": "BUY",
-        "reason": "Monitor for allocation opportunity"
-      },
       {
         "name": "Accelya Solution",
         "code": "ACCELYA",
@@ -1055,10 +1098,660 @@
         "compositeScore": 65,
         "recommendation": "BUY",
         "reason": "Monitor for allocation opportunity"
+      },
+      {
+        "name": "Welspun Corp",
+        "code": "WELCORP",
+        "industry": "Iron & Steel Products",
+        "compositeScore": 65,
+        "recommendation": "BUY",
+        "reason": "Monitor for allocation opportunity"
+      },
+      {
+        "name": "Multi Comm. Exc.",
+        "code": "MCX",
+        "industry": "Exchange and Data Platform",
+        "compositeScore": 65,
+        "recommendation": "BUY",
+        "reason": "Monitor for allocation opportunity"
+      }
+    ],
+    "contrarianPicks": [
+      {
+        "name": "Ashoka Buildcon",
+        "code": "ASHOKA",
+        "industry": "Civil Construction",
+        "currentPrice": 150.16,
+        "compositeScore": 64,
+        "recommendation": "BUY",
+        "scores": {
+          "fundamental": 85,
+          "valuation": 85,
+          "momentum": 35,
+          "safety": 51
+        },
+        "return1w": -7.35,
+        "return1m": -13.67,
+        "return3m": -21.09,
+        "contrarian_reason": "🌟 Top-tier quality (F:85) crashed -21% in 3M - rare deep value"
+      },
+      {
+        "name": "Shilchar Tech.",
+        "code": "SHILCTECH",
+        "industry": "Other Electrical Equipment",
+        "currentPrice": 3238.8,
+        "compositeScore": 63,
+        "recommendation": "ACCUMULATE",
+        "scores": {
+          "fundamental": 84,
+          "valuation": 81,
+          "momentum": 39,
+          "safety": 49
+        },
+        "return1w": -4.57,
+        "return1m": -16.47,
+        "return3m": -26.33,
+        "contrarian_reason": "🌟 Top-tier quality (F:84) crashed -26% in 3M - rare deep value"
+      },
+      {
+        "name": "Fluidomat",
+        "code": "",
+        "industry": "Industrial Products",
+        "currentPrice": 691.45,
+        "compositeScore": 50,
+        "recommendation": "HOLD",
+        "scores": {
+          "fundamental": 82,
+          "valuation": 70,
+          "momentum": 40,
+          "safety": 14.5
+        },
+        "return1w": -1.25,
+        "return1m": -2.01,
+        "return3m": -24.84,
+        "contrarian_reason": "💎 Premium fundamentals (82) at discount valuation (70)"
+      },
+      {
+        "name": "Kamdhenu",
+        "code": "KAMDHENU",
+        "industry": "Iron & Steel Products",
+        "currentPrice": 22.16,
+        "compositeScore": 61,
+        "recommendation": "ACCUMULATE",
+        "scores": {
+          "fundamental": 79,
+          "valuation": 83,
+          "momentum": 41,
+          "safety": 47
+        },
+        "return1w": -0.94,
+        "return1m": 0.36,
+        "return3m": -17.34,
+        "contrarian_reason": "💰 Heavily undervalued (V:83) after -17% correction"
+      },
+      {
+        "name": "Arrow Greentech",
+        "code": "ARROWGREEN",
+        "industry": "Packaging",
+        "currentPrice": 475.05,
+        "compositeScore": 63,
+        "recommendation": "BUY",
+        "scores": {
+          "fundamental": 78,
+          "valuation": 77,
+          "momentum": 41,
+          "safety": 56.5
+        },
+        "return1w": -2.11,
+        "return1m": -7.18,
+        "return3m": -13.83,
+        "contrarian_reason": "🎯 Strong base (F:78, V:77) + weak momentum (41) = entry zone"
+      },
+      {
+        "name": "K.P. Energy",
+        "code": "KPEL",
+        "industry": "Power Generation",
+        "currentPrice": 314.5,
+        "compositeScore": 61,
+        "recommendation": "ACCUMULATE",
+        "scores": {
+          "fundamental": 78,
+          "valuation": 77,
+          "momentum": 41,
+          "safety": 49
+        },
+        "return1w": -4.67,
+        "return1m": -5.85,
+        "return3m": -22.93,
+        "contrarian_reason": "🔥 Quality stock (F:78) down -23% - contrarian opportunity"
+      },
+      {
+        "name": "T R I L",
+        "code": "TARIL",
+        "industry": "Heavy Electrical Equipment",
+        "currentPrice": 260.3,
+        "compositeScore": 60,
+        "recommendation": "BUY",
+        "scores": {
+          "fundamental": 78,
+          "valuation": 69,
+          "momentum": 42,
+          "safety": 56
+        },
+        "return1w": -5.1,
+        "return1m": -7.73,
+        "return3m": -46.24,
+        "contrarian_reason": "🔥 Quality stock (F:78) down -46% - contrarian opportunity"
+      },
+      {
+        "name": "Master Trust",
+        "code": "MASTERTR",
+        "industry": "Stockbroking & Allied",
+        "currentPrice": 106.94,
+        "compositeScore": 68,
+        "recommendation": "BUY",
+        "scores": {
+          "fundamental": 77,
+          "valuation": 86,
+          "momentum": 41,
+          "safety": 66.5
+        },
+        "return1w": -4.09,
+        "return1m": -10.27,
+        "return3m": -14.68,
+        "contrarian_reason": "💰 Heavily undervalued (V:86) after -15% correction"
+      },
+      {
+        "name": "Natco Pharma",
+        "code": "NATCOPHARM",
+        "industry": "Pharmaceuticals",
+        "currentPrice": 859.4,
+        "compositeScore": 68,
+        "recommendation": "BUY",
+        "scores": {
+          "fundamental": 77,
+          "valuation": 83,
+          "momentum": 42,
+          "safety": 64
+        },
+        "return1w": -3.46,
+        "return1m": -6.06,
+        "return3m": 4.02,
+        "contrarian_reason": "🎯 Strong base (F:77, V:83) + weak momentum (42) = entry zone"
+      },
+      {
+        "name": "Ganesh Housing",
+        "code": "GANESHHOU",
+        "industry": "Residential, Commercial Projects",
+        "currentPrice": 741,
+        "compositeScore": 65,
+        "recommendation": "BUY",
+        "scores": {
+          "fundamental": 77,
+          "valuation": 79,
+          "momentum": 40,
+          "safety": 60
+        },
+        "return1w": -1.95,
+        "return1m": -7.17,
+        "return3m": -12.97,
+        "contrarian_reason": "🎯 Strong base (F:77, V:79) + weak momentum (40) = entry zone"
+      }
+    ],
+    "sectorTrends": [
+      {
+        "sector": "Aluminium",
+        "stockCount": 2,
+        "sectorScore": 71,
+        "avgReturn3m": 39.4,
+        "avgMomentum": 73,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Zinc",
+        "stockCount": 1,
+        "sectorScore": 68,
+        "avgReturn3m": 31.1,
+        "avgMomentum": 72,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Computers - Software & Consulting",
+        "stockCount": 6,
+        "sectorScore": 68,
+        "avgReturn3m": 4,
+        "avgMomentum": 72,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Iron & Steel",
+        "stockCount": 1,
+        "sectorScore": 68,
+        "avgReturn3m": 3.6,
+        "avgMomentum": 71,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Telecom - Infrastructure",
+        "stockCount": 1,
+        "sectorScore": 67,
+        "avgReturn3m": 26.5,
+        "avgMomentum": 75,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Non Banking Financial Company (NBFC)",
+        "stockCount": 1,
+        "sectorScore": 65,
+        "avgReturn3m": -0.2,
+        "avgMomentum": 75,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Packaged Foods",
+        "stockCount": 1,
+        "sectorScore": 65,
+        "avgReturn3m": 2.4,
+        "avgMomentum": 71,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Asset Management Company",
+        "stockCount": 1,
+        "sectorScore": 64,
+        "avgReturn3m": -9.2,
+        "avgMomentum": 70,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "IT Enabled Services",
+        "stockCount": 3,
+        "sectorScore": 63,
+        "avgReturn3m": 2.8,
+        "avgMomentum": 60,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Internet & Catalogue Retail",
+        "stockCount": 1,
+        "sectorScore": 63,
+        "avgReturn3m": -2.4,
+        "avgMomentum": 71,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Healthcare Service Provider",
+        "stockCount": 1,
+        "sectorScore": 61,
+        "avgReturn3m": 102.5,
+        "avgMomentum": 59,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Pharmaceuticals",
+        "stockCount": 5,
+        "sectorScore": 61,
+        "avgReturn3m": -0.4,
+        "avgMomentum": 56,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Plastic Products - Industrial",
+        "stockCount": 1,
+        "sectorScore": 61,
+        "avgReturn3m": -8.3,
+        "avgMomentum": 68,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Exchange and Data Platform",
+        "stockCount": 2,
+        "sectorScore": 60,
+        "avgReturn3m": 18.4,
+        "avgMomentum": 62,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Industrial Minerals",
+        "stockCount": 2,
+        "sectorScore": 59,
+        "avgReturn3m": 7.6,
+        "avgMomentum": 60,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Tyres & Rubber Products",
+        "stockCount": 1,
+        "sectorScore": 59,
+        "avgReturn3m": 7.2,
+        "avgMomentum": 57,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Financial Institution",
+        "stockCount": 1,
+        "sectorScore": 58,
+        "avgReturn3m": -1.1,
+        "avgMomentum": 60,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Diversified Commercial Services",
+        "stockCount": 1,
+        "sectorScore": 58,
+        "avgReturn3m": -10.6,
+        "avgMomentum": 58,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Cables - Electricals",
+        "stockCount": 1,
+        "sectorScore": 58,
+        "avgReturn3m": -4.3,
+        "avgMomentum": 58,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Media & Entertainment",
+        "stockCount": 1,
+        "sectorScore": 57,
+        "avgReturn3m": 3,
+        "avgMomentum": 53,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)",
+        "stockCount": 2,
+        "sectorScore": 57,
+        "avgReturn3m": -1.5,
+        "avgMomentum": 52,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Auto Components & Equipments",
+        "stockCount": 5,
+        "sectorScore": 56,
+        "avgReturn3m": -5.9,
+        "avgMomentum": 56,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Residential, Commercial Projects",
+        "stockCount": 2,
+        "sectorScore": 56,
+        "avgReturn3m": -3.6,
+        "avgMomentum": 54,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Edible Oil",
+        "stockCount": 1,
+        "sectorScore": 55,
+        "avgReturn3m": -2.5,
+        "avgMomentum": 55,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Hospital",
+        "stockCount": 1,
+        "sectorScore": 55,
+        "avgReturn3m": -27.6,
+        "avgMomentum": 52,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Breweries & Distilleries",
+        "stockCount": 1,
+        "sectorScore": 55,
+        "avgReturn3m": -9.6,
+        "avgMomentum": 53,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Stockbroking & Allied",
+        "stockCount": 4,
+        "sectorScore": 54,
+        "avgReturn3m": -6.1,
+        "avgMomentum": 53,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Software Products",
+        "stockCount": 3,
+        "sectorScore": 54,
+        "avgReturn3m": -16.1,
+        "avgMomentum": 48,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Pesticides & Agrochemicals",
+        "stockCount": 1,
+        "sectorScore": 54,
+        "avgReturn3m": -7.5,
+        "avgMomentum": 50,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Ferro & Silica Manganese",
+        "stockCount": 1,
+        "sectorScore": 54,
+        "avgReturn3m": 7.3,
+        "avgMomentum": 50,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
+        "sector": "Tour, Travel Related Services",
+        "stockCount": 1,
+        "sectorScore": 53,
+        "avgReturn3m": -6.4,
+        "avgMomentum": 50,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Personal Care",
+        "stockCount": 1,
+        "sectorScore": 53,
+        "avgReturn3m": -8.3,
+        "avgMomentum": 46,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Iron & Steel Products",
+        "stockCount": 6,
+        "sectorScore": 52,
+        "avgReturn3m": -8.6,
+        "avgMomentum": 52,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Specialty Chemicals",
+        "stockCount": 1,
+        "sectorScore": 52,
+        "avgReturn3m": -5.2,
+        "avgMomentum": 49,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Other Financial Services",
+        "stockCount": 2,
+        "sectorScore": 52,
+        "avgReturn3m": -14.2,
+        "avgMomentum": 49,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Other Electrical Equipment",
+        "stockCount": 4,
+        "sectorScore": 51,
+        "avgReturn3m": -27.9,
+        "avgMomentum": 52,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "E-Learning",
+        "stockCount": 1,
+        "sectorScore": 51,
+        "avgReturn3m": -17.8,
+        "avgMomentum": 50,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Computers Hardware & Equipments",
+        "stockCount": 1,
+        "sectorScore": 51,
+        "avgReturn3m": -14.1,
+        "avgMomentum": 50,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Petrochemicals",
+        "stockCount": 1,
+        "sectorScore": 50,
+        "avgReturn3m": -14.2,
+        "avgMomentum": 44,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Industrial Products",
+        "stockCount": 3,
+        "sectorScore": 50,
+        "avgReturn3m": -17.4,
+        "avgMomentum": 48,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Compressors, Pumps & Diesel Engines",
+        "stockCount": 2,
+        "sectorScore": 50,
+        "avgReturn3m": -10.5,
+        "avgMomentum": 50,
+        "trend": "neutral",
+        "trendIcon": "➡️"
+      },
+      {
+        "sector": "Passenger Cars & Utility Vehicles",
+        "stockCount": 1,
+        "sectorScore": 50,
+        "avgReturn3m": -10.8,
+        "avgMomentum": 46,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "LPG/CNG/PNG/LNG Supplier",
+        "stockCount": 1,
+        "sectorScore": 50,
+        "avgReturn3m": -17.1,
+        "avgMomentum": 40,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Rubber",
+        "stockCount": 1,
+        "sectorScore": 49,
+        "avgReturn3m": -10.3,
+        "avgMomentum": 45,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Packaging",
+        "stockCount": 1,
+        "sectorScore": 47,
+        "avgReturn3m": -13.8,
+        "avgMomentum": 41,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Heavy Electrical Equipment",
+        "stockCount": 3,
+        "sectorScore": 47,
+        "avgReturn3m": -35,
+        "avgMomentum": 47,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Diversified FMCG",
+        "stockCount": 1,
+        "sectorScore": 46,
+        "avgReturn3m": -20.1,
+        "avgMomentum": 39,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Power Generation",
+        "stockCount": 1,
+        "sectorScore": 45,
+        "avgReturn3m": -22.9,
+        "avgMomentum": 41,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Civil Construction",
+        "stockCount": 2,
+        "sectorScore": 42,
+        "avgReturn3m": -20.6,
+        "avgMomentum": 35,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
+        "sector": "Construction Vehicles",
+        "stockCount": 1,
+        "sectorScore": 42,
+        "avgReturn3m": -21.9,
+        "avgMomentum": 35,
+        "trend": "bearish",
+        "trendIcon": "📉"
       }
     ],
     "excluded": {
-      "count": 30,
+      "count": 29,
       "reasons": [
         {
           "reason": "Profitability",
@@ -1066,7 +1759,7 @@
         },
         {
           "reason": "Low promoter holding",
-          "count": 3
+          "count": 2
         },
         {
           "reason": "Market cap too low",
@@ -1082,7 +1775,7 @@
         "totalWeight": 90,
         "cashAllocation": 10,
         "sectorCount": 8,
-        "top5Weight": 25.3
+        "top5Weight": 25.6
       }
     }
   },

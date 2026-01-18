@@ -125,6 +125,10 @@ export function calculateStockScore(stock, allStocks = [], marketCondition = nul
             momentum: momentumScore,
             external: externalScore
         },
+        // Return metrics for contrarian analysis
+        return1w: stock['Return over 1week'] || 0,
+        return1m: stock['Return over 1month'] || 0,
+        return3m: stock['Return over 3months'] || 0,
         weights,
         marketCondition: condition,
         compositeScore: Math.round(compositeScore),

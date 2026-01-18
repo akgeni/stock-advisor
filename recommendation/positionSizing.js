@@ -155,6 +155,10 @@ export function calculatePortfolioWeights(scoredStocks, options = {}) {
             momentum: stock.scores.momentum.score,
             external: stock.scores.external.score
         },
+        // Return metrics for sector trend analysis
+        return1w: stock.return1w || 0,
+        return1m: stock.return1m || 0,
+        return3m: stock.return3m || 0,
         riskLevel: stock.scores.risk.riskLevel,
         conviction: Math.round(stock.conviction)
     }));
