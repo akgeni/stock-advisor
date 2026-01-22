@@ -27,7 +27,26 @@ export function loadStockData(filePath) {
         }
     });
 
-    return records;
+    // Remove duplicates based on NSE Code, BSE Code, or Name
+    const seen = new Set();
+    const uniqueRecords = records.filter(record => {
+        // Create a unique key: prefer NSE Code, then BSE Code, then Name
+        const nseCode = record['NSE Code']?.toString().trim();
+        const bseCode = record['BSE Code']?.toString().trim();
+        const name = record['Name']?.toString().trim().toLowerCase();
+
+        const key = nseCode || bseCode || name;
+
+        if (!key || seen.has(key)) {
+            return false;
+        }
+        seen.add(key);
+        return true;
+    });
+
+    console.log(`📊 Loaded ${records.length} records, ${uniqueRecords.length} unique (${records.length - uniqueRecords.length} duplicates removed)`);
+
+    return uniqueRecords;
 }
 
 /**

@@ -1437,14 +1437,56 @@
       `;
         }
 
+        let isAdminUnlocked = false;
+
+        function unlockAdmin() {
+            const passcode = document.getElementById('adminPasscode').value;
+            const correctPasscode = 'Akgeni@@123540';
+            const controls = document.getElementById('adminControls');
+            const btn = document.querySelector('button[onclick="unlockAdmin()"]');
+
+            if (isAdminUnlocked) {
+                // Lock
+                isAdminUnlocked = false;
+                controls.style.display = 'none';
+                btn.textContent = '🔓 Unlock';
+                btn.classList.remove('btn-danger');
+                btn.classList.add('btn-secondary');
+                document.getElementById('adminPasscode').value = '';
+                document.getElementById('adminPasscode').disabled = false;
+            } else {
+                // Unlock
+                if (passcode === correctPasscode) {
+                    isAdminUnlocked = true;
+                    controls.style.display = 'block';
+                    btn.textContent = '🔒 Lock';
+                    btn.classList.remove('btn-secondary');
+                    btn.classList.add('btn-danger');
+                    document.getElementById('adminPasscode').disabled = true;
+                } else {
+                    alert('❌ Incorrect Passcode');
+                }
+            }
+        }
+
         function renderApp() {
             if (!recommendation) return renderEmptyState();
 
             const { summary, allocation, marketCondition, topPicks, watchlist, timestamp } = recommendation;
 
             document.getElementById('content').innerHTML = `
-        <!-- Controls -->
-        <div class="card" style="display: none !important;">
+        <!-- Admin Unlock -->
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem;">
+          <input type="password" id="adminPasscode" placeholder="Enter admin passcode" 
+                 style="padding: 0.5rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); width: 180px;"
+                 ${isAdminUnlocked ? 'disabled' : ''}>
+          <button class="btn ${isAdminUnlocked ? 'btn-danger' : 'btn-secondary'}" onclick="unlockAdmin()" style="padding: 0.5rem 1rem;">
+            ${isAdminUnlocked ? '🔒 Lock' : '🔓 Unlock'}
+          </button>
+        </div>
+        
+        <!-- Controls (Hidden by default) -->
+        <div class="card" id="adminControls" style="display: ${isAdminUnlocked ? 'block' : 'none'};">
           <div class="card-header">
             <h3 class="card-title">📤 Update Watchlist</h3>
           </div>
@@ -2499,6 +2541,37 @@
                 setTimeout(() => loadAnalysis(selectedStockCode), 100);
             }
         };
+        async function init() {
+            try {
+                // 1. Load cached recommendation first for instant UI
+                const cached = localStorage.getItem('stockRecommendation');
+                if (cached) {
+                    recommendation = JSON.parse(cached);
+                    // Only render if cache is less than 24h old
+                    if (Date.now() - recommendation.timestamp < 24 * 60 * 60 * 1000) {
+                        renderApp();
+                    }
+                }
+
+                // 2. Fetch fresh data from server in background
+                const res = await fetch(`${API_BASE}/recommendations`);
+                const data = await res.json();
+
+                if (data.success && data.recommendation) {
+                    // Update global state
+                    recommendation = data.recommendation;
+                    // Update cache
+                    localStorage.setItem('stockRecommendation', JSON.stringify(recommendation));
+                    // Re-render with fresh data
+                    renderApp();
+                }
+            } catch (e) {
+                console.error("Error initializing:", e);
+            }
+        }
+
+        // Initialize on load
+        init();
     </script>
 </body>
 

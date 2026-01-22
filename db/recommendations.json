@@ -2,11 +2,11 @@
   {
     "id": "rec_2026-W04",
     "weekId": "2026-W04",
-    "timestamp": "2026-01-18T15:34:10.203Z",
+    "timestamp": "2026-01-22T06:18:52.327Z",
     "marketCondition": "NEUTRAL",
     "summary": {
-      "totalAnalyzed": 119,
-      "passedGates": 90,
+      "totalAnalyzed": 120,
+      "passedGates": 91,
       "failedGates": 29,
       "recommendedStocks": 20,
       "averageScore": 72
@@ -22,7 +22,7 @@
           "currentPrice": 2596.4,
           "marketCap": 111206.02,
           "weight": 5.5,
-          "compositeScore": 71,
+          "compositeScore": 72,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 78.5,
@@ -36,7 +36,7 @@
           "return3m": -9.15,
           "riskLevel": "Low",
           "conviction": 57,
-          "aiScore": 67
+          "aiScore": 72
         },
         {
           "name": "Indus Towers",
@@ -47,7 +47,7 @@
           "currentPrice": 433.85,
           "marketCap": 114456.69,
           "weight": 5.2,
-          "compositeScore": 73,
+          "compositeScore": 72,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 75,
@@ -61,7 +61,7 @@
           "return3m": 26.49,
           "riskLevel": "Low",
           "conviction": 54,
-          "aiScore": 78
+          "aiScore": 74
         },
         {
           "name": "Fiem Industries",
@@ -72,7 +72,7 @@
           "currentPrice": 2180.6,
           "marketCap": 5739.27,
           "weight": 5,
-          "compositeScore": 68,
+          "compositeScore": 69,
           "recommendation": "BUY",
           "scores": {
             "risk": 74.5,
@@ -85,8 +85,7 @@
           "return1m": -6.66,
           "return3m": 12.77,
           "riskLevel": "Low",
-          "conviction": 51,
-          "aiScore": 62
+          "conviction": 51
         },
         {
           "name": "HCL Technologies",
@@ -97,7 +96,7 @@
           "currentPrice": 1698,
           "marketCap": 460780.33,
           "weight": 5,
-          "compositeScore": 64,
+          "compositeScore": 67,
           "recommendation": "BUY",
           "scores": {
             "risk": 76.5,
@@ -110,8 +109,7 @@
           "return1m": 3.39,
           "return3m": 13.55,
           "riskLevel": "Low",
-          "conviction": 51,
-          "aiScore": 54
+          "conviction": 51
         },
         {
           "name": "Authum Invest",
@@ -122,7 +120,7 @@
           "currentPrice": 631.2,
           "marketCap": 53603.11,
           "weight": 4.9,
-          "compositeScore": 71,
+          "compositeScore": 72,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 69,
@@ -136,7 +134,7 @@
           "return3m": -0.2,
           "riskLevel": "Low",
           "conviction": 50,
-          "aiScore": 62
+          "aiScore": 68
         },
         {
           "name": "Natl. Aluminium",
@@ -172,7 +170,7 @@
           "currentPrice": 5836.5,
           "marketCap": 69784.11,
           "weight": 4.8,
-          "compositeScore": 68,
+          "compositeScore": 67,
           "recommendation": "BUY",
           "scores": {
             "risk": 74.5,
@@ -185,8 +183,7 @@
           "return1m": 5.06,
           "return3m": 5.03,
           "riskLevel": "Low",
-          "conviction": 50,
-          "aiScore": 72
+          "conviction": 50
         },
         {
           "name": "Tips Music",
@@ -197,7 +194,7 @@
           "currentPrice": 528,
           "marketCap": 6749.51,
           "weight": 4.7,
-          "compositeScore": 63,
+          "compositeScore": 69,
           "recommendation": "BUY",
           "scores": {
             "risk": 70.5,
@@ -210,8 +207,7 @@
           "return1m": -0.98,
           "return3m": 3.05,
           "riskLevel": "Low",
-          "conviction": 49,
-          "aiScore": 38
+          "conviction": 49
         },
         {
           "name": "Dynacons Sys.",
@@ -247,7 +243,7 @@
           "currentPrice": 167.35,
           "marketCap": 4938.28,
           "weight": 4.5,
-          "compositeScore": 70,
+          "compositeScore": 71,
           "recommendation": "STRONG BUY",
           "scores": {
             "risk": 65.5,
@@ -260,8 +256,7 @@
           "return1m": -10.85,
           "return3m": -2.48,
           "riskLevel": "Low",
-          "conviction": 47,
-          "aiScore": 68
+          "conviction": 47
         },
         {
           "name": "Hindustan Zinc",
@@ -272,7 +267,7 @@
           "currentPrice": 637.75,
           "marketCap": 269469.72,
           "weight": 4.4,
-          "compositeScore": 69,
+          "compositeScore": 68,
           "recommendation": "BUY",
           "scores": {
             "risk": 67,
@@ -285,8 +280,7 @@
           "return1m": 8.32,
           "return3m": 31.12,
           "riskLevel": "Low",
-          "conviction": 46,
-          "aiScore": 72
+          "conviction": 46
         },
         {
           "name": "Master Trust",
@@ -297,7 +291,7 @@
           "currentPrice": 106.94,
           "marketCap": 1315.53,
           "weight": 4.4,
-          "compositeScore": 63,
+          "compositeScore": 68,
           "recommendation": "BUY",
           "scores": {
             "risk": 66.5,
@@ -311,7 +305,7 @@
           "return3m": -14.68,
           "riskLevel": "Low",
           "conviction": 45,
-          "aiScore": 42
+          "aiScore": 50
         },
         {
           "name": "BLS Internat.",
@@ -322,7 +316,7 @@
           "currentPrice": 302.2,
           "marketCap": 12442.81,
           "weight": 4.3,
-          "compositeScore": 62,
+          "compositeScore": 70,
           "recommendation": "BUY",
           "scores": {
             "risk": 64,
@@ -336,7 +330,7 @@
           "return3m": -6.43,
           "riskLevel": "Moderate",
           "conviction": 45,
-          "aiScore": 28
+          "aiScore": 50
         },
         {
           "name": "Cigniti Tech.",
@@ -360,8 +354,7 @@
           "return1m": -5.29,
           "return3m": 3.73,
           "riskLevel": "Moderate",
-          "conviction": 44,
-          "aiScore": 72
+          "conviction": 44
         },
         {
           "name": "Natco Pharma",
@@ -372,7 +365,7 @@
           "currentPrice": 859.4,
           "marketCap": 15392.7,
           "weight": 4.2,
-          "compositeScore": 61,
+          "compositeScore": 68,
           "recommendation": "BUY",
           "scores": {
             "risk": 64,
@@ -385,8 +378,7 @@
           "return1m": -6.06,
           "return3m": 4.02,
           "riskLevel": "Moderate",
-          "conviction": 44,
-          "aiScore": 32
+          "conviction": 44
         },
         {
           "name": "RPG LifeScience.",
@@ -397,7 +389,7 @@
           "currentPrice": 2307.2,
           "marketCap": 3815.88,
           "weight": 4.1,
-          "compositeScore": 69,
+          "compositeScore": 68,
           "recommendation": "BUY",
           "scores": {
             "risk": 63,
@@ -410,8 +402,7 @@
           "return1m": -1.44,
           "return3m": 1.29,
           "riskLevel": "Moderate",
-          "conviction": 43,
-          "aiScore": 72
+          "conviction": 43
         },
         {
           "name": "Hindalco Inds.",
@@ -436,7 +427,7 @@
           "return3m": 18.86,
           "riskLevel": "Moderate",
           "conviction": 42,
-          "aiScore": 68
+          "aiScore": 50
         },
         {
           "name": "Indrapr.Medical",
@@ -461,7 +452,7 @@
           "return3m": -27.64,
           "riskLevel": "Moderate",
           "conviction": 40,
-          "aiScore": 68
+          "aiScore": 50
         },
         {
           "name": "Waaree Renewab.",
@@ -472,7 +463,7 @@
           "currentPrice": 941.15,
           "marketCap": 9820.5,
           "weight": 3.7,
-          "compositeScore": 66,
+          "compositeScore": 67,
           "recommendation": "BUY",
           "scores": {
             "risk": 57,
@@ -486,7 +477,7 @@
           "return3m": -25.88,
           "riskLevel": "Moderate",
           "conviction": 38,
-          "aiScore": 62
+          "aiScore": 50
         },
         {
           "name": "One Global Serv",
@@ -497,7 +488,7 @@
           "currentPrice": 528.6,
           "marketCap": 1033.04,
           "weight": 3.5,
-          "compositeScore": 70,
+          "compositeScore": 69,
           "recommendation": "BUY",
           "scores": {
             "risk": 52.5,
@@ -510,8 +501,7 @@
           "return1m": -23.88,
           "return3m": 102.49,
           "riskLevel": "Moderate",
-          "conviction": 36,
-          "aiScore": 72
+          "conviction": 36
         }
       ],
       "totalEquity": 90,
@@ -581,34 +571,6 @@
         "aiScore": 72
       },
       {
-        "name": "Indus Towers",
-        "code": "INDUSTOWER",
-        "weight": 5.2,
-        "price": 433.85,
-        "industry": "Telecom - Infrastructure",
-        "compositeScore": 73,
-        "recommendation": "STRONG BUY",
-        "return1w": 0.1,
-        "return1m": 6.14,
-        "return3m": 26.49,
-        "strengths": [
-          "Low risk profile",
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Positive momentum"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 75,
-          "fundamental": 72,
-          "valuation": 72,
-          "momentum": 75,
-          "external": 59,
-          "ai": 78
-        },
-        "aiScore": 78
-      },
-      {
         "name": "Dynacons Sys.",
         "code": "DSSL",
         "weight": 4.7,
@@ -637,40 +599,12 @@
         "aiScore": 72
       },
       {
-        "name": "Cigniti Tech.",
-        "code": "CIGNITITEC",
-        "weight": 4.3,
-        "price": 1707.3,
-        "industry": "IT Enabled Services",
-        "compositeScore": 72,
-        "recommendation": "STRONG BUY",
-        "return1w": 3.08,
-        "return1m": -5.29,
-        "return3m": 3.73,
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 61,
-          "fundamental": 85,
-          "valuation": 80,
-          "momentum": 66,
-          "external": 65,
-          "ai": 72
-        },
-        "aiScore": 72
-      },
-      {
         "name": "HDFC AMC",
         "code": "HDFCAMC",
         "weight": 5.5,
         "price": 2596.4,
         "industry": "Asset Management Company",
-        "compositeScore": 71,
+        "compositeScore": 72,
         "recommendation": "STRONG BUY",
         "return1w": 2.89,
         "return1m": -2.84,
@@ -687,9 +621,37 @@
           "valuation": 62,
           "momentum": 70,
           "external": 57,
-          "ai": 67
+          "ai": 72
         },
-        "aiScore": 67
+        "aiScore": 72
+      },
+      {
+        "name": "Indus Towers",
+        "code": "INDUSTOWER",
+        "weight": 5.2,
+        "price": 433.85,
+        "industry": "Telecom - Infrastructure",
+        "compositeScore": 72,
+        "recommendation": "STRONG BUY",
+        "return1w": 0.1,
+        "return1m": 6.14,
+        "return3m": 26.49,
+        "strengths": [
+          "Low risk profile",
+          "Strong fundamentals",
+          "Attractive valuation",
+          "Positive momentum"
+        ],
+        "risks": [],
+        "scoreBreakdown": {
+          "safety": 75,
+          "fundamental": 72,
+          "valuation": 72,
+          "momentum": 75,
+          "external": 59,
+          "ai": 74
+        },
+        "aiScore": 74
       },
       {
         "name": "Authum Invest",
@@ -697,7 +659,7 @@
         "weight": 4.9,
         "price": 631.2,
         "industry": "Non Banking Financial Company (NBFC)",
-        "compositeScore": 71,
+        "compositeScore": 72,
         "recommendation": "STRONG BUY",
         "return1w": 3.55,
         "return1m": 16.79,
@@ -714,171 +676,61 @@
           "valuation": 86,
           "momentum": 75,
           "external": 55,
-          "ai": 62
+          "ai": 68
         },
-        "aiScore": 62
+        "aiScore": 68
       },
       {
-        "name": "Gokul Agro",
-        "code": "GOKULAGRO",
-        "weight": 4.5,
-        "price": 167.35,
-        "industry": "Edible Oil",
+        "name": "BLS Internat.",
+        "code": "BLS",
+        "weight": 4.3,
+        "price": 302.2,
+        "industry": "Tour, Travel Related Services",
         "compositeScore": 70,
-        "recommendation": "STRONG BUY",
-        "return1w": 0.68,
-        "return1m": -10.85,
-        "return3m": -2.48,
+        "recommendation": "BUY",
+        "return1w": 0.07,
+        "return1m": -7.1,
+        "return3m": -6.43,
         "strengths": [
           "Strong fundamentals",
           "Attractive valuation"
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 65.5,
-          "fundamental": 85,
-          "valuation": 80,
-          "momentum": 55,
+          "safety": 64,
+          "fundamental": 84,
+          "valuation": 82,
+          "momentum": 50,
           "external": 55,
-          "ai": 68
+          "ai": 50
         },
-        "aiScore": 68
+        "aiScore": 50
       },
       {
-        "name": "One Global Serv",
-        "code": "",
-        "weight": 3.5,
-        "price": 528.6,
-        "industry": "Healthcare Service Provider",
-        "compositeScore": 70,
-        "recommendation": "BUY",
-        "return1w": -6.14,
-        "return1m": -23.88,
-        "return3m": 102.49,
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 52.5,
-          "fundamental": 86,
-          "valuation": 81,
-          "momentum": 59,
-          "external": 63,
-          "ai": 72
-        },
-        "aiScore": 72
-      },
-      {
-        "name": "Hindustan Zinc",
-        "code": "HINDZINC",
+        "name": "Master Trust",
+        "code": "MASTERTR",
         "weight": 4.4,
-        "price": 637.75,
-        "industry": "Zinc",
-        "compositeScore": 69,
-        "recommendation": "BUY",
-        "return1w": 5.16,
-        "return1m": 8.32,
-        "return3m": 31.12,
-        "strengths": [
-          "Strong fundamentals",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 67,
-          "fundamental": 75,
-          "valuation": 61,
-          "momentum": 72,
-          "external": 63,
-          "ai": 72
-        },
-        "aiScore": 72
-      },
-      {
-        "name": "RPG LifeScience.",
-        "code": "RPGLIFE",
-        "weight": 4.1,
-        "price": 2307.2,
-        "industry": "Pharmaceuticals",
-        "compositeScore": 69,
-        "recommendation": "BUY",
-        "return1w": -1.49,
-        "return1m": -1.44,
-        "return3m": 1.29,
-        "strengths": [
-          "Strong fundamentals",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 63,
-          "fundamental": 89,
-          "valuation": 54,
-          "momentum": 66,
-          "external": 65,
-          "ai": 72
-        },
-        "aiScore": 72
-      },
-      {
-        "name": "Fiem Industries",
-        "code": "FIEMIND",
-        "weight": 5,
-        "price": 2180.6,
-        "industry": "Auto Components & Equipments",
+        "price": 106.94,
+        "industry": "Stockbroking & Allied",
         "compositeScore": 68,
         "recommendation": "BUY",
-        "return1w": -2.25,
-        "return1m": -6.66,
-        "return3m": 12.77,
+        "return1w": -4.09,
+        "return1m": -10.27,
+        "return3m": -14.68,
         "strengths": [
-          "Low risk profile",
           "Strong fundamentals",
-          "Positive momentum",
-          "Favorable sector trends"
+          "Attractive valuation"
         ],
         "risks": [],
         "scoreBreakdown": {
-          "safety": 74.5,
-          "fundamental": 76,
-          "valuation": 59,
-          "momentum": 64,
-          "external": 62,
-          "ai": 62
+          "safety": 66.5,
+          "fundamental": 77,
+          "valuation": 86,
+          "momentum": 41,
+          "external": 51,
+          "ai": 50
         },
-        "aiScore": 62
-      },
-      {
-        "name": "Alkem Lab",
-        "code": "ALKEM",
-        "weight": 4.8,
-        "price": 5836.5,
-        "industry": "Pharmaceuticals",
-        "compositeScore": 68,
-        "recommendation": "BUY",
-        "return1w": 0.65,
-        "return1m": 5.06,
-        "return3m": 5.03,
-        "strengths": [
-          "Low risk profile",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 74.5,
-          "fundamental": 65,
-          "valuation": 50,
-          "momentum": 76,
-          "external": 67,
-          "ai": 72
-        },
-        "aiScore": 72
+        "aiScore": 50
       },
       {
         "name": "Hindalco Inds.",
@@ -903,9 +755,9 @@
           "valuation": 72,
           "momentum": 75,
           "external": 65,
-          "ai": 68
+          "ai": 50
         },
-        "aiScore": 68
+        "aiScore": 50
       },
       {
         "name": "Indrapr.Medical",
@@ -929,9 +781,9 @@
           "valuation": 74,
           "momentum": 52,
           "external": 58,
-          "ai": 68
+          "ai": 50
         },
-        "aiScore": 68
+        "aiScore": 50
       },
       {
         "name": "Waaree Renewab.",
@@ -939,7 +791,7 @@
         "weight": 3.7,
         "price": 941.15,
         "industry": "Other Electrical Equipment",
-        "compositeScore": 66,
+        "compositeScore": 67,
         "recommendation": "BUY",
         "return1w": 5.43,
         "return1m": 0.98,
@@ -956,142 +808,9 @@
           "valuation": 75,
           "momentum": 65,
           "external": 49,
-          "ai": 62
+          "ai": 50
         },
-        "aiScore": 62
-      },
-      {
-        "name": "HCL Technologies",
-        "code": "HCLTECH",
-        "weight": 5,
-        "price": 1698,
-        "industry": "Computers - Software & Consulting",
-        "compositeScore": 64,
-        "recommendation": "BUY",
-        "return1w": 2.2,
-        "return1m": 3.39,
-        "return3m": 13.55,
-        "strengths": [
-          "Low risk profile",
-          "Positive momentum",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 76.5,
-          "fundamental": 67,
-          "valuation": 49,
-          "momentum": 76,
-          "external": 65,
-          "ai": 54
-        },
-        "aiScore": 54
-      },
-      {
-        "name": "Tips Music",
-        "code": "TIPSMUSIC",
-        "weight": 4.7,
-        "price": 528,
-        "industry": "Media & Entertainment",
-        "compositeScore": 63,
-        "recommendation": "BUY",
-        "return1w": 0.23,
-        "return1m": -0.98,
-        "return3m": 3.05,
-        "strengths": [
-          "Low risk profile",
-          "Strong fundamentals",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 70.5,
-          "fundamental": 81,
-          "valuation": 66,
-          "momentum": 53,
-          "external": 60,
-          "ai": 38
-        },
-        "aiScore": 38
-      },
-      {
-        "name": "Master Trust",
-        "code": "MASTERTR",
-        "weight": 4.4,
-        "price": 106.94,
-        "industry": "Stockbroking & Allied",
-        "compositeScore": 63,
-        "recommendation": "BUY",
-        "return1w": -4.09,
-        "return1m": -10.27,
-        "return3m": -14.68,
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 66.5,
-          "fundamental": 77,
-          "valuation": 86,
-          "momentum": 41,
-          "external": 51,
-          "ai": 42
-        },
-        "aiScore": 42
-      },
-      {
-        "name": "BLS Internat.",
-        "code": "BLS",
-        "weight": 4.3,
-        "price": 302.2,
-        "industry": "Tour, Travel Related Services",
-        "compositeScore": 62,
-        "recommendation": "BUY",
-        "return1w": 0.07,
-        "return1m": -7.1,
-        "return3m": -6.43,
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 64,
-          "fundamental": 84,
-          "valuation": 82,
-          "momentum": 50,
-          "external": 55,
-          "ai": 28
-        },
-        "aiScore": 28
-      },
-      {
-        "name": "Natco Pharma",
-        "code": "NATCOPHARM",
-        "weight": 4.2,
-        "price": 859.4,
-        "industry": "Pharmaceuticals",
-        "compositeScore": 61,
-        "recommendation": "BUY",
-        "return1w": -3.46,
-        "return1m": -6.06,
-        "return3m": 4.02,
-        "strengths": [
-          "Strong fundamentals",
-          "Attractive valuation",
-          "Favorable sector trends"
-        ],
-        "risks": [],
-        "scoreBreakdown": {
-          "safety": 64,
-          "fundamental": 77,
-          "valuation": 83,
-          "momentum": 42,
-          "external": 70,
-          "ai": 32
-        },
-        "aiScore": 32
+        "aiScore": 50
       }
     ],
     "watchlist": [
@@ -1486,6 +1205,15 @@
         "trendIcon": "🚀"
       },
       {
+        "sector": "Cables - Electricals",
+        "stockCount": 1,
+        "sectorScore": 60,
+        "avgReturn3m": -4.3,
+        "avgMomentum": 58,
+        "trend": "bullish",
+        "trendIcon": "🚀"
+      },
+      {
         "sector": "Industrial Minerals",
         "stockCount": 2,
         "sectorScore": 59,
@@ -1517,15 +1245,6 @@
         "stockCount": 1,
         "sectorScore": 58,
         "avgReturn3m": -10.6,
-        "avgMomentum": 58,
-        "trend": "bullish",
-        "trendIcon": "🚀"
-      },
-      {
-        "sector": "Cables - Electricals",
-        "stockCount": 1,
-        "sectorScore": 58,
-        "avgReturn3m": -4.3,
         "avgMomentum": 58,
         "trend": "bullish",
         "trendIcon": "🚀"
@@ -1738,6 +1457,15 @@
         "trendIcon": "📉"
       },
       {
+        "sector": "Household Appliances",
+        "stockCount": 1,
+        "sectorScore": 50,
+        "avgReturn3m": -16.8,
+        "avgMomentum": 45,
+        "trend": "bearish",
+        "trendIcon": "📉"
+      },
+      {
         "sector": "LPG/CNG/PNG/LNG Supplier",
         "stockCount": 1,
         "sectorScore": 50,
@@ -1813,42 +1541,23 @@
     "returnForecast": {
       "topPredictions": [
         {
-          "name": "Waaree Renewab.",
-          "code": "WAAREERTL",
-          "industry": "Other Electrical Equipment",
-          "predictionScore": 73,
-          "expectedReturn": "+12%",
-          "returnLabel": "Buy",
-          "returnIcon": "📈",
-          "factors": {
-            "meanReversion": 95,
-            "trend": 65,
-            "quality": 68,
-            "valuation": 75,
-            "aiSignal": 62
-          },
-          "return3m": -25.88,
-          "aiScore": 62,
-          "compositeScore": 66
-        },
-        {
-          "name": "Indrapr.Medical",
-          "code": "INDRAMEDCO",
-          "industry": "Hospital",
+          "name": "HDFC AMC",
+          "code": "HDFCAMC",
+          "industry": "Asset Management Company",
           "predictionScore": 71,
           "expectedReturn": "+11%",
           "returnLabel": "Buy",
           "returnIcon": "📈",
           "factors": {
-            "meanReversion": 95,
-            "trend": 52,
-            "quality": 71,
-            "valuation": 74,
-            "aiSignal": 68
+            "meanReversion": 70,
+            "trend": 70,
+            "quality": 80,
+            "valuation": 62,
+            "aiSignal": 72
           },
-          "return3m": -27.64,
-          "aiScore": 68,
-          "compositeScore": 67
+          "return3m": -9.15,
+          "aiScore": 72,
+          "compositeScore": 72
         },
         {
           "name": "Natl. Aluminium",
@@ -1870,23 +1579,42 @@
           "compositeScore": 76
         },
         {
-          "name": "HDFC AMC",
-          "code": "HDFCAMC",
-          "industry": "Asset Management Company",
+          "name": "Authum Invest",
+          "code": "AIIL",
+          "industry": "Non Banking Financial Company (NBFC)",
           "predictionScore": 70,
           "expectedReturn": "+10%",
           "returnLabel": "Buy",
           "returnIcon": "📈",
           "factors": {
-            "meanReversion": 70,
-            "trend": 70,
-            "quality": 80,
-            "valuation": 62,
-            "aiSignal": 67
+            "meanReversion": 55,
+            "trend": 75,
+            "quality": 71,
+            "valuation": 86,
+            "aiSignal": 68
           },
-          "return3m": -9.15,
-          "aiScore": 67,
-          "compositeScore": 71
+          "return3m": -0.2,
+          "aiScore": 68,
+          "compositeScore": 72
+        },
+        {
+          "name": "Waaree Renewab.",
+          "code": "WAAREERTL",
+          "industry": "Other Electrical Equipment",
+          "predictionScore": 70,
+          "expectedReturn": "+10%",
+          "returnLabel": "Buy",
+          "returnIcon": "📈",
+          "factors": {
+            "meanReversion": 95,
+            "trend": 65,
+            "quality": 68,
+            "valuation": 75,
+            "aiSignal": 50
+          },
+          "return3m": -25.88,
+          "aiScore": 50,
+          "compositeScore": 67
         },
         {
           "name": "Indus Towers",
@@ -1901,30 +1629,11 @@
             "trend": 85,
             "quality": 74,
             "valuation": 72,
-            "aiSignal": 78
+            "aiSignal": 74
           },
           "return3m": 26.49,
-          "aiScore": 78,
-          "compositeScore": 73
-        },
-        {
-          "name": "Authum Invest",
-          "code": "AIIL",
-          "industry": "Non Banking Financial Company (NBFC)",
-          "predictionScore": 69,
-          "expectedReturn": "+10%",
-          "returnLabel": "Buy",
-          "returnIcon": "📈",
-          "factors": {
-            "meanReversion": 55,
-            "trend": 75,
-            "quality": 71,
-            "valuation": 86,
-            "aiSignal": 62
-          },
-          "return3m": -0.2,
-          "aiScore": 62,
-          "compositeScore": 71
+          "aiScore": 74,
+          "compositeScore": 72
         },
         {
           "name": "Dynacons Sys.",
@@ -1946,200 +1655,49 @@
           "compositeScore": 73
         },
         {
-          "name": "Cigniti Tech.",
-          "code": "CIGNITITEC",
-          "industry": "IT Enabled Services",
+          "name": "Indrapr.Medical",
+          "code": "INDRAMEDCO",
+          "industry": "Hospital",
           "predictionScore": 67,
           "expectedReturn": "+9%",
           "returnLabel": "Buy",
           "returnIcon": "📈",
           "factors": {
-            "meanReversion": 45,
-            "trend": 66,
-            "quality": 73,
-            "valuation": 80,
-            "aiSignal": 72
-          },
-          "return3m": 3.73,
-          "aiScore": 72,
-          "compositeScore": 72
-        },
-        {
-          "name": "Hindalco Inds.",
-          "code": "HINDALCO",
-          "industry": "Aluminium",
-          "predictionScore": 67,
-          "expectedReturn": "+9%",
-          "returnLabel": "Buy",
-          "returnIcon": "📈",
-          "factors": {
-            "meanReversion": 45,
-            "trend": 85,
-            "quality": 64,
-            "valuation": 72,
-            "aiSignal": 68
-          },
-          "return3m": 18.86,
-          "aiScore": 68,
-          "compositeScore": 67
-        },
-        {
-          "name": "Alkem Lab",
-          "code": "ALKEM",
-          "industry": "Pharmaceuticals",
-          "predictionScore": 66,
-          "expectedReturn": "+8%",
-          "returnLabel": "Buy",
-          "returnIcon": "📈",
-          "factors": {
-            "meanReversion": 45,
-            "trend": 86,
-            "quality": 70,
-            "valuation": 50,
-            "aiSignal": 72
-          },
-          "return3m": 5.03,
-          "aiScore": 72,
-          "compositeScore": 68
-        },
-        {
-          "name": "Gokul Agro",
-          "code": "GOKULAGRO",
-          "industry": "Edible Oil",
-          "predictionScore": 65,
-          "expectedReturn": "+8%",
-          "returnLabel": "Buy",
-          "returnIcon": "📈",
-          "factors": {
-            "meanReversion": 55,
-            "trend": 55,
-            "quality": 75,
-            "valuation": 80,
-            "aiSignal": 68
-          },
-          "return3m": -2.48,
-          "aiScore": 68,
-          "compositeScore": 70
-        },
-        {
-          "name": "Hindustan Zinc",
-          "code": "HINDZINC",
-          "industry": "Zinc",
-          "predictionScore": 65,
-          "expectedReturn": "+8%",
-          "returnLabel": "Buy",
-          "returnIcon": "📈",
-          "factors": {
-            "meanReversion": 35,
-            "trend": 82,
+            "meanReversion": 95,
+            "trend": 52,
             "quality": 71,
-            "valuation": 61,
-            "aiSignal": 72
+            "valuation": 74,
+            "aiSignal": 50
           },
-          "return3m": 31.12,
-          "aiScore": 72,
-          "compositeScore": 69
-        },
-        {
-          "name": "RPG LifeScience.",
-          "code": "RPGLIFE",
-          "industry": "Pharmaceuticals",
-          "predictionScore": 63,
-          "expectedReturn": "+7%",
-          "returnLabel": "Hold",
-          "returnIcon": "➡️",
-          "factors": {
-            "meanReversion": 45,
-            "trend": 66,
-            "quality": 76,
-            "valuation": 54,
-            "aiSignal": 72
-          },
-          "return3m": 1.29,
-          "aiScore": 72,
-          "compositeScore": 69
-        },
-        {
-          "name": "HCL Technologies",
-          "code": "HCLTECH",
-          "industry": "Computers - Software & Consulting",
-          "predictionScore": 63,
-          "expectedReturn": "+7%",
-          "returnLabel": "Hold",
-          "returnIcon": "➡️",
-          "factors": {
-            "meanReversion": 45,
-            "trend": 86,
-            "quality": 72,
-            "valuation": 49,
-            "aiSignal": 54
-          },
-          "return3m": 13.55,
-          "aiScore": 54,
-          "compositeScore": 64
+          "return3m": -27.64,
+          "aiScore": 50,
+          "compositeScore": 67
         },
         {
           "name": "Master Trust",
           "code": "MASTERTR",
           "industry": "Stockbroking & Allied",
-          "predictionScore": 63,
-          "expectedReturn": "+7%",
-          "returnLabel": "Hold",
-          "returnIcon": "➡️",
+          "predictionScore": 65,
+          "expectedReturn": "+8%",
+          "returnLabel": "Buy",
+          "returnIcon": "📈",
           "factors": {
             "meanReversion": 85,
             "trend": 41,
             "quality": 72,
             "valuation": 86,
-            "aiSignal": 42
+            "aiSignal": 50
           },
           "return3m": -14.68,
-          "aiScore": 42,
-          "compositeScore": 63
-        },
-        {
-          "name": "One Global Serv",
-          "industry": "Healthcare Service Provider",
-          "predictionScore": 62,
-          "expectedReturn": "+6%",
-          "returnLabel": "Hold",
-          "returnIcon": "➡️",
-          "factors": {
-            "meanReversion": 35,
-            "trend": 59,
-            "quality": 69,
-            "valuation": 81,
-            "aiSignal": 72
-          },
-          "return3m": 102.49,
-          "aiScore": 72,
-          "compositeScore": 70
-        },
-        {
-          "name": "Fiem Industries",
-          "code": "FIEMIND",
-          "industry": "Auto Components & Equipments",
-          "predictionScore": 61,
-          "expectedReturn": "+6%",
-          "returnLabel": "Hold",
-          "returnIcon": "➡️",
-          "factors": {
-            "meanReversion": 45,
-            "trend": 64,
-            "quality": 75,
-            "valuation": 59,
-            "aiSignal": 62
-          },
-          "return3m": 12.77,
-          "aiScore": 62,
+          "aiScore": 50,
           "compositeScore": 68
         },
         {
           "name": "BLS Internat.",
           "code": "BLS",
           "industry": "Tour, Travel Related Services",
-          "predictionScore": 59,
-          "expectedReturn": "+5%",
+          "predictionScore": 64,
+          "expectedReturn": "+7%",
           "returnLabel": "Hold",
           "returnIcon": "➡️",
           "factors": {
@@ -2147,49 +1705,48 @@
             "trend": 50,
             "quality": 74,
             "valuation": 82,
-            "aiSignal": 28
+            "aiSignal": 50
           },
           "return3m": -6.43,
-          "aiScore": 28,
-          "compositeScore": 62
+          "aiScore": 50,
+          "compositeScore": 70
         },
         {
-          "name": "Tips Music",
-          "code": "TIPSMUSIC",
-          "industry": "Media & Entertainment",
-          "predictionScore": 55,
-          "expectedReturn": "+3%",
+          "name": "Hindalco Inds.",
+          "code": "HINDALCO",
+          "industry": "Aluminium",
+          "predictionScore": 64,
+          "expectedReturn": "+7%",
           "returnLabel": "Hold",
           "returnIcon": "➡️",
           "factors": {
             "meanReversion": 45,
-            "trend": 53,
-            "quality": 76,
-            "valuation": 66,
-            "aiSignal": 38
+            "trend": 85,
+            "quality": 64,
+            "valuation": 72,
+            "aiSignal": 50
           },
-          "return3m": 3.05,
-          "aiScore": 38,
-          "compositeScore": 63
+          "return3m": 18.86,
+          "aiScore": 50,
+          "compositeScore": 67
         },
         {
-          "name": "Natco Pharma",
-          "code": "NATCOPHARM",
-          "industry": "Pharmaceuticals",
-          "predictionScore": 52,
-          "expectedReturn": "+1%",
+          "name": "One Global Serv",
+          "industry": "Healthcare Service Provider",
+          "predictionScore": 58,
+          "expectedReturn": "+4%",
           "returnLabel": "Hold",
           "returnIcon": "➡️",
           "factors": {
-            "meanReversion": 45,
-            "trend": 42,
-            "quality": 71,
-            "valuation": 83,
-            "aiSignal": 32
+            "meanReversion": 35,
+            "trend": 59,
+            "quality": 69,
+            "valuation": 81,
+            "aiSignal": 50
           },
-          "return3m": 4.02,
-          "aiScore": 32,
-          "compositeScore": 61
+          "return3m": 102.49,
+          "aiScore": 50,
+          "compositeScore": 69
         }
       ],
       "riskAlerts": [

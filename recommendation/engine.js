@@ -86,8 +86,17 @@ export async function generateRecommendation(stocks) {
     // Re-sort based on new scores
     topPicks = enhancedPicks.sort((a, b) => b.compositeScore - a.compositeScore);
 
+    // 7. Calculate Return Forecast FIRST to identify risk alerts
+    const returnForecast = calculateReturnForecast(portfolioResult.stocks, topPicks);
 
-    // 7. Build recommendation object
+    // 8. Filter topPicks to EXCLUDE stocks that are in risk alerts
+    // This ensures stocks in "Risk Alerts - Stocks to Avoid" don't appear in "Multi Factor Score Analysis"
+    const riskAlertCodes = new Set(returnForecast.riskAlerts.map(r => r.code));
+    const filteredTopPicks = topPicks.filter(pick => !riskAlertCodes.has(pick.code));
+
+    console.log(`📊 Filtered ${topPicks.length - filteredTopPicks.length} risky stocks from top picks`);
+
+    // 9. Build recommendation object
     const recommendation = {
         id: `rec_${weekId}`,
         weekId,
@@ -109,7 +118,7 @@ export async function generateRecommendation(stocks) {
         allocation: {
             stocks: portfolioResult.stocks.map(s => {
                 // Update allocation stocks with AI score if they are in top picks
-                const enhanced = topPicks.find(p => p.code === s.nseCode);
+                const enhanced = filteredTopPicks.find(p => p.code === s.nseCode);
                 return enhanced ? { ...s, compositeScore: enhanced.compositeScore, aiScore: enhanced.aiScore } : s;
             }),
             totalEquity: portfolioResult.totalWeight,
@@ -117,8 +126,8 @@ export async function generateRecommendation(stocks) {
             sectorBreakdown: portfolioResult.sectorAllocation
         },
 
-        // Top picks with reasoning
-        topPicks,
+        // Top picks with reasoning (FILTERED - excludes risk alerts)
+        topPicks: filteredTopPicks,
 
         // Watchlist (good stocks but not in main allocation)
         watchlist: getWatchlist(scoringResult.passed, portfolioResult.stocks),
@@ -130,7 +139,7 @@ export async function generateRecommendation(stocks) {
         sectorTrends: calculateSectorTrends(scoringResult.passed),
 
         // Return Forecast (Next Quarter Prediction - includes both best and worst)
-        returnForecast: calculateReturnForecast(portfolioResult.stocks, topPicks),
+        returnForecast,
 
         // Failed stocks info
         excluded: {
@@ -503,16 +512,22 @@ function calculateReturnForecast(allStocks, topPicks) {
         };
     };
 
-    // Calculate predictions for top picks (already have AI scores)
-    const topForecasts = topPicks.map(calculatePrediction);
-
-    // Calculate predictions for ALL stocks to find worst performers
+    // Calculate predictions for ALL stocks first to identify risk alerts
     const allForecasts = allStocks.map(calculatePrediction);
 
     // Get bottom 10 as risk alerts (stocks with lowest prediction scores - highest risk)
     const riskAlerts = [...allForecasts]
         .sort((a, b) => a.predictionScore - b.predictionScore)
         .slice(0, 10);
+
+    // Get the codes of risk alert stocks to exclude them from top picks
+    const riskAlertCodes = new Set(riskAlerts.map(r => r.code));
+
+    // Calculate predictions for top picks (already have AI scores)
+    // IMPORTANT: Exclude stocks that are in riskAlerts to avoid logical inconsistency
+    const topForecasts = topPicks
+        .filter(pick => !riskAlertCodes.has(pick.code || pick.nseCode)) // Exclude risky stocks
+        .map(calculatePrediction);
 
     // Sort top forecasts by prediction score (highest first)
     const topPredictions = topForecasts.sort((a, b) => b.predictionScore - a.predictionScore);
